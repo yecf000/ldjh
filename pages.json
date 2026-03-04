@@ -1,0 +1,218 @@
+{
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "Gold King",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/myteam/index",
+			"style": {
+				"navigationBarTitleText": "我的团队",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/my/index",
+			"style": {
+				"navigationBarTitleText": "我的资产",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/lottery",
+			"style": {
+				"navigationBarTitleText": "开矿记录",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/otcapply",
+			"style": {
+				"navigationBarTitleText": "OTC申请",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/getgold",
+			"style": {
+				"navigationBarTitleText": "获取金矿",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/sellgold",
+			"style": {
+				"navigationBarTitleText": "售出金矿",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/mymessage",
+			"style": {
+				"navigationBarTitleText": "我的消息",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/reg",
+			"style": {
+				"navigationBarTitleText": "注册",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/login",
+			"style": {
+				"navigationBarTitleText": "登陆",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/c2c",
+			"style": {
+				"navigationBarTitleText": "c2c交易",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/storelist",
+			"style": {
+				"navigationBarTitleText": "商户列表",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/otherpages/userinfo",
+			"style": {
+				"navigationBarTitleText": "个人资料",
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/myfriend/myfriends",
+			"style": {
+				"navigationBarTitleText": "我的通讯",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/impage",
+			"style": {
+				"navigationBarTitleText": "聊天",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/invite",
+			"style": {
+				"navigationBarTitleText": "好友邀请",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/rules",
+			"style": {
+				"navigationBarTitleText": "游戏规则",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/question",
+			"style": {
+				"navigationBarTitleText": "常见问题",
+				"navigationStyle": "custom"
+			}
+		},
+		// {
+		// 	"path": "pages/otherpages/wstest",
+		// 	"style": {
+		// 		"navigationBarTitleText": "WS",
+		// 		"navigationStyle": "custom"
+		// 	}
+		// }, 
+		{
+			"path": "pages/otherpages/logs",
+			"style": {
+				"navigationBarTitleText": "流水详情",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/store",
+			"style": {
+				"navigationBarTitleText": "商户信息",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/gamegoldhis",
+			"style": {
+				"navigationBarTitleText": "游戏记录",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/otcorder",
+			"style": {
+				"navigationBarTitleText": "OTC订单",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/mockgame",
+			"style": {
+				"navigationBarTitleText": "游戏模拟",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/level",
+			"style": {
+				"navigationBarTitleText": "用户等级",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/realname",
+			"style": {
+				"navigationBarTitleText": "用户认证",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/otherpages/payways",
+			"style": {
+				"navigationBarTitleText": "收款渠道",
+				"navigationStyle": "custom"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Gold King",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"height": "120rpx",
+		"selectedColor": "#be4604",
+		"backgroundColor": "#2c2b31",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/icons/tabbar/tabbar00.png",
+			"selectedIconPath": "static/icons/tabbar/tabbar01.png",
+			"text": " "
+		}, {
+			"pagePath": "pages/myteam/index",
+			"iconPath": "static/icons/tabbar/tabbar10.png",
+			"selectedIconPath": "static/icons/tabbar/tabbar11.png",
+			"text": " "
+		}, {
+			"pagePath": "pages/myfriend/myfriends",
+			"iconPath": "static/icons/tabbar/tabbar30.png",
+			"selectedIconPath": "static/icons/tabbar/tabbar31.png",
+			"text": " "
+		}, {
+			"pagePath": "pages/my/index",
+			"iconPath": "static/icons/tabbar/tabbar40.png",
+			"selectedIconPath": "static/icons/tabbar/tabbar41.png",
+			"text": " "
+		}]
+	},
+	"uniIdRouter": {}
+}
