@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<navbar title="开矿记录"></navbar>
+		<navbar :title="$lang('开矿记录')"></navbar>
 		<view class="table">
 			<view class="tableitem" v-for="(i,index) in gamelist" :key="i.id"
 				:style="{marginLeft:(index%4)==0?'':'12rpx'}">
@@ -16,12 +16,12 @@
 
 		<!-- 加载状态提示 -->
 		<view class="loading-container" v-if="loading">
-			<text class="loading-text">加载中...</text>
+			<text class="loading-text">{{$lang('加载中')}}</text>
 		</view>
 
 		<!-- 没有更多数据提示 -->
 		<view class="no-more-container" v-if="noMore">
-			<text class="no-more-text">没有更多数据了</text>
+			<text class="no-more-text">{{$lang('没有更多数据了')}}</text>
 		</view>
 	</view>
 </template>

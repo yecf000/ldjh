@@ -1,41 +1,41 @@
 <template>
 	<view class="all">
-		<navbar title="身份认证"></navbar>
+		<navbar :title="$lang('身份认证')"></navbar>
 		<view class="auth-status" v-if="authInfo.status_code==1">
 			<view class="status-icon">
 				<u-icon name="checkmark-circle" color="#0f763c" size="80"></u-icon>
 			</view>
-			<view class="status-text">您已完成身份认证</view>
-			<view class="status-desc">认证时间：{{authInfo.authTime}}</view>
+			<view class="status-text">{{$lang('您已完成身份认证')}}</view>
+			<view class="status-desc">{{$lang('认证时间：')}}{{authInfo.authTime}}</view>
 		</view>
 		<view class="auth-status" v-else>
 			<view class="status-icon">
 				<u-icon name="info-circle" color="#767d81" size="80" v-if="authInfo.status_code==0"></u-icon>
 				<u-icon name="close-circle" color="#7f0906" size="80" v-else></u-icon>
 			</view>
-			<view class="status-text" v-if="authInfo.status_code==-1">您尚未完成身份认证</view>
-			<view class="status-text" v-if="authInfo.status_code==2">您的申请未被通过，请重新提交</view>
-			<view class="status-text" v-if="authInfo.status_code==0">申请中,请等待</view>
-			<view class="status-desc" v-if="authInfo.status_code==-1">完成身份认证后，您将获得更多功能权限</view>
-			<view class="status-desc" v-if="authInfo.status_code==2">拒绝原因：{{authInfo.refuse_msg}}</view>
+			<view class="status-text" v-if="authInfo.status_code==-1">{{$lang('您尚未完成身份认证')}}</view>
+			<view class="status-text" v-if="authInfo.status_code==2">{{$lang('您的申请未被通过，请重新提交')}}</view>
+			<view class="status-text" v-if="authInfo.status_code==0">{{$lang('申请中,请等待')}}</view>
+			<view class="status-desc" v-if="authInfo.status_code==-1">{{$lang('完成身份认证后，您将获得更多功能权限')}}</view>
+			<view class="status-desc" v-if="authInfo.status_code==2">{{$lang('拒绝原因：')}}{{authInfo.refuse_msg}}</view>
 		</view>
 		<view class="auth-form" v-if="!authInfo.status">
-			<view class="title">认证信息</view>
+			<view class="title">{{$lang('认证信息')}}</view>
 			<view class="form-item">
-				<view class="label">真实姓名</view>
+				<view class="label">{{$lang('真实姓名')}}</view>
 				<u-input 
 					v-model="authInfo.realName" 
-					placeholder="请输入您的真实姓名"
+					:placeholder='$lang("请输入您的真实姓名")'
 					:custom-style="inputStyle"
 					:border="true"
 					:border-color="borderColor"
 				/>
 			</view>
 			<view class="form-item">
-				<view class="label">证件号</view>
+				<view class="label">{{$lang('证件号')}}</view>
 				<u-input 
 					v-model="authInfo.idCard" 
-					placeholder="请输入您的证件号码"
+					:placeholder='$lang("请输入您的证件号码")'
 					:custom-style="inputStyle"
 					:border="true"
 					:border-color="borderColor"
@@ -44,7 +44,7 @@
 			</view>
 			
 			<view class="form-item">
-				<view class="label">证件正面</view>
+				<view class="label">{{$lang('证件正面')}}</view>
 				<view class="upload-area" @click="uploadIdCard('front')">
 					<image 
 						v-if="authInfo.idCardFront" 
@@ -54,13 +54,13 @@
 					></image>
 					<view v-else class="upload-placeholder">
 						<u-icon name="photo" color="#b9bdbd" size="48"></u-icon>
-						<view class="upload-text">上传证件正面</view>
+						<view class="upload-text">{{$lang('上传证件正面')}}</view>
 					</view>
 				</view>
 			</view>
 			
 			<view class="form-item">
-				<view class="label">证件反面</view>
+				<view class="label">{{$lang('证件反面')}}</view>
 				<view class="upload-area" @click="uploadIdCard('back')">
 					<image 
 						v-if="authInfo.idCardBack" 
@@ -70,7 +70,7 @@
 					></image>
 					<view v-else class="upload-placeholder">
 						<u-icon name="photo" color="#b9bdbd" size="48"></u-icon>
-						<view class="upload-text">上传证件反面</view>
+						<view class="upload-text">{{$lang('上传证件反面')}}</view>
 					</view>
 				</view>
 			</view>
@@ -81,22 +81,22 @@
 					:class="{disabled: !canSubmit}" 
 					@click="submitAuth"
 				>
-					提交认证
+					{{$lang('提交认证')}}
 				</button>
 			</view>
 		</view>
 
 		<view class="tips-section" v-if="!authInfo.status">
-			<view class="tips-title">认证说明</view>
+			<view class="tips-title">{{$lang('认证说明')}}</view>
 			<view class="tips-content">
-				<view class="tip-item">1. 请确保提交的身份证信息真实有效</view>
-				<view class="tip-item">2. 身份证照片需清晰、完整、无反光</view>
-				<view class="tip-item">3. 认证信息提交后将在1-3个工作日内完成审核</view>
-				<view class="tip-item">4. 平台不会泄露用户任何信息，该实名仅用于C2C交易</view>
+				<view class="tip-item">{{$lang('1. 请确保提交的身份证信息真实有效')}}</view>
+				<view class="tip-item">{{$lang('2. 身份证照片需清晰、完整、无反光')}}</view>
+				<view class="tip-item">{{$lang('3. 认证信息提交后将在1-3个工作日内完成审核')}}</view>
+				<view class="tip-item">{{$lang('4. 平台不会泄露用户任何信息，该实名仅用于C2C交易')}}</view>
 			</view>
 		</view>
 		
-		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
+		<zero-loading color='#F0E68C' mask v-if="loading" showText :textColor='$lang("#fff")' :maskOpacity='0.8'></zero-loading>
 	</view>
 </template>
 
@@ -166,7 +166,7 @@
 					success: res => {
 						if(res.tempFiles[0].size > 1024 * 1024 * 5) {
 							uni.showToast({
-								title: '图片太大,请控制在5MB内',
+								title:this.$lang('图片太大,请控制在5MB内'),
 								icon: 'none'
 							})
 							return
@@ -193,7 +193,7 @@
 			submitAuth() {
 				if(!this.canSubmit){
 					uni.showToast({
-						title:'请先完善信息',
+						title:this.$lang('请先完善信息'),
 						icon:'none'
 					})
 					return;
@@ -208,7 +208,7 @@
 					back_img:this.authInfo.idCardBack
 				}).then(res=>{
 					uni.showToast({
-						title: '提交成功，等待审核',
+						title: this.$lang('提交成功，等待审核'),
 						icon: 'none'
 					});
 					this.getAuthInfo()

@@ -1,3 +1,7 @@
+import {
+	getlang
+} from "@/utils/lang.js";
+
 // 心跳间隔、重连websocket间隔，5秒
 const interval = 5000
 // 重连最大次数
@@ -58,7 +62,7 @@ export default class WS {
 	watchWS() {
 		// 监听 WebSocket 连接打开事件
 		this.socketTask.onOpen(() => {
-			console.log('websocket连接成功！')
+			// console.log('websocket连接成功！')
 			// 连接成功
 			this.options.onConnected()
 			// 重置连接次数
@@ -96,7 +100,7 @@ export default class WS {
 					this.options.onMessage(JSON.parse(res.data))
 				}
 			} else {
-				console.log('未监听到消息：原因：', JSON.stringify(res))
+				// console.log('未监听到消息：原因：', JSON.stringify(res))
 			}
 		})
 	}
@@ -105,7 +109,7 @@ export default class WS {
 
 	// 断开连接
 	onDisconnected(res) {
-		console.log('websocket断开连接，原因：', JSON.stringify(res))
+		// console.log('websocket断开连接，原因：', JSON.stringify(res))
 		// 关闭心跳
 		clearInterval(this.heartTimer)
 		// 全局Toast提示，防止用户继续发送
@@ -122,16 +126,16 @@ export default class WS {
 		clearTimeout(this.reconnectTimer)
 		if (this.reconnectTime < maxReconnectMaxTime) {
 			this.reconnectTimer = setTimeout(() => {
-				console.log(`第【${this.reconnectTime}】次重新连接中……`)
+				// console.log(`第【${this.reconnectTime}】次重新连接中……`)
 				this.initWS()
 				this.reconnectTime++
 			}, interval)
 		} else {
 			uni.showModal({
-				title: '温馨提示',
-				content: '服务器开小差啦~请返回聊天列表重试',
+				title: getlang('温馨提示'),
+				content: getlang('服务器开小差啦~请返回聊天列表重试'),
 				showCancel: false,
-				confirmText: '我知道了',
+				confirmText: getlang('我知道了'),
 				success: () => {
 					uni.navigateBack()
 				}

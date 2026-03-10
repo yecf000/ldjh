@@ -1,5 +1,9 @@
 export const api = {
-	
+	c2cUserLists: {
+		url: '/api/c2c.order/lists',
+		name: '用户订单列表',
+		method: 'GET'
+	},
 	myTeam: {
 		url: '/api/user/myTeam',
 		name: '邀请记录',

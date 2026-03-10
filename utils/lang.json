@@ -1,0 +1,3984 @@
+{
+	"网络异常": {
+		"zh-cn": "网络异常",
+		"zh-hk": "網絡異常",
+		"en": "Network Error",
+		"kr": "네트워크 이상",
+		"ja": "ネットワーク異常",
+		"ru": "Сетевая аномалия",
+		"es": "Anomalía de red",
+		"tr": "Ağ Anomalisi"
+	},
+	"登录超时": {
+		"zh-cn": "登录超时",
+		"zh-hk": "登入逾時",
+		"en": "Login Timeout",
+		"kr": "로그인 시간 초과",
+		"ja": "ログインタイムアウト",
+		"ru": "Тайм-аут входа",
+		"es": "Tiempo de espera de inicio de sesión agotado",
+		"tr": "Oturum açma zaman aşımı"
+	},
+	"温馨提示": {
+		"zh-cn": "温馨提示",
+		"zh-hk": "溫馨提示",
+		"en": "Friendly Reminder",
+		"kr": "안내 말씀",
+		"ja": "お知らせ",
+		"ru": "Уведомление",
+		"es": "Aviso",
+		"tr": "Bilgilendirme"
+	},
+	"服务器开小差啦~请返回聊天列表重试": {
+		"zh-cn": "服务器开小差啦~请返回聊天列表重试",
+		"zh-hk": "伺服器走神啦~請返回聊天列表重試",
+		"en": "Server is busy~ Please return to chat list and retry",
+		"kr": "서버가 바쁩니다~ 채팅 목록으로 돌아가 다시 시도하세요",
+		"ja": "サーバーがビジーです~ チャットリストに戻ってやり直してください",
+		"ru": "Сервер занят~ Вернитесь к списку чатов и повторите попытку",
+		"es": "Servidor ocupado~ Vuelve a la lista de chats y reintenta",
+		"tr": "Sunucu meşgul~ Sohbet listesine dönüp tekrar deneyin"
+	},
+	"我知道了": {
+		"zh-cn": "我知道了",
+		"zh-hk": "我知道了",
+		"en": "Got it",
+		"kr": "확인했습니다",
+		"ja": "確認しました",
+		"ru": "Понятно",
+		"es": "Entendido",
+		"tr": "Anladım"
+	},
+	"消息收取中…": {
+		"zh-cn": "消息收取中…",
+		"zh-hk": "訊息收取中…",
+		"en": "Receiving messages…",
+		"kr": "메시지 수신 중…",
+		"ja": "メッセージ受信中…",
+		"ru": "Получение сообщений…",
+		"es": "Recibiendo mensajes…",
+		"tr": "Mesajlar alınıyor…"
+	},
+	"websocket断开连接，原因：": {
+		"zh-cn": "websocket断开连接，原因：",
+		"zh-hk": "websocket中斷連線，原因：",
+		"en": "websocket disconnected, reason:",
+		"kr": "websocket 연결 끊김, 사유:",
+		"ja": "websocket接続が切断されました。理由：",
+		"ru": "websocket отключен, причина:",
+		"es": "websocket desconectado, motivo:",
+		"tr": "websocket bağlantısı kesildi, neden:"
+	},
+	"未监听到消息：原因：": {
+		"zh-cn": "未监听到消息：原因：",
+		"zh-hk": "未監聽到訊息：原因：",
+		"en": "No message received: reason:",
+		"kr": "메시지 수신 없음: 사유:",
+		"ja": "メッセージを受信していません：理由：",
+		"ru": "Сообщение не получено: причина:",
+		"es": "No se recibió mensaje: motivo:",
+		"tr": "Mesaj alınamadı: neden:"
+	},
+	"websocket连接成功！": {
+		"zh-cn": "websocket连接成功！",
+		"zh-hk": "websocket連線成功！",
+		"en": "websocket connected successfully!",
+		"kr": "websocket 연결 성공!",
+		"ja": "websocket接続に成功しました！",
+		"ru": "websocket подключен успешно!",
+		"es": "¡websocket conectado exitosamente!",
+		"tr": "websocket bağlantısı başarılı!"
+	},
+	"剩余金矿": {
+		"zh-cn": "剩余金矿",
+		"zh-hk": "剩餘金礦",
+		"en": "Remaining Gold",
+		"kr": "남은 금광",
+		"ja": "残り金鉱",
+		"ru": "Остаток золота",
+		"es": "Oro restante",
+		"tr": "Kalan Altın"
+	},
+	"获取金矿": {
+		"zh-cn": "获取金矿",
+		"zh-hk": "獲取金礦",
+		"en": "Get Gold",
+		"kr": "금광 획득",
+		"ja": "金鉱を入手",
+		"ru": "Получить золото",
+		"es": "Obtener oro",
+		"tr": "Altın Al"
+	},
+	"充值": {
+		"zh-cn": "获取金矿",
+		"zh-hk": "獲取金礦",
+		"en": "Get Gold",
+		"kr": "금광 획득",
+		"ja": "金鉱を入手",
+		"ru": "Депозит",
+		"es": "Obtener oro",
+		"tr": "Altın Al"
+	},
+	"矿山总资产": {
+		"zh-cn": "矿山总资产",
+		"zh-hk": "礦山總資產",
+		"en": "Total Assets",
+		"kr": "광산 총자산",
+		"ja": "鉱山総資産",
+		"ru": "Общие активы",
+		"es": "Activos totales",
+		"tr": "Toplam Varlıklar"
+	},
+	"已参与": {
+		"zh-cn": "已参与",
+		"zh-hk": "已參與",
+		"en": "Joined",
+		"kr": "참여함",
+		"ja": "参加済み",
+		"ru": "Участвует",
+		"es": "Participó",
+		"tr": "Katıldı"
+	},
+	"进入挖矿": {
+		"zh-cn": "进入挖矿",
+		"zh-hk": "進入挖礦",
+		"en": "Start Mining",
+		"kr": "채굴 시작",
+		"ja": "採掘開始",
+		"ru": "Начать добычу",
+		"es": "Iniciar minería",
+		"tr": "Madenciliğe Başla"
+	},
+	"撤离成功": {
+		"zh-cn": "撤离成功",
+		"zh-hk": "撤離成功",
+		"en": "Withdrawn",
+		"kr": "철수 성공",
+		"ja": "撤退成功",
+		"ru": "Выведено",
+		"es": "Retirado",
+		"tr": "Başarıyla Çekildi"
+	},
+	"立即撤离": {
+		"zh-cn": "立即撤离",
+		"zh-hk": "立即撤離",
+		"en": "Withdraw Now",
+		"kr": "즉시 철수",
+		"ja": "今すぐ撤退",
+		"ru": "Вывести сейчас",
+		"es": "Retirar ahora",
+		"tr": "Hemen Çek"
+	},
+	"游戏结算中": {
+		"zh-cn": "游戏结算中",
+		"zh-hk": "遊戲結算中",
+		"en": "Calculating...",
+		"kr": "정산 중",
+		"ja": "清算中",
+		"ru": "Расчет...",
+		"es": "Calculando...",
+		"tr": "Hesaplanıyor..."
+	},
+	"请选择稿子": {
+		"zh-cn": "请选择稿子",
+		"zh-hk": "請選擇稿子",
+		"en": "Select Pickaxe",
+		"kr": "곡괭이 선택",
+		"ja": "ツルハシを選択",
+		"ru": "Выберите кирку",
+		"es": "Selecciona pico",
+		"tr": "Kazma Seçin"
+	},
+	"固定倍率撤出": {
+		"zh-cn": "固定倍率撤出",
+		"zh-hk": "固定倍率撤出",
+		"en": "Fixed Rate Exit",
+		"kr": "고정 배율 철수",
+		"ja": "固定倍率での撤退",
+		"ru": "Фикс. выход",
+		"es": "Salida con tasa fija",
+		"tr": "Sabit Oranlı Çıkış"
+	},
+	"玩家": {
+		"zh-cn": "玩家",
+		"zh-hk": "玩家",
+		"en": "Players",
+		"kr": "플레이어",
+		"ja": "プレイヤー",
+		"ru": "Игроки",
+		"es": "Jugadores",
+		"tr": "Oyuncular"
+	},
+	"撤出": {
+		"zh-cn": "撤出",
+		"zh-hk": "撤出",
+		"en": "Exit",
+		"kr": "철수",
+		"ja": "撤退",
+		"ru": "Выход",
+		"es": "Salir",
+		"tr": "Çıkış"
+	},
+	"投入": {
+		"zh-cn": "投入",
+		"zh-hk": "投入",
+		"en": "Invest",
+		"kr": "투입",
+		"ja": "投入",
+		"ru": "Вложить",
+		"es": "Invertir",
+		"tr": "Yatır"
+	},
+	"盈亏": {
+		"zh-cn": "盈亏",
+		"zh-hk": "盈虧",
+		"en": "Profit/Loss",
+		"kr": "손익",
+		"ja": "損益",
+		"ru": "Приб/Уб",
+		"es": "Resultado",
+		"tr": "Kar/Zarar"
+	},
+	"铁镐": {
+		"zh-cn": "铁镐",
+		"zh-hk": "鐵鎬",
+		"en": "Iron Pickaxe",
+		"kr": "철 곡괭이",
+		"ja": "鉄のツルハシ",
+		"ru": "Железная кирка",
+		"es": "Pico de hierro",
+		"tr": "Demir Kazma"
+	},
+	"银镐": {
+		"zh-cn": "银镐",
+		"zh-hk": "銀鎬",
+		"en": "Silver Pickaxe",
+		"kr": "은 곡괭이",
+		"ja": "銀のツルハシ",
+		"ru": "Серебряная кирка",
+		"es": "Pico de plata",
+		"tr": "Gümüş Kazma"
+	},
+	"金镐": {
+		"zh-cn": "金镐",
+		"zh-hk": "金鎬",
+		"en": "Golden Pickaxe",
+		"kr": "금 곡괭이",
+		"ja": "金のツルハシ",
+		"ru": "Золотая кирка",
+		"es": "Pico de oro",
+		"tr": "Altın Kazma"
+	},
+	"秘银镐": {
+		"zh-cn": "秘银镐",
+		"zh-hk": "祕銀鎬",
+		"en": "Mithril Pickaxe",
+		"kr": "미스릴 곡괭이",
+		"ja": "ミスリルのツルハシ",
+		"ru": "Мифриловая кирка",
+		"es": "Pico de mitril",
+		"tr": "Mithril Kazma"
+	},
+	"精钢镐": {
+		"zh-cn": "精钢镐",
+		"zh-hk": "精鋼鎬",
+		"en": "Steel Pickaxe",
+		"kr": "정강 곡괭이",
+		"ja": "精鋼のツルハシ",
+		"ru": "Стальная кирка",
+		"es": "Pico de acero",
+		"tr": "Çelik Kazma"
+	},
+	"已连接": {
+		"zh-cn": "已连接",
+		"zh-hk": "已連接",
+		"en": "Connected",
+		"kr": "연결됨",
+		"ja": "接続済み",
+		"ru": "Подключено",
+		"es": "Conectado",
+		"tr": "Bağlandı"
+	},
+	"未连接": {
+		"zh-cn": "未连接",
+		"zh-hk": "未連接",
+		"en": "Disconnected",
+		"kr": "연결 안 됨",
+		"ja": "未接続",
+		"ru": "Не подключено",
+		"es": "Desconectado",
+		"tr": "Bağlı Değil"
+	},
+	"已设置固定点位": {
+		"zh-cn": "已设置固定点位",
+		"zh-hk": "已設定固定點位",
+		"en": "Fixed Point Set",
+		"kr": "고정 지점 설정됨",
+		"ja": "固定ポイント設定済み",
+		"ru": "Точка зафиксирована",
+		"es": "Punto fijo establecido",
+		"tr": "Sabit Nokta Ayarlandı"
+	},
+	"已错过撤离时间": {
+		"zh-cn": "已错过撤离时间",
+		"zh-hk": "已錯過撤離時間",
+		"en": "Exit Time Missed",
+		"kr": "철수 시간 놓침",
+		"ja": "撤退時間を逃しました",
+		"ru": "Время выхода упущено",
+		"es": "Tiempo de salida perdido",
+		"tr": "Çıkış Süresi Kaçırıldı"
+	},
+	"金矿不足": {
+		"zh-cn": "金矿不足",
+		"zh-hk": "金礦不足",
+		"en": "Insufficient Gold",
+		"kr": "금광 부족",
+		"ja": "金鉱不足",
+		"ru": "Недостаточно золота",
+		"es": "Oro insuficiente",
+		"tr": "Altın Yetersiz"
+	},
+	"未到进入时间": {
+		"zh-cn": "未到进入时间",
+		"zh-hk": "未到進入時間",
+		"en": "Entry Time Not Reached",
+		"kr": "입장 시간 아님",
+		"ja": "開始時間未到達",
+		"ru": "Вход недоступен",
+		"es": "Hora de entrada no alcanzada",
+		"tr": "Giriş Zamanı Gelmedi"
+	},
+	"连接服务器成功": {
+		"zh-cn": "连接服务器成功",
+		"zh-hk": "連接伺服器成功",
+		"en": "Server Connected",
+		"kr": "서버 연결 성공",
+		"ja": "サーバー接続成功",
+		"ru": "Сервер подключен",
+		"es": "Servidor conectado",
+		"tr": "Sunucuya Bağlandı"
+	},
+	"消息解析错误": {
+		"zh-cn": "消息解析错误",
+		"zh-hk": "訊息解析錯誤",
+		"en": "Message Parse Error",
+		"kr": "메시지 분석 오류",
+		"ja": "メッセージ解析エラー",
+		"ru": "Ошибка парсинга",
+		"es": "Error al analizar mensaje",
+		"tr": "Mesaj Ayrıştırma Hatası"
+	},
+	"连接已断开": {
+		"zh-cn": "连接已断开",
+		"zh-hk": "連接已斷開",
+		"en": "Connection Closed",
+		"kr": "연결 끊김",
+		"ja": "接続が切断されました",
+		"ru": "Соединение разорвано",
+		"es": "Conexión cerrada",
+		"tr": "Bağlantı Kapatıldı"
+	},
+	"连接错误": {
+		"zh-cn": "连接错误",
+		"zh-hk": "連接錯誤",
+		"en": "Connection Error",
+		"kr": "연결 오류",
+		"ja": "接続エラー",
+		"ru": "Ошибка соединения",
+		"es": "Error de conexión",
+		"tr": "Bağlantı Hatası"
+	},
+	"连接失败": {
+		"zh-cn": "连接失败",
+		"zh-hk": "連接失敗",
+		"en": "Connection Failed",
+		"kr": "연결 실패",
+		"ja": "接続失敗",
+		"ru": "Не удалось подключиться",
+		"es": "Conexión fallida",
+		"tr": "Bağlantı Başarısız"
+	},
+	"已主动断开连接": {
+		"zh-cn": "已主动断开连接",
+		"zh-hk": "已主動斷開連接",
+		"en": "Disconnected by User",
+		"kr": "사용자 연결 끊김",
+		"ja": "ユーザー切断",
+		"ru": "Отключено пользователем",
+		"es": "Desconectado por el usuario",
+		"tr": "Kullanıcı Tarafından Bağlantı Kesildi"
+	},
+	"游戏事件": {
+		"zh-cn": "游戏事件",
+		"zh-hk": "遊戲事件",
+		"en": "Game Event",
+		"kr": "게임 이벤트",
+		"ja": "ゲームイベント",
+		"ru": "Событие игры",
+		"es": "Evento del juego",
+		"tr": "Oyun Olayı"
+	},
+	"未知消息": {
+		"zh-cn": "未知消息",
+		"zh-hk": "未知訊息",
+		"en": "Unknown Message",
+		"kr": "알 수 없는 메시지",
+		"ja": "不明なメッセージ",
+		"ru": "Неизвестное сообщение",
+		"es": "Mensaje desconocido",
+		"tr": "Bilinmeyen Mesaj"
+	},
+	"操作失败": {
+		"zh-cn": "操作失败",
+		"zh-hk": "操作失敗",
+		"en": "Operation Failed",
+		"kr": "작업 실패",
+		"ja": "操作失敗",
+		"ru": "Ошибка операции",
+		"es": "Operación fallida",
+		"tr": "İşlem Başarısız"
+	},
+	"发送失败": {
+		"zh-cn": "发送失败",
+		"zh-hk": "發送失敗",
+		"en": "Send Failed",
+		"kr": "전송 실패",
+		"ja": "送信失敗",
+		"ru": "Ошибка отправки",
+		"es": "Envío fallido",
+		"tr": "Gönderilemedi"
+	},
+	"尝试重新连接": {
+		"zh-cn": "尝试重新连接",
+		"zh-hk": "嘗試重新連接",
+		"en": "Reconnecting...",
+		"kr": "재연결 시도 중",
+		"ja": "再接続を試みています",
+		"ru": "Переподключение...",
+		"es": "Reconectando...",
+		"tr": "Yeniden bağlanıyor..."
+	},
+	"普通用户": {
+		"zh-cn": "普通用户",
+		"zh-hk": "普通用戶",
+		"en": "Regular User",
+		"kr": "일반用户",
+		"ja": "一般ユーザー",
+		"ru": "Обычный",
+		"es": "Usuario",
+		"tr": "Normal"
+	},
+	"资产估值": {
+		"zh-cn": "资产估值",
+		"zh-hk": "資產估值",
+		"en": "Asset Value",
+		"kr": "자산가치",
+		"ja": "資産価値",
+		"ru": "Оценка",
+		"es": "Valor",
+		"tr": "Değer"
+	},
+	"今日收益": {
+		"zh-cn": "今日收益",
+		"zh-hk": "今日收益",
+		"en": "Today's Profit",
+		"kr": "오늘 수익",
+		"ja": "本日の収益",
+		"ru": "Прибыль",
+		"es": "Ganancia",
+		"tr": "Bugünkü Kar"
+	},
+	"可用资产": {
+		"zh-cn": "可用资产",
+		"zh-hk": "可用資產",
+		"en": "Available",
+		"kr": "가능 자산",
+		"ja": "利用可能",
+		"ru": "Доступно",
+		"es": "Disponible",
+		"tr": "Kullanılabilir"
+	},
+	"资产管理": {
+		"zh-cn": "资产管理",
+		"zh-hk": "資產管理",
+		"en": "Assets",
+		"kr": "자산관리",
+		"ja": "資産管理",
+		"ru": "Активы",
+		"es": "Gestión",
+		"tr": "Varlıklar"
+	},
+	"金矿兑现": {
+		"zh-cn": "金矿兑现",
+		"zh-hk": "金礦兌現",
+		"en": "Redeem",
+		"kr": "현금화",
+		"ja": "現金化",
+		"ru": "Снятие",
+		"es": "Canjear",
+		"tr": "Bozdur"
+	},
+	"C2C交易": {
+		"zh-cn": "C2C交易",
+		"zh-hk": "C2C交易",
+		"en": "C2C",
+		"kr": "C2C",
+		"ja": "C2C",
+		"ru": "P2P",
+		"es": "C2C",
+		"tr": "C2C"
+	},
+	"OTC订单": {
+		"zh-cn": "OTC订单",
+		"zh-hk": "OTC訂單",
+		"en": "OTC",
+		"kr": "OTC",
+		"ja": "OTC",
+		"ru": "Oрдер",
+		"es": "OTC",
+		"tr": "OTC"
+	},
+	"其他常用": {
+		"zh-cn": "其他",
+		"zh-hk": "其他",
+		"en": "More",
+		"kr": "기타",
+		"ja": "その他",
+		"ru": "Ещё",
+		"es": "Más",
+		"tr": "Diğer"
+	},
+	"流水详情": {
+		"zh-cn": "流水",
+		"zh-hk": "流水",
+		"en": "History",
+		"kr": "내역",
+		"ja": "履歴",
+		"ru": "Выписка",
+		"es": "Historial",
+		"tr": "Geçmiş"
+	},
+	"矿产记录": {
+		"zh-cn": "矿产",
+		"zh-hk": "礦產",
+		"en": "Mining",
+		"kr": "채굴",
+		"ja": "採掘",
+		"ru": "История",
+		"es": "Minería",
+		"tr": "Madencilik"
+	},
+	"游戏记录": {
+		"zh-cn": "游戏",
+		"zh-hk": "遊戲",
+		"en": "Games",
+		"kr": "게임",
+		"ja": "ゲーム",
+		"ru": "Записывать",
+		"es": "Juegos",
+		"tr": "Oyunlar"
+	},
+	"我的消息": {
+		"zh-cn": "消息",
+		"zh-hk": "訊息",
+		"en": "Messages",
+		"kr": "메시지",
+		"ja": "メッセージ",
+		"ru": "Уведомить",
+		"es": "Mensajes",
+		"tr": "Mesajlar"
+	},
+	"官方客服": {
+		"zh-cn": "客服",
+		"zh-hk": "客服",
+		"en": "Support",
+		"kr": "고객센터",
+		"ja": "サポート",
+		"ru": "Помощь",
+		"es": "Ayuda",
+		"tr": "Destek"
+	},
+	"常见问题": {
+		"zh-cn": "常见问题",
+		"zh-hk": "常見問題",
+		"en": "FAQ",
+		"kr": "FAQ",
+		"ja": "FAQ",
+		"ru": "Вопрос",
+		"es": "FAQ",
+		"tr": "SSS"
+	},
+	"官方群聊": {
+		"zh-cn": "官方群",
+		"zh-hk": "官方群",
+		"en": "Group",
+		"kr": "공식방",
+		"ja": "公式グループ",
+		"ru": "Официал",
+		"es": "Grupo",
+		"tr": "Grup"
+	},
+	"好友邀请": {
+		"zh-cn": "邀请",
+		"zh-hk": "邀請",
+		"en": "Invite",
+		"kr": "초대",
+		"ja": "招待",
+		"ru": "Пригласить",
+		"es": "Invitar",
+		"tr": "Davet"
+	},
+	"OTC申请": {
+		"zh-cn": "OTC申请",
+		"zh-hk": "OTC申請",
+		"en": "OTC Apply",
+		"kr": "OTC 신청",
+		"ja": "OTC申請",
+		"ru": "OTC Заявка",
+		"es": "Solicitar OTC",
+		"tr": "OTC Başvuru"
+	},
+	"OTC商户": {
+		"zh-cn": "OTC商户",
+		"zh-hk": "OTC商戶",
+		"en": "OTC Merchant",
+		"kr": "OTC 판매자",
+		"ja": "OTC業者",
+		"ru": "Продавец",
+		"es": "Comerciante",
+		"tr": "OTC Satıcı"
+	},
+	"游戏说明": {
+		"zh-cn": "游戏说明",
+		"zh-hk": "遊戲說明",
+		"en": "Tutorial",
+		"kr": "게임설명",
+		"ja": "チュートリアル",
+		"ru": "Обучение",
+		"es": "Tutorial",
+		"tr": "Rehber"
+	},
+	"商务合作": {
+		"zh-cn": "商务合作",
+		"zh-hk": "商務合作",
+		"en": "Business",
+		"kr": "제휴",
+		"ja": "ビジネス",
+		"ru": "Партнёрам",
+		"es": "Negocios",
+		"tr": "İşbirliği"
+	},
+	"模拟游戏": {
+		"zh-cn": "模拟游戏",
+		"zh-hk": "模擬遊戲",
+		"en": "Simulation",
+		"kr": "시뮬레이션",
+		"ja": "シミュレーション",
+		"ru": "Симулятор",
+		"es": "Simulación",
+		"tr": "Simülasyon"
+	},
+	"请输入关键词": {
+		"zh-cn": "请输入关键词",
+		"zh-hk": "請輸入關鍵詞",
+		"en": "Enter keywords",
+		"kr": "키워드 입력",
+		"ja": "キーワード入力",
+		"ru": "Введите запрос",
+		"es": "Buscar",
+		"tr": "Kelime girin"
+	},
+	"陌生人": {
+		"zh-cn": "陌生人",
+		"zh-hk": "陌生人",
+		"en": "Stranger",
+		"kr": "陌生人",
+		"ja": "知らない人",
+		"ru": "Незнакомец",
+		"es": "Desconocido",
+		"tr": "Yabancı"
+	},
+	"您已赚取": {
+		"zh-cn": "您已赚取",
+		"zh-hk": "您已賺取",
+		"en": "You earned",
+		"kr": "획득 금액",
+		"ja": "獲得済み",
+		"ru": "Вы заработали",
+		"es": "Has ganado",
+		"tr": "Kazandınız"
+	},
+	"邀请更多好友，赚取更多奖励": {
+		"zh-cn": "邀请更多好友，赚取更多奖励",
+		"zh-hk": "邀請更多好友，賺取更多獎勵",
+		"en": "Invite more, earn more",
+		"kr": "더 초대하고, 더 받으세요",
+		"ja": "招待して報酬をGET",
+		"ru": "Приглашайте друзей и получайте бонусы",
+		"es": "Invita y gana más",
+		"tr": "Davet et, kazan"
+	},
+	"邀请历史": {
+		"zh-cn": "邀请历史",
+		"zh-hk": "邀請歷史",
+		"en": "Invite history",
+		"kr": "초대 내역",
+		"ja": "招待履歴",
+		"ru": "История",
+		"es": "Historial",
+		"tr": "Geçmiş"
+	},
+	"您已邀请过的好友": {
+		"zh-cn": "您已邀请过的好友",
+		"zh-hk": "您已邀請過的好友",
+		"en": "Friends invited",
+		"kr": "초대한 친구",
+		"ja": "招待済み",
+		"ru": "Приглашённые",
+		"es": "Invitados",
+		"tr": "Davet edilenler"
+	},
+	"用户": {
+		"zh-cn": "用户",
+		"zh-hk": "用戶",
+		"en": "User",
+		"kr": "사용자",
+		"ja": "ユーザー",
+		"ru": "Пользователь",
+		"es": "Usuario",
+		"tr": "Kullanıcı"
+	},
+	"商户列表": {
+		"zh-cn": "商户列表",
+		"zh-hk": "商戶列表",
+		"en": "Merchants",
+		"kr": "판매자 목록",
+		"ja": "業者一覧",
+		"ru": "Продавцы",
+		"es": "Comerciantes",
+		"tr": "Satıcılar"
+	},
+	"售出": {
+		"zh-cn": "售出",
+		"zh-hk": "售出",
+		"en": "Sell",
+		"kr": "판매",
+		"ja": "売る",
+		"ru": "Продать",
+		"es": "Vender",
+		"tr": "Sat"
+	},
+	"金矿": {
+		"zh-cn": "金矿",
+		"zh-hk": "金礦",
+		"en": "Gold",
+		"kr": "금",
+		"ja": "金",
+		"ru": "Золото",
+		"es": "Oro",
+		"tr": "Altın"
+	},
+	"使用": {
+		"zh-cn": "使用",
+		"zh-hk": "使用",
+		"en": "Use",
+		"kr": "사용",
+		"ja": "使う",
+		"ru": "Исп.",
+		"es": "Usar",
+		"tr": "Kullan"
+	},
+	"快捷交易": {
+		"zh-cn": "快捷交易",
+		"zh-hk": "快捷交易",
+		"en": "Quick Trade",
+		"kr": "퀵 거래",
+		"ja": "クイック取引",
+		"ru": "Быстро",
+		"es": "Rápido",
+		"tr": "Hızlı İşlem"
+	},
+	"购买": {
+		"zh-cn": "购买",
+		"zh-hk": "購買",
+		"en": "Buy",
+		"kr": "구매",
+		"ja": "買う",
+		"ru": "Купить",
+		"es": "Comprar",
+		"tr": "Al"
+	},
+	"市场": {
+		"zh-cn": "市场",
+		"zh-hk": "市場",
+		"en": "Market",
+		"kr": "마켓",
+		"ja": "マーケット",
+		"ru": "Рынок",
+		"es": "Mercado",
+		"tr": "Piyasa"
+	},
+	"最优价格的商家": {
+		"zh-cn": "最优价格的商家",
+		"zh-hk": "最優價格的商家",
+		"en": "Best offers",
+		"kr": "최적가 판매자",
+		"ja": "最安値の業者",
+		"ru": "Лучшая цена",
+		"es": "Mejor oferta",
+		"tr": "En iyi fiyat"
+	},
+	"快捷交易为您自动匹配当前": {
+		"zh-cn": "快捷交易为您自动匹配当前",
+		"zh-hk": "快捷交易為您自動匹配當前",
+		"en": "Quickly match with",
+		"kr": "자동 매칭:",
+		"ja": "自動マッチング：",
+		"ru": "Автоподбор:",
+		"es": "Coincidencia automática:",
+		"tr": "Otomatik eşleşme:"
+	},
+	"出售": {
+		"zh-cn": "出售",
+		"zh-hk": "出售",
+		"en": "Sell",
+		"kr": "판매",
+		"ja": "売却",
+		"ru": "Продажа",
+		"es": "Vender",
+		"tr": "Satış"
+	},
+	"我要支付": {
+		"zh-cn": "我要支付",
+		"zh-hk": "我要支付",
+		"en": "I pay",
+		"kr": "내가 결제",
+		"ja": "支払う",
+		"ru": "Я плачу",
+		"es": "Yo pago",
+		"tr": "Ben öderim"
+	},
+	"可用余额": {
+		"zh-cn": "可用余额",
+		"zh-hk": "可用餘額",
+		"en": "Balance",
+		"kr": "가용 잔액",
+		"ja": "残高",
+		"ru": "Баланс",
+		"es": "Saldo",
+		"tr": "Bakiye"
+	},
+	"我将收到": {
+		"zh-cn": "我将收到",
+		"zh-hk": "我將收到",
+		"en": "I receive",
+		"kr": "내가 받음",
+		"ja": "受取額",
+		"ru": "Я получу",
+		"es": "Recibo",
+		"tr": "Ben alırım"
+	},
+	"选择": {
+		"zh-cn": "选择",
+		"zh-hk": "選擇",
+		"en": "Select",
+		"kr": "선택",
+		"ja": "選択",
+		"ru": "Выбрать",
+		"es": "Elegir",
+		"tr": "Seç"
+	},
+	"付款": {
+		"zh-cn": "付款",
+		"zh-hk": "付款",
+		"en": "Pay",
+		"kr": "결제",
+		"ja": "支払い",
+		"ru": "Оплата",
+		"es": "Pagar",
+		"tr": "Öde"
+	},
+	"收款": {
+		"zh-cn": "收款",
+		"zh-hk": "收款",
+		"en": "Receive",
+		"kr": "수취",
+		"ja": "受取",
+		"ru": "Получить",
+		"es": "Recibir",
+		"tr": "Al"
+	},
+	"方式": {
+		"zh-cn": "方式",
+		"zh-hk": "方式",
+		"en": "Method",
+		"kr": "방식",
+		"ja": "方法",
+		"ru": "Способ",
+		"es": "Método",
+		"tr": "Yöntem"
+	},
+	"预计单价": {
+		"zh-cn": "预计单价",
+		"zh-hk": "預計單價",
+		"en": "Est. price",
+		"kr": "예상 단가",
+		"ja": "予定単価",
+		"ru": "Цена",
+		"es": "Precio est.",
+		"tr": "Tahmini fiyat"
+	},
+	"支付方式": {
+		"zh-cn": "支付方式",
+		"zh-hk": "支付方式",
+		"en": "Payment",
+		"kr": "결제 방식",
+		"ja": "支払方法",
+		"ru": "Оплата",
+		"es": "Pago",
+		"tr": "Ödeme"
+	},
+	"我需要支付": {
+		"zh-cn": "我需要支付",
+		"zh-hk": "我需要支付",
+		"en": "Total pay",
+		"kr": "결제 금액",
+		"ja": "支払総額",
+		"ru": "К оплате",
+		"es": "Total a pagar",
+		"tr": "Ödenecek"
+	},
+	"确认": {
+		"zh-cn": "确认",
+		"zh-hk": "確認",
+		"en": "Confirm",
+		"kr": "확인",
+		"ja": "確認",
+		"ru": "Ок",
+		"es": "Confirmar",
+		"tr": "Onay"
+	},
+	"C2C": {
+		"zh-cn": "C2C",
+		"zh-hk": "C2C",
+		"en": "C2C",
+		"kr": "C2C",
+		"ja": "C2C",
+		"ru": "C2C",
+		"es": "C2C",
+		"tr": "C2C"
+	},
+	"P2P": {
+		"zh-cn": "P2P",
+		"zh-hk": "P2P",
+		"en": "P2P",
+		"kr": "P2P",
+		"ja": "P2P",
+		"ru": "P2P",
+		"es": "P2P",
+		"tr": "P2P"
+	},
+	"游戏回合": {
+		"zh-cn": "游戏回合",
+		"zh-hk": "遊戲回合",
+		"en": "Round",
+		"kr": "라운드",
+		"ja": "ラウンド",
+		"ru": "Раунд",
+		"es": "Ronda",
+		"tr": "Tur"
+	},
+	"金矿余量": {
+		"zh-cn": "金矿余量",
+		"zh-hk": "金礦餘量",
+		"en": "Gold Left",
+		"kr": "남은 금",
+		"ja": "残り金",
+		"ru": "Остаток",
+		"es": "Oro restante",
+		"tr": "Kalan Altın"
+	},
+	"加载中": {
+		"zh-cn": "加载中",
+		"zh-hk": "載入中",
+		"en": "Loading...",
+		"kr": "로딩 중",
+		"ja": "読み込み中",
+		"ru": "Загрузка...",
+		"es": "Cargando...",
+		"tr": "Yükleniyor..."
+	},
+	"没有更多数据了": {
+		"zh-cn": "没有更多数据了",
+		"zh-hk": "沒有更多數據了",
+		"en": "No more data",
+		"kr": "데이터 없음",
+		"ja": "データなし",
+		"ru": "Нет данных",
+		"es": "Sin datos",
+		"tr": "Veri yok"
+	},
+	"暂无流水记录": {
+		"zh-cn": "暂无流水记录",
+		"zh-hk": "暫無流水記錄",
+		"en": "No records",
+		"kr": "내역 없음",
+		"ja": "履歴なし",
+		"ru": "Нет записей",
+		"es": "Sin registros",
+		"tr": "Kayıt yok"
+	},
+	"游戏获得": {
+		"zh-cn": "游戏获得",
+		"zh-hk": "遊戲獲得",
+		"en": "Game Gain",
+		"kr": "게임 획득",
+		"ja": "ゲーム獲得",
+		"ru": "Выигрыш",
+		"es": "Ganado",
+		"tr": "Oyun Kazancı"
+	},
+	"游戏投入": {
+		"zh-cn": "游戏投入",
+		"zh-hk": "遊戲投入",
+		"en": "Game Cost",
+		"kr": "게임 투입",
+		"ja": "ゲーム投入",
+		"ru": "Затраты",
+		"es": "Invertido",
+		"tr": "Oyun Maliyeti"
+	},
+	"其他": {
+		"zh-cn": "其他",
+		"zh-hk": "其他",
+		"en": "Other",
+		"kr": "기타",
+		"ja": "その他",
+		"ru": "Другое",
+		"es": "Otros",
+		"tr": "Diğer"
+	},
+	"兑换金矿": {
+		"zh-cn": "兑换金矿",
+		"zh-hk": "兌換金礦",
+		"en": "Redeem",
+		"kr": "환전",
+		"ja": "交換",
+		"ru": "Обменять",
+		"es": "Canjear",
+		"tr": "Bozdur"
+	},
+	"USDT与金矿兑换比例为": {
+		"zh-cn": "USDT与金矿兑换比例为",
+		"zh-hk": "USDT與金礦兌換比例為",
+		"en": "Rate: 1 USDT =",
+		"kr": "환율: 1 USDT =",
+		"ja": "レート: 1 USDT =",
+		"ru": "Курс: 1 USDT =",
+		"es": "Tasa: 1 USDT =",
+		"tr": "Kur: 1 USDT ="
+	},
+	"地址": {
+		"zh-cn": "地址",
+		"zh-hk": "地址",
+		"en": "Address",
+		"kr": "주소",
+		"ja": "アドレス",
+		"ru": "Адрес",
+		"es": "Dirección",
+		"tr": "Adres"
+	},
+	"其他数量": {
+		"zh-cn": "其他数量",
+		"zh-hk": "其他數量",
+		"en": "Other amount",
+		"kr": "다른 수량",
+		"ja": "その他の数量",
+		"ru": "Другое",
+		"es": "Otra cantidad",
+		"tr": "Diğer miktar"
+	},
+	"近期记录": {
+		"zh-cn": "近期记录",
+		"zh-hk": "近期記錄",
+		"en": "Recent",
+		"kr": "최근 기록",
+		"ja": "最近の記録",
+		"ru": "Недавние",
+		"es": "Recientes",
+		"tr": "Son Kayıtlar"
+	},
+	"全部": {
+		"zh-cn": "全部",
+		"zh-hk": "全部",
+		"en": "All",
+		"kr": "전체",
+		"ja": "すべて",
+		"ru": "Все",
+		"es": "Todo",
+		"tr": "Tümü"
+	},
+	"时间": {
+		"zh-cn": "时间",
+		"zh-hk": "時間",
+		"en": "Time",
+		"kr": "시간",
+		"ja": "時間",
+		"ru": "Время",
+		"es": "Hora",
+		"tr": "Zaman"
+	},
+	"数量": {
+		"zh-cn": "数量",
+		"zh-hk": "數量",
+		"en": "Amount",
+		"kr": "수량",
+		"ja": "数量",
+		"ru": "Сумма",
+		"es": "Cantidad",
+		"tr": "Miktar"
+	},
+	"状态": {
+		"zh-cn": "状态",
+		"zh-hk": "狀態",
+		"en": "Status",
+		"kr": "상태",
+		"ja": "状態",
+		"ru": "Статус",
+		"es": "Estado",
+		"tr": "Durum"
+	},
+	"待确认": {
+		"zh-cn": "待确认",
+		"zh-hk": "待確認",
+		"en": "Pending",
+		"kr": "대기 중",
+		"ja": "確認待ち",
+		"ru": "Ожидание",
+		"es": "Pendiente",
+		"tr": "Beklemede"
+	},
+	"成功充值": {
+		"zh-cn": "成功充值",
+		"zh-hk": "成功充值",
+		"en": "Success",
+		"kr": "완료",
+		"ja": "成功",
+		"ru": "Успешно",
+		"es": "Éxito",
+		"tr": "Başarılı"
+	},
+	"充值失败": {
+		"zh-cn": "充值失败",
+		"zh-hk": "充值失敗",
+		"en": "Failed",
+		"kr": "실패",
+		"ja": "失敗",
+		"ru": "Ошибка",
+		"es": "Falló",
+		"tr": "Başarısız"
+	},
+	"订单取消": {
+		"zh-cn": "订单取消",
+		"zh-hk": "訂單取消",
+		"en": "Cancelled",
+		"kr": "취소됨",
+		"ja": "キャンセル",
+		"ru": "Отмена",
+		"es": "Cancelado",
+		"tr": "İptal"
+	},
+	"订单失效": {
+		"zh-cn": "订单失效",
+		"zh-hk": "訂單失效",
+		"en": "Expired",
+		"kr": "만료됨",
+		"ja": "期限切れ",
+		"ru": "Истек",
+		"es": "Expirado",
+		"tr": "Süresi Doldu"
+	},
+	"订单异常": {
+		"zh-cn": "订单异常",
+		"zh-hk": "訂單異常",
+		"en": "Error",
+		"kr": "오류",
+		"ja": "エラー",
+		"ru": "Ошибка",
+		"es": "Error",
+		"tr": "Hata"
+	},
+	"我已完成储值": {
+		"zh-cn": "我已完成储值",
+		"zh-hk": "我已完成儲值",
+		"en": "I've paid",
+		"kr": "입금 완료",
+		"ja": "支払い済み",
+		"ru": "Я оплатил",
+		"es": "Pagado",
+		"tr": "Ödedim"
+	},
+	"已提交储值": {
+		"zh-cn": "已提交储值",
+		"zh-hk": "已提交儲值",
+		"en": "Submitted",
+		"kr": "제출됨",
+		"ja": "送信済み",
+		"ru": "Отправлено",
+		"es": "Enviado",
+		"tr": "İletildi"
+	},
+	"请输入USDT数量": {
+		"zh-cn": "请输入USDT数量",
+		"zh-hk": "請輸入USDT數量",
+		"en": "Enter USDT amount",
+		"kr": "USDT 금액 입력",
+		"ja": "USDT数を入力",
+		"ru": "Введите сумму USDT",
+		"es": "Ingrese cantidad USDT",
+		"tr": "USDT miktarı girin"
+	},
+	"您有一笔出售订单，等待对方支付": {
+		"zh-cn": "您有一笔出售订单，等待对方支付",
+		"zh-hk": "您有一筆出售訂單，等待對方支付",
+		"en": "Sell order: awaiting payment",
+		"kr": "판매 주문: 결제 대기 중",
+		"ja": "売り注文: 支払い待ち",
+		"ru": "Продажа: ожидание оплаты",
+		"es": "Venta: esperando pago",
+		"tr": "Satış emri: ödeme bekleniyor"
+	},
+	"对方正在向你转账，请注意查收": {
+		"zh-cn": "对方正在向你转账，请注意查收",
+		"zh-hk": "對方正在向你轉賬，請注意查收",
+		"en": "Transfer in progress, check soon",
+		"kr": "송금 중, 확인하세요",
+		"ja": "送金中、ご確認ください",
+		"ru": "Перевод, проверьте",
+		"es": "Transferencia, verifique",
+		"tr": "Transfer yapılıyor, kontrol edin"
+	},
+	"您有一笔待支付订单，请及时支付": {
+		"zh-cn": "您有一笔待支付订单，请及时支付",
+		"zh-hk": "您有一筆待支付訂單，請及時支付",
+		"en": "Pending payment, pay now",
+		"kr": "결제 대기, 지금 결제하세요",
+		"ja": "支払い待ち、今すぐ支払ってください",
+		"ru": "Ожидание оплаты",
+		"es": "Pago pendiente",
+		"tr": "Ödeme bekleniyor, ödeyin"
+	},
+	"去付款": {
+		"zh-cn": "去付款",
+		"zh-hk": "去付款",
+		"en": "Pay now",
+		"kr": "결제하기",
+		"ja": "支払う",
+		"ru": "Оплатить",
+		"es": "Pagar",
+		"tr": "Öde"
+	},
+	"即将完成本单交易": {
+		"zh-cn": "即将完成本单交易",
+		"zh-hk": "即將完成本單交易",
+		"en": "Completing order...",
+		"kr": "주문 완료 중...",
+		"ja": "注文完了中...",
+		"ru": "Завершение...",
+		"es": "Completando...",
+		"tr": "Tamamlanıyor..."
+	},
+	"已付款，等待对方确认收款": {
+		"zh-cn": "已付款，等待对方确认收款",
+		"zh-hk": "已付款，等待對方確認收款",
+		"en": "Paid, awaiting confirmation",
+		"kr": "결제 완료, 확인 대기 중",
+		"ja": "支払済み、確認待ち",
+		"ru": "Оплачено, ожидание",
+		"es": "Pagado, esperando",
+		"tr": "Ödendi, onay bekleniyor"
+	},
+	"对方已完成付款，请确认收款": {
+		"zh-cn": "对方已完成付款，请确认收款",
+		"zh-hk": "對方已完成付款，請確認收款",
+		"en": "Payment received, confirm",
+		"kr": "입금 확인, 확인하세요",
+		"ja": "入金確認、確認してください",
+		"ru": "Получено, подтвердите",
+		"es": "Recibido, confirme",
+		"tr": "Ödeme alındı, onaylayın"
+	},
+	"订单号": {
+		"zh-cn": "订单号",
+		"zh-hk": "訂單號",
+		"en": "Order ID",
+		"kr": "주문번호",
+		"ja": "注文ID",
+		"ru": "№ заказа",
+		"es": "Nº pedido",
+		"tr": "Sipariş No"
+	},
+	"该订单已被取消": {
+		"zh-cn": "该订单已被取消",
+		"zh-hk": "該訂單已被取消",
+		"en": "Order cancelled",
+		"kr": "주문 취소됨",
+		"ja": "注文はキャンセルされました",
+		"ru": "Заказ отменён",
+		"es": "Pedido cancelado",
+		"tr": "Sipariş iptal edildi"
+	},
+	"交易完成": {
+		"zh-cn": "交易完成",
+		"zh-hk": "交易完成",
+		"en": "Completed",
+		"kr": "완료",
+		"ja": "完了",
+		"ru": "Завершено",
+		"es": "Completado",
+		"tr": "Tamamlandı"
+	},
+	"已经完成交易": {
+		"zh-cn": "已经完成交易",
+		"zh-hk": "已經完成交易",
+		"en": "Transaction done",
+		"kr": "거래 완료",
+		"ja": "取引完了",
+		"ru": "Готово",
+		"es": "Listo",
+		"tr": "İşlem bitti"
+	},
+	"订单": {
+		"zh-cn": "订单",
+		"zh-hk": "訂單",
+		"en": "Order",
+		"kr": "주문",
+		"ja": "注文",
+		"ru": "Заказ",
+		"es": "Pedido",
+		"tr": "Sipariş"
+	},
+	"在此处输入消息": {
+		"zh-cn": "在此处输入消息",
+		"zh-hk": "在此處輸入訊息",
+		"en": "Type here...",
+		"kr": "입력하세요...",
+		"ja": "入力...",
+		"ru": "Введите...",
+		"es": "Escriba...",
+		"tr": "Yazın..."
+	},
+	"订单详情": {
+		"zh-cn": "订单详情",
+		"zh-hk": "訂單詳情",
+		"en": "Order details",
+		"kr": "주문 상세",
+		"ja": "注文詳細",
+		"ru": "Детали",
+		"es": "Detalles",
+		"tr": "Detaylar"
+	},
+	"商家昵称": {
+		"zh-cn": "商家昵称",
+		"zh-hk": "商家暱稱",
+		"en": "Merchant",
+		"kr": "판매자",
+		"ja": "業者名",
+		"ru": "Продавец",
+		"es": "Comerciante",
+		"tr": "Satıcı"
+	},
+	"订单类型": {
+		"zh-cn": "订单类型",
+		"zh-hk": "訂單類型",
+		"en": "Type",
+		"kr": "유형",
+		"ja": "タイプ",
+		"ru": "Тип",
+		"es": "Tipo",
+		"tr": "Tür"
+	},
+	"订单状态": {
+		"zh-cn": "订单状态",
+		"zh-hk": "訂單狀態",
+		"en": "Order Status",
+		"kr": "주문 상태",
+		"ja": "注文ステータス",
+		"ru": "Статус заказа",
+		"es": "Estado del pedido",
+		"tr": "Sipariş Durumu"
+	},
+	"交易数量": {
+		"zh-cn": "交易数量",
+		"zh-hk": "交易數量",
+		"en": "Amount",
+		"kr": "수량",
+		"ja": "数量",
+		"ru": "Кол-во",
+		"es": "Cantidad",
+		"tr": "Miktar"
+	},
+	"交易单价": {
+		"zh-cn": "交易单价",
+		"zh-hk": "交易單價",
+		"en": "Price",
+		"kr": "단가",
+		"ja": "単価",
+		"ru": "Цена",
+		"es": "Precio",
+		"tr": "Fiyat"
+	},
+	"交易金额": {
+		"zh-cn": "交易金额",
+		"zh-hk": "交易金額",
+		"en": "Total",
+		"kr": "총액",
+		"ja": "合計",
+		"ru": "Сумма",
+		"es": "Total",
+		"tr": "Toplam"
+	},
+	"交易方式": {
+		"zh-cn": "交易方式",
+		"zh-hk": "交易方式",
+		"en": "Method",
+		"kr": "방식",
+		"ja": "方法",
+		"ru": "Способ",
+		"es": "Método",
+		"tr": "Yöntem"
+	},
+	"交易账户": {
+		"zh-cn": "交易账户",
+		"zh-hk": "交易賬戶",
+		"en": "Account",
+		"kr": "계좌",
+		"ja": "アカウント",
+		"ru": "Счёт",
+		"es": "Cuenta",
+		"tr": "Hesap"
+	},
+	"下单时间": {
+		"zh-cn": "下单时间",
+		"zh-hk": "下單時間",
+		"en": "Order time",
+		"kr": "주문 시간",
+		"ja": "注文時間",
+		"ru": "Заказан",
+		"es": "Pedido",
+		"tr": "Sipariş zamanı"
+	},
+	"支付时间": {
+		"zh-cn": "支付时间",
+		"zh-hk": "支付時間",
+		"en": "Paid at",
+		"kr": "결제 시간",
+		"ja": "支払い時間",
+		"ru": "Оплачен",
+		"es": "Pagado",
+		"tr": "Ödeme zamanı"
+	},
+	"确认时间": {
+		"zh-cn": "确认时间",
+		"zh-hk": "確認時間",
+		"en": "Confirmed at",
+		"kr": "확인 시간",
+		"ja": "確認時間",
+		"ru": "Подтверждён",
+		"es": "Confirmado",
+		"tr": "Onay zamanı"
+	},
+	"取消订单": {
+		"zh-cn": "取消订单",
+		"zh-hk": "取消訂單",
+		"en": "Cancel",
+		"kr": "취소",
+		"ja": "キャンセル",
+		"ru": "Отмена",
+		"es": "Cancelar",
+		"tr": "İptal"
+	},
+	"完成支付": {
+		"zh-cn": "完成支付",
+		"zh-hk": "完成支付",
+		"en": "Mark paid",
+		"kr": "결제 완료",
+		"ja": "支払い完了",
+		"ru": "Оплатил",
+		"es": "Pagado",
+		"tr": "Ödendi"
+	},
+	"订单申诉": {
+		"zh-cn": "订单申诉",
+		"zh-hk": "訂單申訴",
+		"en": "Appeal",
+		"kr": "이의신청",
+		"ja": "異議申立",
+		"ru": "Спор",
+		"es": "Apelar",
+		"tr": "İtiraz"
+	},
+	"确认收款": {
+		"zh-cn": "确认收款",
+		"zh-hk": "確認收款",
+		"en": "Confirm receipt",
+		"kr": "수취 확인",
+		"ja": "受取確認",
+		"ru": "Подтвердить",
+		"es": "Confirmar",
+		"tr": "Onayla"
+	},
+	"稍后": {
+		"zh-cn": "稍后",
+		"zh-hk": "稍後",
+		"en": "Later",
+		"kr": "나중에",
+		"ja": "後で",
+		"ru": "Позже",
+		"es": "Después",
+		"tr": "Sonra"
+	},
+	"取消": {
+		"zh-cn": "取消",
+		"zh-hk": "取消",
+		"en": "Cancel",
+		"kr": "취소",
+		"ja": "キャンセル",
+		"ru": "Отмена",
+		"es": "Cancelar",
+		"tr": "İptal"
+	},
+	"是否确认取消该订单": {
+		"zh-cn": "是否确认取消该订单",
+		"zh-hk": "是否確認取消該訂單",
+		"en": "Cancel this order?",
+		"kr": "주문을 취소할까요?",
+		"ja": "注文をキャンセルしますか？",
+		"ru": "Отменить заказ?",
+		"es": "¿Cancelar pedido?",
+		"tr": "Sipariş iptal edilsin mi?"
+	},
+	"是否确认完成付款": {
+		"zh-cn": "是否确认完成付款",
+		"zh-hk": "是否確認完成付款",
+		"en": "Confirm payment?",
+		"kr": "결제를 완료할까요?",
+		"ja": "支払いを完了しますか？",
+		"ru": "Подтвердить оплату?",
+		"es": "¿Confirmar pago?",
+		"tr": "Ödeme onaylansın mı?"
+	},
+	"是否确认完成订单": {
+		"zh-cn": "是否确认完成订单",
+		"zh-hk": "是否確認完成訂單",
+		"en": "Complete order?",
+		"kr": "주문을 완료할까요?",
+		"ja": "注文を完了しますか？",
+		"ru": "Завершить заказ?",
+		"es": "¿Completar pedido?",
+		"tr": "Sipariş tamamlansın mı?"
+	},
+	"是否确认申诉该订单": {
+		"zh-cn": "是否确认申诉该订单",
+		"zh-hk": "是否確認申訴該訂單",
+		"en": "Appeal this order?",
+		"kr": "이의신청할까요?",
+		"ja": "異議を申し立てますか？",
+		"ru": "Открыть спор?",
+		"es": "¿Apelar pedido?",
+		"tr": "İtiraz edilsin mi?"
+	},
+	"客户卖出": {
+		"zh-cn": "客户卖出",
+		"zh-hk": "客戶賣出",
+		"en": "Client Sell",
+		"kr": "고객 판매",
+		"ja": "顧客売り",
+		"ru": "Клиент продаёт",
+		"es": "Cliente vende",
+		"tr": "Müşteri Satış"
+	},
+	"客户买入": {
+		"zh-cn": "客户买入",
+		"zh-hk": "客戶買入",
+		"en": "Client Buy",
+		"kr": "고객 구매",
+		"ja": "顧客買い",
+		"ru": "Клиент покупает",
+		"es": "Cliente compra",
+		"tr": "Müşteri Alış"
+	},
+	"复制成功": {
+		"zh-cn": "复制成功",
+		"zh-hk": "複製成功",
+		"en": "Copied",
+		"kr": "복사 완료",
+		"ja": "コピー完了",
+		"ru": "Скопировано",
+		"es": "Copiado",
+		"tr": "Kopyalandı"
+	},
+	"待支付": {
+		"zh-cn": "待支付",
+		"zh-hk": "待支付",
+		"en": "Pending",
+		"kr": "결제 대기",
+		"ja": "支払い待ち",
+		"ru": "Ожидание",
+		"es": "Pendiente",
+		"tr": "Beklemede"
+	},
+	"已完成": {
+		"zh-cn": "已完成",
+		"zh-hk": "已完成",
+		"en": "Completed",
+		"kr": "완료",
+		"ja": "完了",
+		"ru": "Готово",
+		"es": "Completado",
+		"tr": "Tamamlandı"
+	},
+	"已取消": {
+		"zh-cn": "已取消",
+		"zh-hk": "已取消",
+		"en": "Cancelled",
+		"kr": "취소됨",
+		"ja": "キャンセル",
+		"ru": "Отмена",
+		"es": "Cancelado",
+		"tr": "İptal"
+	},
+	"申诉中": {
+		"zh-cn": "申诉中",
+		"zh-hk": "申訴中",
+		"en": "Appealing",
+		"kr": "이의신청 중",
+		"ja": "異議申立中",
+		"ru": "Спор",
+		"es": "Apelando",
+		"tr": "İtirazda"
+	},
+	"未知状态": {
+		"zh-cn": "未知状态",
+		"zh-hk": "未知狀態",
+		"en": "Unknown",
+		"kr": "알 수 없음",
+		"ja": "不明",
+		"ru": "Неизвестно",
+		"es": "Desconocido",
+		"tr": "Bilinmiyor"
+	},
+	"图片太大,请控制在5MB内": {
+		"zh-cn": "图片太大,请控制在5MB内",
+		"zh-hk": "圖片太大,請控制在5MB內",
+		"en": "Image too large (max 5MB)",
+		"kr": "이미지가 너무 큼 (최대 5MB)",
+		"ja": "画像が大きすぎます (最大5MB)",
+		"ru": "Файл >5MB",
+		"es": "Imagen >5MB",
+		"tr": "Resim çok büyük (maks 5MB)"
+	},
+	"上传失败": {
+		"zh-cn": "上传失败",
+		"zh-hk": "上傳失敗",
+		"en": "Upload failed",
+		"kr": "업로드 실패",
+		"ja": "アップロード失敗",
+		"ru": "Ошибка",
+		"es": "Error",
+		"tr": "Yükleme başarısız"
+	},
+	"邀请好友，赢取专属奖励！": {
+		"zh-cn": "邀请好友，赢取专属奖励！",
+		"zh-hk": "邀請好友，贏取專屬獎勵！",
+		"en": "Invite friends and earn exclusive rewards!",
+		"kr": "친구를 초대하고 특별 보상을 받으세요!",
+		"ja": "友達を招待して限定報酬をゲット！",
+		"ru": "Приглашайте друзей и получайте бонусы!",
+		"es": "¡Invita amigos y gana recompensas exclusivas!",
+		"tr": "Arkadaşlarınızı davet edin, özel ödüller kazanın!"
+	},
+	"使用手机浏览器扫描二维码加入掘金，您的奖励触手可及。": {
+		"zh-cn": "使用手机浏览器扫描二维码加入掘金，您的奖励触手可及。",
+		"zh-hk": "使用手機瀏覽器掃描二維碼加入掘金，您的獎勵觸手可及。",
+		"en": "Scan the QR code with your mobile browser to join and claim your rewards.",
+		"kr": "모바일 브라우저로 QR코드를 스캔하여 참여하고 보상을 받아가세요.",
+		"ja": "モバイルブラウザでQRコードをスキャンして参加し、報酬を手に入れましょう。",
+		"ru": "Отсканируйте QR-код в мобильном браузере, чтобы присоединиться и получить награды.",
+		"es": "Escanea el código QR con tu navegador móvil para unirte y obtener tus recompensas.",
+		"tr": "QR kodu mobil tarayıcınızla tarayın, katılın ve ödüllerinizi alın."
+	},
+	"分享专属邀请链接或邀请码": {
+		"zh-cn": "分享专属邀请链接或邀请码",
+		"zh-hk": "分享專屬邀請鏈接或邀請碼",
+		"en": "Share your exclusive invite link or code",
+		"kr": "전용 초대 링크 또는 코드를 공유하세요",
+		"ja": "専用招待リンクまたはコードを共有",
+		"ru": "Поделитесь ссылкой или кодом",
+		"es": "Comparte tu enlace o código exclusivo",
+		"tr": "Özel davet bağlantınızı veya kodunuzu paylaşın"
+	},
+	"邀请链接": {
+		"zh-cn": "邀请链接",
+		"zh-hk": "邀請鏈接",
+		"en": "Invite Link",
+		"kr": "초대 링크",
+		"ja": "招待リンク",
+		"ru": "Ссылка",
+		"es": "Enlace",
+		"tr": "Davet Linki"
+	},
+	"邀请码": {
+		"zh-cn": "邀请码",
+		"zh-hk": "邀請碼",
+		"en": "Invite Code",
+		"kr": "초대 코드",
+		"ja": "招待コード",
+		"ru": "Код",
+		"es": "Código",
+		"tr": "Davet Kodu"
+	},
+	"tips: 奖励包括不固定数量的金矿、好友充值返利等多重福利。具体权益因账户等级而异，可前往会员权益查看详情以及最新活动。": {
+		"zh-cn": "tips: 奖励包括不固定数量的金矿、好友充值返利等多重福利。具体权益因账户等级而异，可前往会员权益查看详情以及最新活动。",
+		"zh-hk": "tips: 獎勵包括不固定數量的金礦、好友充值返利等多重福利。具體權益因賬戶等級而異，可前往會員權益查看詳情以及最新活動。",
+		"en": "Tips: Rewards include random gold bonuses, friend recharge rebates, and more. Benefits vary by account level. Check Membership Benefits for details and latest events.",
+		"kr": "tips: 보상은 랜덤 금광, 친구 충전 리베이트 등 다양합니다. 혜택은 계정 등급에 따라 다르며, 회원 혜택에서 자세한 내용과 최신 이벤트를 확인하세요.",
+		"ja": "tips: 報酬にはランダムな金鉱、友達のチャージ還元などが含まれます。特典はアカウントレベルによって異なります。詳細と最新情報は会員特典でご確認ください。",
+		"ru": "tips: Бонусы: случайное золото, возврат от пополнений друзей и др. Условия зависят от уровня аккаунта. Подробности в разделе 'Привилегии'.",
+		"es": "tips: Las recompensas incluyen oro aleatorio, reembolsos por recargas de amigos, etc. Los beneficios varían según el nivel de la cuenta. Consulta 'Beneficios' para más detalles.",
+		"tr": "tips: Ödüller rastgele altın, arkadaş yükleme iadeleri vb. içerir. Faydalar hesap seviyesine göre değişir. Detaylar için 'Üyelik Avantajları'na bakın."
+	},
+	"账户等级": {
+		"zh-cn": "账户等级",
+		"zh-hk": "賬戶等級",
+		"en": "Account Level",
+		"kr": "계정 등급",
+		"ja": "アカウントレベル",
+		"ru": "Уровень аккаунта",
+		"es": "Nivel de cuenta",
+		"tr": "Hesap Seviyesi"
+	},
+	"金矿兑U手续费": {
+		"zh-cn": "金矿兑U手续费",
+		"zh-hk": "金礦兌U手續費",
+		"en": "Gold-to-USDT Fee",
+		"kr": "금→USDT 수수료",
+		"ja": "金→USDT手数料",
+		"ru": "Комиссия за обмен золота на USDT",
+		"es": "Comisión por cambio de oro a USDT",
+		"tr": "Altın-USDT Dönüşüm Ücreti"
+	},
+	"下一等级": {
+		"zh-cn": "下一等级",
+		"zh-hk": "下一等級",
+		"en": "Next Level",
+		"kr": "다음 등급",
+		"ja": "次のレベル",
+		"ru": "Следующий уровень",
+		"es": "Siguiente nivel",
+		"tr": "Sonraki Seviye"
+	},
+	"当前等级": {
+		"zh-cn": "当前等级",
+		"zh-hk": "當前等級",
+		"en": "Current Level",
+		"kr": "현재 등급",
+		"ja": "現在のレベル",
+		"ru": "Текущий уровень",
+		"es": "Nivel actual",
+		"tr": "Mevcut Seviye"
+	},
+	"平台金矿兑U处理时间": {
+		"zh-cn": "平台金矿兑U处理时间",
+		"zh-hk": "平台金礦兌U處理時間",
+		"en": "Platform Gold-to-USDT Processing Time",
+		"kr": "플랫폼 금→USDT 처리 시간",
+		"ja": "プラットフォーム金→USDT処理時間",
+		"ru": "Время обработки обмена золота на USDT на платформе",
+		"es": "Tiempo de procesamiento de oro a USDT en plataforma",
+		"tr": "Platform Altın-USDT İşlem Süresi"
+	},
+	"单日最大金矿兑换数": {
+		"zh-cn": "单日最大金矿兑换数",
+		"zh-hk": "單日最大金礦兌換數",
+		"en": "Maximum Daily Gold Redemption Amount",
+		"kr": "일일 최대 금 환전 수량",
+		"ja": "1日の最大金交換量",
+		"ru": "Максимальное количество золота для обмена в день",
+		"es": "Cantidad máxima diaria de canje de oro",
+		"tr": "Günlük Maksimum Altın Bozdurma Miktarı"
+	},
+	"平台单日最大金矿交易订单数": {
+		"zh-cn": "平台单日最大金矿交易订单数",
+		"zh-hk": "平台單日最大金礦交易訂單數",
+		"en": "Maximum Daily Gold Trading Orders on Platform",
+		"kr": "플랫폼 일일 최대 금 거래 주문 수",
+		"ja": "プラットフォーム1日の最大金取引注文件数",
+		"ru": "Максимальное количество ордеров на торговлю золотом в день на платформе",
+		"es": "Máximo de órdenes diarias de trading de oro en plataforma",
+		"tr": "Platformda Günlük Maksimum Altın İşlem Emri Sayısı"
+	},
+	"C2C单日最大金矿交易订单数": {
+		"zh-cn": "C2C单日最大金矿交易订单数",
+		"zh-hk": "C2C單日最大金礦交易訂單數",
+		"en": "Maximum Daily C2C Gold Trading Orders",
+		"kr": "C2C 일일 최대 금 거래 주문 수",
+		"ja": "C2C 1日の最大金取引注文件数",
+		"ru": "Максимальное количество C2C ордеров на торговлю золотом в день",
+		"es": "Máximo de órdenes diarias C2C de trading de oro",
+		"tr": "Günlük Maksimum C2C Altın İşlem Emri Sayısı"
+	},
+	"用户等级": {
+		"zh-cn": "用户等级",
+		"zh-hk": "用戶等級",
+		"en": "User Level",
+		"kr": "사용자 등급",
+		"ja": "ユーザーレベル",
+		"ru": "Уровень",
+		"es": "Nivel de usuario",
+		"tr": "Kullanıcı Seviyesi"
+	},
+	"总流水(金矿)": {
+		"zh-cn": "总流水(金矿)",
+		"zh-hk": "總流水(金礦)",
+		"en": "Total Trading Volume (Gold)",
+		"kr": "총 거래량(금)",
+		"ja": "総取引量(金)",
+		"ru": "Общий оборот (в золоте)",
+		"es": "Volumen total de operaciones (oro)",
+		"tr": "Toplam İşlem Hacmi (Altın)"
+	},
+	"专业用户": {
+		"zh-cn": "专业用户",
+		"zh-hk": "專業用戶",
+		"en": "Professional User",
+		"kr": "전문 사용자",
+		"ja": "プロフェッショナルユーザー",
+		"ru": "Профессиональный пользователь",
+		"es": "Usuario profesional",
+		"tr": "Profesyonel Kullanıcı"
+	},
+	"关于用户等级": {
+		"zh-cn": "关于用户等级",
+		"zh-hk": "關於用戶等級",
+		"en": "About User Levels",
+		"kr": "사용자 등급 안내",
+		"ja": "ユーザーレベルについて",
+		"ru": "О уровнях пользователей",
+		"es": "Acerca de los niveles de usuario",
+		"tr": "Kullanıcı Seviyeleri Hakkında"
+	},
+	"小时": {
+		"zh-cn": "小时",
+		"zh-hk": "小時",
+		"en": "hour",
+		"kr": "시간",
+		"ja": "時間",
+		"ru": "ч",
+		"es": "h",
+		"tr": "saat"
+	},
+	"登录": {
+		"zh-cn": "登录",
+		"zh-hk": "登入",
+		"en": "Log In",
+		"kr": "로그인",
+		"ja": "ログイン",
+		"ru": "Войти",
+		"es": "Iniciar sesión",
+		"tr": "Giriş Yap"
+	},
+	"密码": {
+		"zh-cn": "密码",
+		"zh-hk": "密碼",
+		"en": "Password",
+		"kr": "비밀번호",
+		"ja": "パスワード",
+		"ru": "Пароль",
+		"es": "Contraseña",
+		"tr": "Şifre"
+	},
+	"没有账号？": {
+		"zh-cn": "没有账号？",
+		"zh-hk": "沒有帳號？",
+		"en": "No account?",
+		"kr": "계정이 없으신가요?",
+		"ja": "アカウントがありませんか？",
+		"ru": "Нет аккаунта?",
+		"es": "¿No tienes cuenta?",
+		"tr": "Hesabın yok mu?"
+	},
+	"注册": {
+		"zh-cn": "注册",
+		"zh-hk": "註冊",
+		"en": "Sign Up",
+		"kr": "회원가입",
+		"ja": "登録",
+		"ru": "Регистрация",
+		"es": "Registrarse",
+		"tr": "Kayıt Ol"
+	},
+	"或使用其他方式": {
+		"zh-cn": "或使用其他方式",
+		"zh-hk": "或使用其他方式",
+		"en": "or use other methods",
+		"kr": "또는 다른 방법 사용",
+		"ja": "または他の方法を使用",
+		"ru": "или другие способы",
+		"es": "u otros métodos",
+		"tr": "veya diğer yöntemler"
+	},
+	"验证码": {
+		"zh-cn": "验证码",
+		"zh-hk": "驗證碼",
+		"en": "Verification Code",
+		"kr": "인증번호",
+		"ja": "認証コード",
+		"ru": "Код подтверждения",
+		"es": "Código de verificación",
+		"tr": "Doğrulama Kodu"
+	},
+	"身份校验": {
+		"zh-cn": "身份校验",
+		"zh-hk": "身份校驗",
+		"en": "Identity Verification",
+		"kr": "신원 확인",
+		"ja": "本人確認",
+		"ru": "Проверка личности",
+		"es": "Verificación de identidad",
+		"tr": "Kimlik Doğrulama"
+	},
+	"邮箱": {
+		"zh-cn": "邮箱",
+		"zh-hk": "郵箱",
+		"en": "Email",
+		"kr": "이메일",
+		"ja": "メール",
+		"ru": "Email",
+		"es": "Correo",
+		"tr": "E-posta"
+	},
+	"手机号": {
+		"zh-cn": "手机号",
+		"zh-hk": "手機號",
+		"en": "Phone Number",
+		"kr": "휴대폰 번호",
+		"ja": "電話番号",
+		"ru": "Телефон",
+		"es": "Teléfono",
+		"tr": "Telefon"
+	},
+	"请填写邮箱": {
+		"zh-cn": "请填写邮箱",
+		"zh-hk": "請填寫郵箱",
+		"en": "Please enter your email",
+		"kr": "이메일을 입력하세요",
+		"ja": "メールアドレスを入力してください",
+		"ru": "Введите email",
+		"es": "Ingrese su correo",
+		"tr": "E-posta adresinizi girin"
+	},
+	"请填写手机号": {
+		"zh-cn": "请填写手机号",
+		"zh-hk": "請填寫手機號",
+		"en": "Please enter your phone number",
+		"kr": "휴대폰 번호를 입력하세요",
+		"ja": "電話番号を入力してください",
+		"ru": "Введите номер телефона",
+		"es": "Ingrese su teléfono",
+		"tr": "Telefon numaranızı girin"
+	},
+	"请填写密码": {
+		"zh-cn": "请填写密码",
+		"zh-hk": "請填寫密碼",
+		"en": "Please enter your password",
+		"kr": "비밀번호를 입력하세요",
+		"ja": "パスワードを入力してください",
+		"ru": "Введите пароль",
+		"es": "Ingrese su contraseña",
+		"tr": "Şifrenizi girin"
+	},
+	"正在获取验证码": {
+		"zh-cn": "正在获取验证码",
+		"zh-hk": "正在獲取驗證碼",
+		"en": "Sending code...",
+		"kr": "인증번호 전송 중...",
+		"ja": "コードを送信中...",
+		"ru": "Отправка кода...",
+		"es": "Enviando código...",
+		"tr": "Kod gönderiliyor..."
+	},
+	"验证码已发送": {
+		"zh-cn": "验证码已发送",
+		"zh-hk": "驗證碼已發送",
+		"en": "Code sent",
+		"kr": "인증번호 전송됨",
+		"ja": "コードを送信しました",
+		"ru": "Код отправлен",
+		"es": "Código enviado",
+		"tr": "Kod gönderildi"
+
+	},
+	"获取验证码": {
+		"zh-cn": "获取验证码",
+		"zh-hk": "獲取驗證碼",
+		"en": "Get Code",
+		"kr": "인증번호 받기",
+		"ja": "コードを取得",
+		"ru": "Получить код",
+		"es": "Obtener código",
+		"tr": "Kod Al"
+	},
+	"重新获取": {
+		"zh-cn": "重新获取",
+		"zh-hk": "重新獲取",
+		"en": "Resend",
+		"kr": "재전송",
+		"ja": "再送信",
+		"ru": "Отправить снова",
+		"es": "Reenviar",
+		"tr": "Yeniden Gönder"
+	},
+	"关联单号": {
+		"zh-cn": "关联单号",
+		"zh-hk": "關聯單號",
+		"en": "Reference No.",
+		"kr": "참조 번호",
+		"ja": "参照番号",
+		"ru": "Номер операции",
+		"es": "Nº de referencia",
+		"tr": "Referans No"
+	},
+	"账单类型": {
+		"zh-cn": "账单类型",
+		"zh-hk": "賬單類型",
+		"en": "Bill Type",
+		"kr": "내역 유형",
+		"ja": "明細タイプ",
+		"ru": "Тип операции",
+		"es": "Tipo",
+		"tr": "İşlem Türü"
+	},
+	"金矿余额": {
+		"zh-cn": "金矿余额",
+		"zh-hk": "金礦餘額",
+		"en": "Gold Balance",
+		"kr": "금 잔액",
+		"ja": "金残高",
+		"ru": "Баланс золота",
+		"es": "Saldo de oro",
+		"tr": "Altın Bakiyesi"
+	},
+	"流水记录": {
+		"zh-cn": "流水记录",
+		"zh-hk": "流水記錄",
+		"en": "Transaction History",
+		"kr": "거래 내역",
+		"ja": "取引履歴",
+		"ru": "История операций",
+		"es": "Historial",
+		"tr": "İşlem Geçmişi"
+	},
+	"开矿记录": {
+		"zh-cn": "开矿记录",
+		"zh-hk": "開礦記錄",
+		"en": "Mining History",
+		"kr": "채굴 기록",
+		"ja": "採掘履歴",
+		"ru": "История добычи",
+		"es": "Historial de minería",
+		"tr": "Madencilik Geçmişi"
+	},
+	"退出模拟": {
+		"zh-cn": "退出模拟",
+		"zh-hk": "退出模擬",
+		"en": "Exit Simulation",
+		"kr": "시뮬레이션 종료",
+		"ja": "シミュレーション終了",
+		"ru": "Выйти из симуляции",
+		"es": "Salir de simulación",
+		"tr": "Simülasyondan Çık"
+	},
+	"暂无内容": {
+		"zh-cn": "暂无内容",
+		"zh-hk": "暫無內容",
+		"en": "No content",
+		"kr": "내용 없음",
+		"ja": "コンテンツなし",
+		"ru": "Нет сообщений",
+		"es": "Sin contenido",
+		"tr": "İçerik yok"
+	},
+	"无标题通知": {
+		"zh-cn": "无标题通知",
+		"zh-hk": "無標題通知",
+		"en": "Untitled",
+		"kr": "제목 없음",
+		"ja": "タイトルなし",
+		"ru": "Без темы",
+		"es": "Sin título",
+		"tr": "Başlıksız"
+	},
+	"成为C2C交易商家": {
+		"zh-cn": "成为C2C交易商家",
+		"zh-hk": "成為C2C交易商戶",
+		"en": "Become a C2C Merchant",
+		"kr": "C2C 판매자 되기",
+		"ja": "C2C業者になる",
+		"ru": "Стать C2C продавцом",
+		"es": "Convertirse en comerciante C2C",
+		"tr": "C2C Satıcısı Ol"
+	},
+	"即刻申请": {
+		"zh-cn": "即刻申请",
+		"zh-hk": "即刻申請",
+		"en": "Apply Now",
+		"kr": "지금 신청",
+		"ja": "今すぐ申請",
+		"ru": "Подать заявку",
+		"es": "Solicitar ahora",
+		"tr": "Hemen Başvur"
+	},
+	"无手续费买卖金矿": {
+		"zh-cn": "无手续费买卖金矿",
+		"zh-hk": "無手續費買賣金礦",
+		"en": "Trade Gold with Zero Fees",
+		"kr": "수수료 없는 금 거래",
+		"ja": "手数料無料で金を取引",
+		"ru": "Торгуйте золотом без комиссии",
+		"es": "Comercio de oro sin comisiones",
+		"tr": "Sıfır ücretle altın al-sat"
+	},
+	"如何成为商家": {
+		"zh-cn": "如何成为商家",
+		"zh-hk": "如何成為商戶",
+		"en": "How to Become a Merchant",
+		"kr": "판매자 되는 방법",
+		"ja": "業者になるには",
+		"ru": "Как стать продавцом",
+		"es": "Cómo ser comerciante",
+		"tr": "Satıcı Nasıl Olunur"
+	},
+	"账户总金矿交易超过1000": {
+		"zh-cn": "账户总金矿交易超过1000",
+		"zh-hk": "賬戶總金礦交易超過1000",
+		"en": "Total gold traded > 1000",
+		"kr": "총 금 거래량 1000 이상",
+		"ja": "総金取引量1000以上",
+		"ru": "Общий объём торгов золотом > 1000",
+		"es": "Volumen total de oro > 1000",
+		"tr": "Toplam altın işlem hacmi > 1000"
+	},
+	"已达成": {
+		"zh-cn": "已达成",
+		"zh-hk": "已達成",
+		"en": "Achieved",
+		"kr": "달성됨",
+		"ja": "達成済み",
+		"ru": "Выполнено",
+		"es": "Cumplido",
+		"tr": "Tamamlandı"
+	},
+	"至少给出一种交易方式": {
+		"zh-cn": "至少给出一种交易方式",
+		"zh-hk": "至少給出一種交易方式",
+		"en": "At least 1 payment method",
+		"kr": "최소 1개 결제 방식 등록",
+		"ja": "最低1つの支払い方法を設定",
+		"ru": "Укажите минимум 1 способ оплаты",
+		"es": "Al menos 1 método de pago",
+		"tr": "En az 1 ödeme yöntemi belirtin"
+	},
+	"未完成": {
+		"zh-cn": "未完成",
+		"zh-hk": "未完成",
+		"en": "Not achieved",
+		"kr": "미달성",
+		"ja": "未達成",
+		"ru": "Не выполнено",
+		"es": "No cumplido",
+		"tr": "Tamamlanmadı"
+	},
+	"总交易成交率大于80%": {
+		"zh-cn": "总交易成交率大于80%",
+		"zh-hk": "總交易成交率大於80%",
+		"en": "Transaction completion rate > 80%",
+		"kr": "거래 완료율 80% 이상",
+		"ja": "取引完了率80%以上",
+		"ru": "Процент завершённых сделок > 80%",
+		"es": "Tasa de finalización > 80%",
+		"tr": "İşlem tamamlama oranı > %80"
+	},
+	"商家权益": {
+		"zh-cn": "商家权益",
+		"zh-hk": "商戶權益",
+		"en": "Merchant Benefits",
+		"kr": "판매자 혜택",
+		"ja": "業者特典",
+		"ru": "Преимущества продавца",
+		"es": "Beneficios para comerciantes",
+		"tr": "Satıcı Avantajları"
+	},
+	"除了 C2C 交易不收取任何手续费外以及可自行设置金矿得合理交易价位之外，申请成为商家并完成交易可概率额外获取一定量金矿": {
+		"zh-cn": "除了 C2C 交易不收取任何手续费外以及可自行设置金矿得合理交易价位之外，申请成为商家并完成交易可概率额外获取一定量金矿",
+		"zh-hk": "除了 C2C 交易不收取任何手續費外以及可自行設置金礦得合理交易價位之外，申請成為商戶並完成交易可概率額外獲取一定量金礦",
+		"en": "In addition to zero fees and the ability to set your own prices, merchants have a chance to earn extra gold for each completed transaction.",
+		"kr": "C2C 거래 수수료 면제 및 가격 직접 설정 외에도, 판매자는 거래 완료 시 추가 금을 확률적으로 획득할 수 있습니다.",
+		"ja": "C2C取引の手数料無料、価格の自由設定に加え、取引完了時に確率で追加の金を獲得できます。",
+		"ru": "Помимо отсутствия комиссий и возможности устанавливать свои цены, продавцы имеют шанс получать дополнительное золото за каждую завершённую сделку.",
+		"es": "Además de cero comisiones y poder fijar tus propios precios, los comerciantes tienen la posibilidad de obtener oro extra al completar cada transacción.",
+		"tr": "Sıfır komisyon ve kendi fiyatını belirleme avantajlarına ek olarak, satıcılar her tamamlanan işlemde ekstra altın kazanma şansına sahiptir."
+	},
+	"申请成功": {
+		"zh-cn": "申请成功",
+		"zh-hk": "申請成功",
+		"en": "Application Submitted",
+		"kr": "신청 완료",
+		"ja": "申請完了",
+		"ru": "Заявка отправлена",
+		"es": "Solicitud enviada",
+		"tr": "Başvuru Alındı"
+	},
+	"收款渠道": {
+		"zh-cn": "收款渠道",
+		"zh-hk": "收款渠道",
+		"en": "Payout Methods",
+		"kr": "수취 방식",
+		"ja": "受取方法",
+		"ru": "Способы получения",
+		"es": "Métodos de cobro",
+		"tr": "Tahsilat Yöntemleri"
+	},
+	"暂无收款渠道": {
+		"zh-cn": "暂无收款渠道",
+		"zh-hk": "暫無收款渠道",
+		"en": "No payout methods",
+		"kr": "수취 방식 없음",
+		"ja": "受取方法がありません",
+		"ru": "Нет способов",
+		"es": "Sin métodos",
+		"tr": "Tahsilat yöntemi yok"
+	},
+	"添加收款渠道以便接收款项": {
+		"zh-cn": "添加收款渠道以便接收款项",
+		"zh-hk": "添加收款渠道以便接收款項",
+		"en": "Add a method to receive payments",
+		"kr": "수취를 위해 방식을 추가하세요",
+		"ja": "支払いを受け取る方法を追加",
+		"ru": "Добавьте способ для получения",
+		"es": "Añade un método para cobrar",
+		"tr": "Ödeme almak için yöntem ekleyin"
+	},
+	"我的收款渠道": {
+		"zh-cn": "我的收款渠道",
+		"zh-hk": "我的收款渠道",
+		"en": "My Payout Methods",
+		"kr": "내 수취 방식",
+		"ja": "自分の受取方法",
+		"ru": "Мои способы",
+		"es": "Mis métodos",
+		"tr": "Tahsilat Yöntemlerim"
+	},
+	"使用中": {
+		"zh-cn": "使用中",
+		"zh-hk": "使用中",
+		"en": "Active",
+		"kr": "사용 중",
+		"ja": "使用中",
+		"ru": "Активно",
+		"es": "Activo",
+		"tr": "Aktif"
+	},
+	"未启用": {
+		"zh-cn": "未启用",
+		"zh-hk": "未啟用",
+		"en": "Inactive",
+		"kr": "비활성",
+		"ja": "未使用",
+		"ru": "Неактивно",
+		"es": "Inactivo",
+		"tr": "Pasif"
+	},
+	"编辑": {
+		"zh-cn": "编辑",
+		"zh-hk": "編輯",
+		"en": "Edit",
+		"kr": "편집",
+		"ja": "編集",
+		"ru": "Изменить",
+		"es": "Editar",
+		"tr": "Düzenle"
+	},
+	"删除": {
+		"zh-cn": "删除",
+		"zh-hk": "刪除",
+		"en": "Delete",
+		"kr": "삭제",
+		"ja": "削除",
+		"ru": "Удалить",
+		"es": "Eliminar",
+		"tr": "Sil"
+	},
+	"点击预览收款码": {
+		"zh-cn": "点击预览收款码",
+		"zh-hk": "點擊預覽收款碼",
+		"en": "Tap to preview QR",
+		"kr": "탭하여 QR 미리보기",
+		"ja": "タップしてQRプレビュー",
+		"ru": "Нажмите для предпросмотра",
+		"es": "Tocar para vista previa",
+		"tr": "Önizleme için dokunun"
+	},
+	"添加收款渠道": {
+		"zh-cn": "添加收款渠道",
+		"zh-hk": "添加收款渠道",
+		"en": "Add Method",
+		"kr": "방식 추가",
+		"ja": "方法を追加",
+		"ru": "Добавить",
+		"es": "Añadir",
+		"tr": "Yöntem Ekle"
+	},
+	"编辑收款渠道": {
+		"zh-cn": "编辑收款渠道",
+		"zh-hk": "編輯收款渠道",
+		"en": "Edit Method",
+		"kr": "방식 편집",
+		"ja": "方法を編集",
+		"ru": "Изменить",
+		"es": "Editar",
+		"tr": "Yöntemi Düzenle"
+	},
+	"例如：银行卡": {
+		"zh-cn": "例如：银行卡",
+		"zh-hk": "例如：銀行卡",
+		"en": "e.g. Bank Card",
+		"kr": "예: 은행 카드",
+		"ja": "例: 銀行カード",
+		"ru": "Напр.: Банк. карта",
+		"es": "Ej: Tarjeta bancaria",
+		"tr": "Örn: Banka Kartı"
+	},
+	"账户号码": {
+		"zh-cn": "账户号码",
+		"zh-hk": "賬戶號碼",
+		"en": "Account Number",
+		"kr": "계좌번호",
+		"ja": "口座番号",
+		"ru": "Номер счета",
+		"es": "Nº de cuenta",
+		"tr": "Hesap No"
+	},
+	"请输入账户号码": {
+		"zh-cn": "请输入账户号码",
+		"zh-hk": "請輸入賬戶號碼",
+		"en": "Enter account number",
+		"kr": "계좌번호 입력",
+		"ja": "口座番号を入力",
+		"ru": "Введите номер счета",
+		"es": "Ingrese nº de cuenta",
+		"tr": "Hesap no girin"
+	},
+	"收款码": {
+		"zh-cn": "收款码",
+		"zh-hk": "收款碼",
+		"en": "QR Code",
+		"kr": "QR 코드",
+		"ja": "QRコード",
+		"ru": "QR-код",
+		"es": "Código QR",
+		"tr": "QR Kod"
+	},
+	"上传收款码": {
+		"zh-cn": "上传收款码",
+		"zh-hk": "上傳收款碼",
+		"en": "Upload QR",
+		"kr": "QR 업로드",
+		"ja": "QRアップロード",
+		"ru": "Загрузить QR",
+		"es": "Subir QR",
+		"tr": "QR Yükle"
+	},
+	"启用状态": {
+		"zh-cn": "启用状态",
+		"zh-hk": "啟用狀態",
+		"en": "Status",
+		"kr": "상태",
+		"ja": "状態",
+		"ru": "Статус",
+		"es": "Estado",
+		"tr": "Durum"
+	},
+	"立即启用此收款渠道": {
+		"zh-cn": "立即启用此收款渠道",
+		"zh-hk": "立即啟用此收款渠道",
+		"en": "Activate now",
+		"kr": "지금 활성화",
+		"ja": "今すぐ有効化",
+		"ru": "Активировать",
+		"es": "Activar ahora",
+		"tr": "Şimdi aktifleştir"
+	},
+	"保存修改": {
+		"zh-cn": "保存修改",
+		"zh-hk": "保存修改",
+		"en": "Save changes",
+		"kr": "변경사항 저장",
+		"ja": "変更を保存",
+		"ru": "Сохранить",
+		"es": "Guardar",
+		"tr": "Kaydet"
+	},
+	"确认添加": {
+		"zh-cn": "确认添加",
+		"zh-hk": "確認添加",
+		"en": "Add",
+		"kr": "추가",
+		"ja": "追加",
+		"ru": "Добавить",
+		"es": "Añadir",
+		"tr": "Ekle"
+	},
+	"确定要删除这个收款渠道吗？删除后无法恢复。": {
+		"zh-cn": "确定要删除这个收款渠道吗？删除后无法恢复。",
+		"zh-hk": "確定要刪除這個收款渠道嗎？刪除後無法恢復。",
+		"en": "Delete this method? This action cannot be undone.",
+		"kr": "이 방식을 삭제할까요? 삭제 후 복구할 수 없습니다.",
+		"ja": "この方法を削除しますか？元に戻せません。",
+		"ru": "Удалить этот способ? Действие необратимо.",
+		"es": "¿Eliminar? No se puede deshacer.",
+		"tr": "Bu yöntem silinsin mi? Geri alınamaz."
+	},
+	"删除成功": {
+		"zh-cn": "删除成功",
+		"zh-hk": "刪除成功",
+		"en": "Deleted",
+		"kr": "삭제됨",
+		"ja": "削除完了",
+		"ru": "Удалено",
+		"es": "Eliminado",
+		"tr": "Silindi"
+	},
+	"删除失败": {
+		"zh-cn": "删除失败",
+		"zh-hk": "刪除失敗",
+		"en": "Delete failed",
+		"kr": "삭제 실패",
+		"ja": "削除失敗",
+		"ru": "Ошибка",
+		"es": "Error",
+		"tr": "Silinemedi"
+	},
+	"请填写完整信息": {
+		"zh-cn": "请填写完整信息",
+		"zh-hk": "請填寫完整信息",
+		"en": "Please fill all fields",
+		"kr": "모든 항목을 입력하세요",
+		"ja": "全て入力してください",
+		"ru": "Заполните все поля",
+		"es": "Complete todos los campos",
+		"tr": "Tüm alanları doldurun"
+	},
+	"修改成功": {
+		"zh-cn": "修改成功",
+		"zh-hk": "修改成功",
+		"en": "Updated",
+		"kr": "수정됨",
+		"ja": "更新完了",
+		"ru": "Обновлено",
+		"es": "Actualizado",
+		"tr": "Güncellendi"
+	},
+	"添加成功": {
+		"zh-cn": "添加成功",
+		"zh-hk": "添加成功",
+		"en": "Added",
+		"kr": "추가됨",
+		"ja": "追加完了",
+		"ru": "Добавлено",
+		"es": "Añadido",
+		"tr": "Eklendi"
+	},
+	"上传成功": {
+		"zh-cn": "上传成功",
+		"zh-hk": "上傳成功",
+		"en": "Uploaded",
+		"kr": "업로드됨",
+		"ja": "アップロード完了",
+		"ru": "Загружено",
+		"es": "Subido",
+		"tr": "Yüklendi"
+	},
+	"收款方式": {
+		"zh-cn": "收款方式",
+		"zh-hk": "收款方式",
+		"en": "Payment Method",
+		"kr": "결제 방식",
+		"ja": "支払い方法",
+		"ru": "Способ оплаты",
+		"es": "Método de pago",
+		"tr": "Ödeme Yöntemi"
+	},
+	"提示": {
+		"zh-cn": "提示",
+		"zh-hk": "提示",
+		"en": "Notice",
+		"kr": "알림",
+		"ja": "通知",
+		"ru": "Уведомление",
+		"es": "Aviso",
+		"tr": "Bildirim"
+	},
+	"内容": {
+		"zh-cn": "内容",
+		"zh-hk": "內容",
+		"en": "Content",
+		"kr": "내용",
+		"ja": "内容",
+		"ru": "Содержание",
+		"es": "Contenido",
+		"tr": "İçerik"
+	},
+	"身份认证": {
+		"zh-cn": "身份认证",
+		"zh-hk": "身份認證",
+		"en": "Identity Verification",
+		"kr": "신원 인증",
+		"ja": "本人確認",
+		"ru": "Верификация",
+		"es": "Verificación de identidad",
+		"tr": "Kimlik Doğrulama"
+	},
+	"认证时间：": {
+		"zh-cn": "认证时间：",
+		"zh-hk": "認證時間：",
+		"en": "Verified on:",
+		"kr": "인증 시간:",
+		"ja": "認証日時：",
+		"ru": "Дата:",
+		"es": "Fecha:",
+		"tr": "Doğrulama tarihi:"
+	},
+	"您已完成身份认证": {
+		"zh-cn": "您已完成身份认证",
+		"zh-hk": "您已完成身份認證",
+		"en": "Verification completed",
+		"kr": "인증 완료",
+		"ja": "認証済み",
+		"ru": "Верификация пройдена",
+		"es": "Verificado",
+		"tr": "Doğrulama tamamlandı"
+	},
+	"您的申请未被通过，请重新提交": {
+		"zh-cn": "您的申请未被通过，请重新提交",
+		"zh-hk": "您的申請未被通過，請重新提交",
+		"en": "Verification failed. Please re-submit.",
+		"kr": "인증 실패. 다시 제출하세요.",
+		"ja": "認証に失敗しました。再送信してください。",
+		"ru": "Отказ. Подайте заново.",
+		"es": "Rechazado. Reenvíe.",
+		"tr": "Doğrulama başarısız. Yeniden gönderin."
+	},
+	"申请中,请等待": {
+		"zh-cn": "申请中,请等待",
+		"zh-hk": "申請中,請等待",
+		"en": "Pending review",
+		"kr": "심사 중",
+		"ja": "審査中",
+		"ru": "На проверке",
+		"es": "En revisión",
+		"tr": "İncelemede"
+	},
+	"完成身份认证后，您将获得更多功能权限": {
+		"zh-cn": "完成身份认证后，您将获得更多功能权限",
+		"zh-hk": "完成身份認證後，您將獲得更多功能權限",
+		"en": "Verify to unlock more features",
+		"kr": "인증 완료 시 더 많은 기능 이용 가능",
+		"ja": "認証済みでより多くの機能を利用可",
+		"ru": "Верификация открывает больше возможностей",
+		"es": "Verifíquese para más funciones",
+		"tr": "Doğrulama ile daha fazla özellik açın"
+	},
+	"拒绝原因：": {
+		"zh-cn": "拒绝原因：",
+		"zh-hk": "拒絕原因：",
+		"en": "Reason:",
+		"kr": "거절 사유:",
+		"ja": "拒否理由：",
+		"ru": "Причина:",
+		"es": "Motivo:",
+		"tr": "Sebep:"
+	},
+	"认证信息": {
+		"zh-cn": "认证信息",
+		"zh-hk": "認證信息",
+		"en": "Details",
+		"kr": "인증 정보",
+		"ja": "認証情報",
+		"ru": "Данные",
+		"es": "Datos",
+		"tr": "Bilgiler"
+	},
+	"真实姓名": {
+		"zh-cn": "真实姓名",
+		"zh-hk": "真實姓名",
+		"en": "Full Name",
+		"kr": "실명",
+		"ja": "氏名",
+		"ru": "Имя",
+		"es": "Nombre",
+		"tr": "Ad Soyad"
+	},
+	"请输入您的真实姓名": {
+		"zh-cn": "请输入您的真实姓名",
+		"zh-hk": "請輸入您的真實姓名",
+		"en": "Enter your full name",
+		"kr": "실명을 입력하세요",
+		"ja": "氏名を入力",
+		"ru": "Введите имя",
+		"es": "Ingrese su nombre",
+		"tr": "Adınızı girin"
+	},
+	"请输入您的证件号码": {
+		"zh-cn": "请输入您的证件号码",
+		"zh-hk": "請輸入您的證件號碼",
+		"en": "Enter your ID number",
+		"kr": "신분증 번호 입력",
+		"ja": "ID番号を入力",
+		"ru": "Введите номер ID",
+		"es": "Ingrese su ID",
+		"tr": "Kimlik no girin"
+	},
+	"证件号": {
+		"zh-cn": "证件号",
+		"zh-hk": "證件號",
+		"en": "ID Number",
+		"kr": "신분증 번호",
+		"ja": "ID番号",
+		"ru": "№ документа",
+		"es": "Nº ID",
+		"tr": "Kimlik No"
+	},
+	"证件正面": {
+		"zh-cn": "证件正面",
+		"zh-hk": "證件正面",
+		"en": "ID Front",
+		"kr": "신분증 앞면",
+		"ja": "身分証表面",
+		"ru": "Лицевая сторона",
+		"es": "Anverso",
+		"tr": "Kimlik Ön Yüz"
+	},
+	"上传证件正面": {
+		"zh-cn": "上传证件正面",
+		"zh-hk": "上傳證件正面",
+		"en": "Upload front",
+		"kr": "앞면 업로드",
+		"ja": "表面をアップロード",
+		"ru": "Загрузить лицевую сторону",
+		"es": "Subir anverso",
+		"tr": "Ön yüzü yükle"
+	},
+	"证件反面": {
+		"zh-cn": "证件反面",
+		"zh-hk": "證件反面",
+		"en": "ID Back",
+		"kr": "신분증 뒷면",
+		"ja": "身分証裏面",
+		"ru": "Обратная сторона",
+		"es": "Reverso",
+		"tr": "Kimlik Arka Yüz"
+	},
+	"上传证件反面": {
+		"zh-cn": "上传证件反面",
+		"zh-hk": "上傳證件反面",
+		"en": "Upload back",
+		"kr": "뒷면 업로드",
+		"ja": "裏面をアップロード",
+		"ru": "Загрузить обратную сторону",
+		"es": "Subir reverso",
+		"tr": "Arka yüzü yükle"
+	},
+	"提交认证": {
+		"zh-cn": "提交认证",
+		"zh-hk": "提交認證",
+		"en": "Submit",
+		"kr": "제출",
+		"ja": "送信",
+		"ru": "Отправить",
+		"es": "Enviar",
+		"tr": "Gönder"
+	},
+	"认证说明": {
+		"zh-cn": "认证说明",
+		"zh-hk": "認證說明",
+		"en": "Instructions",
+		"kr": "안내",
+		"ja": "案内",
+		"ru": "Инструкция",
+		"es": "Instrucciones",
+		"tr": "Talimatlar"
+	},
+	"1. 请确保提交的身份证信息真实有效": {
+		"zh-cn": "1. 请确保提交的身份证信息真实有效",
+		"zh-hk": "1. 請確保提交的身份證信息真實有效",
+		"en": "1. Information must be accurate",
+		"kr": "1. 정보는 정확해야 합니다",
+		"ja": "1. 情報は正確に入力してください",
+		"ru": "1. Данные должны быть верны",
+		"es": "1. Los datos deben ser correctos",
+		"tr": "1. Bilgiler doğru olmalı"
+	},
+	"2. 身份证照片需清晰、完整、无反光": {
+		"zh-cn": "2. 身份证照片需清晰、完整、无反光",
+		"zh-hk": "2. 身份證照片需清晰、完整、無反光",
+		"en": "2. Photos must be clear and legible",
+		"kr": "2. 사진은 선명해야 합니다",
+		"ja": "2. 写真は鮮明に",
+		"ru": "2. Фото должны быть чёткими",
+		"es": "2. Fotos claras y legibles",
+		"tr": "2. Fotoğraflar net olmalı"
+	},
+	"3. 认证信息提交后将在1-3个工作日内完成审核": {
+		"zh-cn": "3. 认证信息提交后将在1-3个工作日内完成审核",
+		"zh-hk": "3. 認證信息提交後將在1-3個工作日內完成審核",
+		"en": "3. Review takes 1-3 business days",
+		"kr": "3. 심사는 1-3 영업일 소요",
+		"ja": "3. 審査は1-3営業日",
+		"ru": "3. Проверка: 1-3 рабочих дня",
+		"es": "3. Revisión: 1-3 días hábiles",
+		"tr": "3. İnceleme 1-3 iş günü sürer"
+	},
+	"4. 平台不会泄露用户任何信息，该实名仅用于C2C交易": {
+		"zh-cn": "4. 平台不会泄露用户任何信息，该实名仅用于C2C交易",
+		"zh-hk": "4. 平台不會洩露用戶任何信息，該實名僅用於C2C交易",
+		"en": "4. Your info is safe and used only for C2C",
+		"kr": "4. 정보는 안전하며 C2C에만 사용됩니다",
+		"ja": "4. 情報は安全に保管され、C2Cのみに使用",
+		"ru": "4. Данные конфиденциальны, только для C2C",
+		"es": "4. Datos seguros, solo para C2C",
+		"tr": "4. Bilgileriniz güvende, sadece C2C için"
+	},
+	"您尚未完成身份认证": {
+		"zh-cn": "您尚未完成身份认证",
+		"zh-hk": "您尚未完成身份認證",
+		"en": "Not verified",
+		"kr": "미인증",
+		"ja": "未認証",
+		"ru": "Не верифицирован",
+		"es": "No verificado",
+		"tr": "Doğrulanmamış"
+	},
+	"提交成功，等待审核": {
+		"zh-cn": "提交成功，等待审核",
+		"zh-hk": "提交成功，等待審核",
+		"en": "Submitted. Pending review.",
+		"kr": "제출 완료. 심사 대기 중.",
+		"ja": "送信完了。審査待ち。",
+		"ru": "Отправлено. На проверке.",
+		"es": "Enviado. En revisión.",
+		"tr": "Gönderildi. İncelemede."
+	},
+	"请先完善信息": {
+		"zh-cn": "请先完善信息",
+		"zh-hk": "請先完善信息",
+		"en": "Please complete your info",
+		"kr": "정보를 먼저 입력하세요",
+		"ja": "情報を入力してください",
+		"ru": "Заполните данные",
+		"es": "Complete sus datos",
+		"tr": "Bilgilerinizi tamamlayın"
+	},
+	"邀请码(选填)": {
+		"zh-cn": "邀请码(选填)",
+		"zh-hk": "邀請碼(選填)",
+		"en": "Invite Code (Optional)",
+		"kr": "초대 코드 (선택)",
+		"ja": "招待コード (任意)",
+		"ru": "Код (необязательно)",
+		"es": "Código (opcional)",
+		"tr": "Davet Kodu (İsteğe bağlı)"
+	},
+	"添加邮箱地址": {
+		"zh-cn": "添加邮箱地址",
+		"zh-hk": "添加郵箱地址",
+		"en": "Add Email",
+		"kr": "이메일 추가",
+		"ja": "メールアドレスを追加",
+		"ru": "Добавить email",
+		"es": "Añadir correo",
+		"tr": "E-posta Ekle"
+	},
+	"添加手机号": {
+		"zh-cn": "添加手机号",
+		"zh-hk": "添加手機號",
+		"en": "Add Phone Number",
+		"kr": "휴대폰 번호 추가",
+		"ja": "電話番号を追加",
+		"ru": "Добавить телефон",
+		"es": "Añadir teléfono",
+		"tr": "Telefon Ekle"
+	},
+	"此": {
+		"zh-cn": "此",
+		"zh-hk": "此",
+		"en": "This",
+		"kr": "이",
+		"ja": "この",
+		"ru": "Этот",
+		"es": "Este",
+		"tr": "Bu"
+	},
+	"已有账号？": {
+		"zh-cn": "已有账号？",
+		"zh-hk": "已有帳號？",
+		"en": "Already have an account?",
+		"kr": "이미 계정이 있으신가요?",
+		"ja": "すでにアカウントをお持ちですか？",
+		"ru": "Уже есть аккаунт?",
+		"es": "¿Ya tienes cuenta?",
+		"tr": "Zaten hesabınız var mı?"
+	},
+	"将成为您的登录账号，也是您访问我们提供的全部服务的关键。": {
+		"zh-cn": "将成为您的登录账号，也是您访问我们提供的全部服务的关键。",
+		"zh-hk": "將成為您的登錄帳號，也是您訪問我們提供的全部服務的關鍵。",
+		"en": "This will be your login account and the key to all our services.",
+		"kr": "이것은 귀하의 로그인 계정이자 당사가 제공하는 모든 서비스 이용의 핵심입니다.",
+		"ja": "これはあなたのログインアカウントとなり、当社が提供するすべてのサービスへのアクセスキーとなります。",
+		"ru": "Это будет ваш логин и ключ ко всем нашим сервисам.",
+		"es": "Será tu cuenta de acceso y la clave para todos nuestros servicios.",
+		"tr": "Bu, giriş hesabınız olacak ve tüm hizmetlerimize erişiminizin anahtarıdır."
+	},
+	"邮箱地址": {
+		"zh-cn": "邮箱地址",
+		"zh-hk": "郵箱地址",
+		"en": "Email Address",
+		"kr": "이메일 주소",
+		"ja": "メールアドレス",
+		"ru": "Адрес email",
+		"es": "Correo electrónico",
+		"tr": "E-posta Adresi"
+	},
+	"密码必须包含字母和数字，并且大于6位": {
+		"zh-cn": "密码必须包含字母和数字，并且大于6位",
+		"zh-hk": "密碼必須包含字母和數字，並且大於6位",
+		"en": "Password must contain letters & numbers, min 6 characters",
+		"kr": "비밀번호는 문자와 숫자를 포함해야 하며 6자리 이상이어야 합니다",
+		"ja": "パスワードは英数字を含む6文字以上である必要があります",
+		"ru": "Пароль должен содержать буквы и цифры, минимум 6 символов",
+		"es": "La contraseña debe contener letras y números, mínimo 6 caracteres",
+		"tr": "Şifre harf ve rakam içermeli, en az 6 karakter olmalı"
+	},
+	"请填写正确邮箱": {
+		"zh-cn": "请填写正确邮箱",
+		"zh-hk": "請填寫正確郵箱",
+		"en": "Please enter a valid email",
+		"kr": "올바른 이메일을 입력하세요",
+		"ja": "有効なメールアドレスを入力してください",
+		"ru": "Введите корректный email",
+		"es": "Ingrese un email válido",
+		"tr": "Geçerli bir e-posta girin"
+	},
+	"售出金矿": {
+		"zh-cn": "售出金矿",
+		"zh-hk": "售出金礦",
+		"en": "Sell Gold",
+		"kr": "금 판매",
+		"ja": "金を売る",
+		"ru": "Продать золото",
+		"es": "Vender oro",
+		"tr": "Altın Sat"
+	},
+	"粘贴": {
+		"zh-cn": "粘贴",
+		"zh-hk": "粘貼",
+		"en": "Paste",
+		"kr": "붙여넣기",
+		"ja": "貼り付け",
+		"ru": "Вставить",
+		"es": "Pegar",
+		"tr": "Yapıştır"
+	},
+	"我要出售": {
+		"zh-cn": "我要出售",
+		"zh-hk": "我要出售",
+		"en": "Sell",
+		"kr": "판매하기",
+		"ja": "売却",
+		"ru": "Продать",
+		"es": "Vender",
+		"tr": "Sat"
+	},
+	"当前账户可出售金矿数量": {
+		"zh-cn": "当前账户可出售金矿数量",
+		"zh-hk": "當前賬戶可出售金礦數量",
+		"en": "Available gold to sell",
+		"kr": "판매 가능한 금 수량",
+		"ja": "売却可能な金の量",
+		"ru": "Доступно для продажи",
+		"es": "Oro disponible",
+		"tr": "Satılabilir altın miktarı"
+	},
+	"我将获得": {
+		"zh-cn": "我将获得",
+		"zh-hk": "我將獲得",
+		"en": "I will receive",
+		"kr": "받을 금액",
+		"ja": "受取額",
+		"ru": "Я получу",
+		"es": "Recibiré",
+		"tr": "Alacağım miktar"
+	},
+	"售出数量": {
+		"zh-cn": "售出数量",
+		"zh-hk": "售出數量",
+		"en": "Amount Sold",
+		"kr": "판매 수량",
+		"ja": "売却数量",
+		"ru": "Количество",
+		"es": "Cantidad",
+		"tr": "Satılan Miktar"
+	},
+	"USDT数量": {
+		"zh-cn": "USDT数量",
+		"zh-hk": "USDT數量",
+		"en": "USDT Amount",
+		"kr": "USDT 수량",
+		"ja": "USDT数量",
+		"ru": "USDT",
+		"es": "Cantidad USDT",
+		"tr": "USDT Miktarı"
+	},
+	"通过": {
+		"zh-cn": "通过",
+		"zh-hk": "通過",
+		"en": "Approved",
+		"kr": "승인됨",
+		"ja": "承認済み",
+		"ru": "Одобрено",
+		"es": "Aprobado",
+		"tr": "Onaylandı"
+	},
+	"拒绝": {
+		"zh-cn": "拒绝",
+		"zh-hk": "拒絕",
+		"en": "Rejected",
+		"kr": "거절됨",
+		"ja": "拒否",
+		"ru": "Отказ",
+		"es": "Rechazado",
+		"tr": "Reddedildi"
+	},
+	"确认售出": {
+		"zh-cn": "确认售出",
+		"zh-hk": "確認售出",
+		"en": "Confirm Sale",
+		"kr": "판매 확인",
+		"ja": "売却確認",
+		"ru": "Подтвердить",
+		"es": "Confirmar venta",
+		"tr": "Satışı Onayla"
+	},
+	"是否确认售出？": {
+		"zh-cn": "是否确认售出？",
+		"zh-hk": "是否確認售出？",
+		"en": "Confirm sale?",
+		"kr": "판매하시겠습니까?",
+		"ja": "売却しますか？",
+		"ru": "Подтвердить продажу?",
+		"es": "¿Confirmar venta?",
+		"tr": "Satış onaylansın mı?"
+	},
+	"已提交售出": {
+		"zh-cn": "已提交售出",
+		"zh-hk": "已提交售出",
+		"en": "Sale submitted",
+		"kr": "판매 신청 완료",
+		"ja": "売却申請完了",
+		"ru": "Заявка отправлена",
+		"es": "Solicitud enviada",
+		"tr": "Satış gönderildi"
+	},
+	"未填写地址": {
+		"zh-cn": "未填写地址",
+		"zh-hk": "未填寫地址",
+		"en": "Address missing",
+		"kr": "주소 없음",
+		"ja": "アドレス未入力",
+		"ru": "Адрес не указан",
+		"es": "Falta dirección",
+		"tr": "Adres girilmedi"
+	},
+	"未填写数量": {
+		"zh-cn": "未填写数量",
+		"zh-hk": "未填寫數量",
+		"en": "Amount missing",
+		"kr": "수량 없음",
+		"ja": "数量未入力",
+		"ru": "Сумма не указана",
+		"es": "Falta cantidad",
+		"tr": "Miktar girilmedi"
+	},
+	"粘贴失败": {
+		"zh-cn": "粘贴失败",
+		"zh-hk": "粘貼失敗",
+		"en": "Paste failed",
+		"kr": "붙여넣기 실패",
+		"ja": "貼り付け失敗",
+		"ru": "Ошибка вставки",
+		"es": "Error al pegar",
+		"tr": "Yapıştırma başarısız"
+	},
+	"单": {
+		"zh-cn": "单",
+		"zh-hk": "單",
+		"en": "order",
+		"kr": "건",
+		"ja": "件",
+		"ru": "заказ",
+		"es": "orden",
+		"tr": "emir"
+	},
+	"未命名商家": {
+		"zh-cn": "未命名商家",
+		"zh-hk": "未命名商戶",
+		"en": "Unnamed Merchant",
+		"kr": "이름 없는 판매자",
+		"ja": "名称未設定の業者",
+		"ru": "Без названия",
+		"es": "Sin nombre",
+		"tr": "Adsız Satıcı"
+	},
+	"成交率": {
+		"zh-cn": "成交率",
+		"zh-hk": "成交率",
+		"en": "Completion Rate",
+		"kr": "완료율",
+		"ja": "完了率",
+		"ru": "Выполнено",
+		"es": "Tasa de éxito",
+		"tr": "Tamamlama Oranı"
+	},
+	"限额": {
+		"zh-cn": "限额",
+		"zh-hk": "限額",
+		"en": "Limit",
+		"kr": "한도",
+		"ja": "制限額",
+		"ru": "Лимит",
+		"es": "Límite",
+		"tr": "Limit"
+	},
+	"可得": {
+		"zh-cn": "可得",
+		"zh-hk": "可得",
+		"en": "You Get",
+		"kr": "받을 수량",
+		"ja": "受取額",
+		"ru": "Вы получите",
+		"es": "Recibirás",
+		"tr": "Alacağınız"
+	},
+	"即时付款": {
+		"zh-cn": "即时付款",
+		"zh-hk": "即時付款",
+		"en": "Instant Payment",
+		"kr": "즉시 결제",
+		"ja": "即時支払い",
+		"ru": "Мгновенная оплата",
+		"es": "Pago inmediato",
+		"tr": "Anında Ödeme"
+	},
+	"商家信息": {
+		"zh-cn": "商家信息",
+		"zh-hk": "商戶信息",
+		"en": "Merchant Info",
+		"kr": "판매자 정보",
+		"ja": "業者情報",
+		"ru": "Инфо о продавце",
+		"es": "Info del vendedor",
+		"tr": "Satıcı Bilgisi"
+	},
+	"交易提醒": {
+		"zh-cn": "交易提醒",
+		"zh-hk": "交易提醒",
+		"en": "Trade Notice",
+		"kr": "거래 알림",
+		"ja": "取引通知",
+		"ru": "Уведомление",
+		"es": "Aviso de trade",
+		"tr": "İşlem Uyarısı"
+	},
+	"kk商行": {
+		"zh-cn": "kk商行",
+		"zh-hk": "kk商行",
+		"en": "KK Trading",
+		"kr": "KK 상회",
+		"ja": "KK商会",
+		"ru": "KK Трейдинг",
+		"es": "KK Trading",
+		"tr": "KK Ticaret"
+	},
+	"0手续费购买金矿": {
+		"zh-cn": "0手续费购买金矿",
+		"zh-hk": "0手續費購買金礦",
+		"en": "0 Fee Gold Purchase",
+		"kr": "수수료 0% 금 구매",
+		"ja": "手数料0%で金を購入",
+		"ru": "Комиссия 0%",
+		"es": "Compra oro sin comisión",
+		"tr": "Sıfır Ücretle Altın Al"
+	},
+	"单价": {
+		"zh-cn": "单价",
+		"zh-hk": "單價",
+		"en": "Unit Price",
+		"kr": "단가",
+		"ja": "単価",
+		"ru": "Цена",
+		"es": "Precio unitario",
+		"tr": "Birim Fiyat"
+	},
+	"当前可售出金矿数量": {
+		"zh-cn": "当前可售出金矿数量",
+		"zh-hk": "當前可售出金礦數量",
+		"en": "Available to Sell",
+		"kr": "판매 가능 수량",
+		"ja": "販売可能在庫",
+		"ru": "Доступно для продажи",
+		"es": "Disponible para vender",
+		"tr": "Satılabilir Miktar"
+	},
+	"未知商家": {
+		"zh-cn": "未知商家",
+		"zh-hk": "未知商戶",
+		"en": "Unknown Merchant",
+		"kr": "알 수 없는 판매자",
+		"ja": "不明な業者",
+		"ru": "Неизвестный",
+		"es": "Desconocido",
+		"tr": "Bilinmeyen Satıcı"
+	},
+	"剩余数量": {
+		"zh-cn": "剩余数量",
+		"zh-hk": "剩餘數量",
+		"en": "Remaining",
+		"kr": "잔여 수량",
+		"ja": "残り数量",
+		"ru": "Осталось",
+		"es": "Restante",
+		"tr": "Kalan Miktar"
+	},
+	"暂无数据~": {
+		"zh-cn": "暂无数据~",
+		"zh-hk": "暫無數據~",
+		"en": "No data~",
+		"kr": "데이터 없음~",
+		"ja": "データがありません~",
+		"ru": "Нет данных~",
+		"es": "Sin datos~",
+		"tr": "Veri yok~"
+	},
+	"支付宝": {
+		"zh-cn": "支付宝",
+		"zh-hk": "支付寶",
+		"en": "Alipay",
+		"kr": "알리페이",
+		"ja": "アリペイ",
+		"ru": "Alipay",
+		"es": "Alipay",
+		"tr": "Alipay"
+	},
+	"出售金矿": {
+		"zh-cn": "出售金矿",
+		"zh-hk": "出售金礦",
+		"en": "Sell Gold",
+		"kr": "금 판매",
+		"ja": "金を売る",
+		"ru": "Продажа золота",
+		"es": "Vender oro",
+		"tr": "Altın Sat"
+	},
+	"购买金矿": {
+		"zh-cn": "购买金矿",
+		"zh-hk": "購買金礦",
+		"en": "Buy Gold",
+		"kr": "금 구매",
+		"ja": "金を買う",
+		"ru": "Купить золото",
+		"es": "Comprar oro",
+		"tr": "Altın Al"
+	},
+	"个人资料": {
+		"zh-cn": "个人资料",
+		"zh-hk": "個人資料",
+		"en": "Profile",
+		"kr": "프로필",
+		"ja": "プロフィール",
+		"ru": "Профиль",
+		"es": "Perfil",
+		"tr": "Profil"
+	},
+	"昵称": {
+		"zh-cn": "昵称",
+		"zh-hk": "暱稱",
+		"en": "Nickname",
+		"kr": "닉네임",
+		"ja": "ニックネーム",
+		"ru": "Ник",
+		"es": "Apodo",
+		"tr": "Takma Ad"
+	},
+	"账号信息": {
+		"zh-cn": "账号信息",
+		"zh-hk": "賬號信息",
+		"en": "Account Info",
+		"kr": "계정 정보",
+		"ja": "アカウント情報",
+		"ru": "Аккаунт",
+		"es": "Info de cuenta",
+		"tr": "Hesap Bilgileri"
+	},
+	"登录密码": {
+		"zh-cn": "登录密码",
+		"zh-hk": "登入密碼",
+		"en": "Login Password",
+		"kr": "로그인 비밀번호",
+		"ja": "ログインパスワード",
+		"ru": "Пароль",
+		"es": "Contraseña",
+		"tr": "Giriş Şifresi"
+	},
+	"其他信息": {
+		"zh-cn": "其他信息",
+		"zh-hk": "其他信息",
+		"en": "Other Info",
+		"kr": "기타 정보",
+		"ja": "その他の情報",
+		"ru": "Другое",
+		"es": "Otros datos",
+		"tr": "Diğer Bilgiler"
+	},
+	"实名认证": {
+		"zh-cn": "实名认证",
+		"zh-hk": "實名認證",
+		"en": "KYC",
+		"kr": "실명 인증",
+		"ja": "本人確認",
+		"ru": "Верификация",
+		"es": "Verificación",
+		"tr": "Kimlik Doğrulama"
+	},
+	"已认证": {
+		"zh-cn": "已认证",
+		"zh-hk": "已認證",
+		"en": "Verified",
+		"kr": "인증됨",
+		"ja": "認証済み",
+		"ru": "Пройдена",
+		"es": "Verificado",
+		"tr": "Doğrulandı"
+	},
+	"未认证": {
+		"zh-cn": "未认证",
+		"zh-hk": "未認證",
+		"en": "Unverified",
+		"kr": "미인증",
+		"ja": "未認証",
+		"ru": "Не пройдена",
+		"es": "No verificado",
+		"tr": "Doğrulanmadı"
+	},
+	"会员等级": {
+		"zh-cn": "会员等级",
+		"zh-hk": "會員等級",
+		"en": "VIP Level",
+		"kr": "회원 등급",
+		"ja": "会員レベル",
+		"ru": "Уровень",
+		"es": "Nivel",
+		"tr": "Üyelik Seviyesi"
+	},
+	"退出登录": {
+		"zh-cn": "退出登录",
+		"zh-hk": "退出登入",
+		"en": "Log Out",
+		"kr": "로그아웃",
+		"ja": "ログアウト",
+		"ru": "Выйти",
+		"es": "Cerrar sesión",
+		"tr": "Çıkış Yap"
+	},
+	"您的昵称将显示于交易和聊天": {
+		"zh-cn": "您的昵称将显示于交易和聊天",
+		"zh-hk": "您的暱稱將顯示於交易和聊天",
+		"en": "Your nickname will be visible in trades and chat",
+		"kr": "닉네임은 거래 및 채팅에 표시됩니다",
+		"ja": "ニックネームは取引とチャットで表示されます",
+		"ru": "Ник будет виден в сделках и чате",
+		"es": "Tu apodo será visible en operaciones y chat",
+		"tr": "Takma adınız işlemlerde ve sohbette görünecek"
+	},
+	"请保管好您的登录密码": {
+		"zh-cn": "请保管好您的登录密码",
+		"zh-hk": "請保管好您的登入密碼",
+		"en": "Keep your password safe",
+		"kr": "비밀번호를 안전하게 보관하세요",
+		"ja": "パスワードは大切に保管してください",
+		"ru": "Храните пароль в безопасности",
+		"es": "Mantén tu contraseña segura",
+		"tr": "Şifrenizi güvende tutun"
+	},
+	"请输入密码": {
+		"zh-cn": "请输入密码",
+		"zh-hk": "請輸入密碼",
+		"en": "Enter password",
+		"kr": "비밀번호 입력",
+		"ja": "パスワードを入力",
+		"ru": "Введите пароль",
+		"es": "Ingrese contraseña",
+		"tr": "Şifre girin"
+	},
+	"请填写验证码": {
+		"zh-cn": "请填写验证码",
+		"zh-hk": "請填寫驗證碼",
+		"en": "Enter verification code",
+		"kr": "인증번호 입력",
+		"ja": "認証コードを入力",
+		"ru": "Введите код",
+		"es": "Ingrese código",
+		"tr": "Doğrulama kodu girin"
+	},
+	"已复制": {
+		"zh-cn": "已复制",
+		"zh-hk": "已複製",
+		"en": "Copied",
+		"kr": "복사됨",
+		"ja": "コピー完了",
+		"ru": "Скопировано",
+		"es": "Copiado",
+		"tr": "Kopyalandı"
+	},
+	"头像已更新": {
+		"zh-cn": "头像已更新",
+		"zh-hk": "頭像已更新",
+		"en": "Avatar updated",
+		"kr": "프로필 사진 업데이트됨",
+		"ja": "アバター更新済み",
+		"ru": "Аватар обновлён",
+		"es": "Avatar actualizado",
+		"tr": "Profil fotoğrafı güncellendi"
+	},
+	"请填写昵称": {
+		"zh-cn": "请填写昵称",
+		"zh-hk": "請填寫暱稱",
+		"en": "Enter nickname",
+		"kr": "닉네임을 입력하세요",
+		"ja": "ニックネームを入力",
+		"ru": "Введите ник",
+		"es": "Ingrese apodo",
+		"tr": "Takma ad girin"
+	},
+	"倒计时结束后再发送": {
+		"zh-cn": "倒计时结束后再发送",
+		"zh-hk": "倒計時結束後再發送",
+		"en": "Please wait for countdown",
+		"kr": "카운트다운 후 재시도",
+		"ja": "カウントダウン後にお試しください",
+		"ru": "Подождите окончания отсчёта",
+		"es": "Espere la cuenta regresiva",
+		"tr": "Süre bitiminde tekrar deneyin"
+	},
+	"昵称已更新": {
+		"zh-cn": "昵称已更新",
+		"zh-hk": "暱稱已更新",
+		"en": "Nickname updated",
+		"kr": "닉네임 업데이트됨",
+		"ja": "ニックネーム更新済み",
+		"ru": "Ник обновлён",
+		"es": "Apodo actualizado",
+		"tr": "Takma ad güncellendi"
+	},
+	"手机": {
+		"zh-cn": "手机",
+		"zh-hk": "手機",
+		"en": "Phone",
+		"kr": "휴대폰",
+		"ja": "電話",
+		"ru": "Телефон",
+		"es": "Teléfono",
+		"tr": "Telefon"
+	},
+	"普通会员": {
+		"zh-cn": "普通会员",
+		"zh-hk": "普通會員",
+		"en": "Regular Member",
+		"kr": "일반 회원",
+		"ja": "一般会員",
+		"ru": "Обычный",
+		"es": "Miembro regular",
+		"tr": "Normal Üye"
+	},
+	"请输入内容": {
+		"zh-cn": "请输入内容",
+		"zh-hk": "請輸入內容",
+		"en": "Please enter content",
+		"kr": "내용을 입력하세요",
+		"ja": "内容を入力してください",
+		"ru": "Введите текст",
+		"es": "Ingrese contenido",
+		"tr": "İçerik girin"
+	},
+	"商户主页": {
+		"zh-cn": "商户主页",
+		"zh-hk": "商戶主頁",
+		"en": "Merchant Home",
+		"kr": "판매자 홈",
+		"ja": "業者ホーム",
+		"ru": "Продавец",
+		"es": "Vendedor",
+		"tr": "Satıcı Sayfası"
+	},
+	"保证金": {
+		"zh-cn": "保证金",
+		"zh-hk": "保證金",
+		"en": "Deposit",
+		"kr": "보증금",
+		"ja": "保証金",
+		"ru": "Депозит",
+		"es": "Depósito",
+		"tr": "Teminat"
+	},
+
+	"电子邮件": {
+		"zh-cn": "电子邮件",
+		"zh-hk": "電子郵件",
+		"en": "Email",
+		"kr": "이메일",
+		"ja": "メール",
+		"ru": "Email",
+		"es": "Email",
+		"tr": "E-posta"
+	},
+	"官方认证": {
+		"zh-cn": "官方认证",
+		"zh-hk": "官方認證",
+		"en": "Verified",
+		"kr": "공식 인증",
+		"ja": "公式認証",
+		"ru": "Официально",
+		"es": "Verificado",
+		"tr": "Resmi Onaylı"
+	},
+	"成为商家时间": {
+		"zh-cn": "成为商家时间",
+		"zh-hk": "成為商家時間",
+		"en": "Merchant since",
+		"kr": "판매자 등록일",
+		"ja": "登録日",
+		"ru": "С нами с",
+		"es": "Vendedor desde",
+		"tr": "Kayıt Tarihi"
+	},
+	"近期交易": {
+		"zh-cn": "近期交易",
+		"zh-hk": "近期交易",
+		"en": "Recent Trades",
+		"kr": "최근 거래",
+		"ja": "最近の取引",
+		"ru": "Сделки",
+		"es": "Operaciones",
+		"tr": "Son İşlemler"
+	},
+	"成交单数": {
+		"zh-cn": "成交单数",
+		"zh-hk": "成交單數",
+		"en": "Orders",
+		"kr": "체결 건수",
+		"ja": "成立件数",
+		"ru": "Сделок",
+		"es": "Operaciones",
+		"tr": "İşlem Sayısı"
+	},
+	"交易订单总数": {
+		"zh-cn": "交易订单总数",
+		"zh-hk": "交易訂單總數",
+		"en": "Total Orders",
+		"kr": "총 주문 수",
+		"ja": "総注文件数",
+		"ru": "Всего",
+		"es": "Total",
+		"tr": "Toplam İşlem"
+	},
+	"我的委托": {
+		"zh-cn": "我的委托",
+		"zh-hk": "我的委託",
+		"en": "My Orders",
+		"kr": "내 주문",
+		"ja": "注文一覧",
+		"ru": "Мои ордера",
+		"es": "Mis órdenes",
+		"tr": "Emirlerim"
+	},
+	"总额": {
+		"zh-cn": "总额",
+		"zh-hk": "總額",
+		"en": "Total",
+		"kr": "총액",
+		"ja": "合計",
+		"ru": "Сумма",
+		"es": "Total",
+		"tr": "Toplam"
+	},
+	"发布": {
+		"zh-cn": "发布",
+		"zh-hk": "發布",
+		"en": "Post",
+		"kr": "등록",
+		"ja": "掲載",
+		"ru": "Разместить",
+		"es": "Publicar",
+		"tr": "Yayınla"
+	},
+	"立即": {
+		"zh-cn": "立即",
+		"zh-hk": "立即",
+		"en": "Now",
+		"kr": "즉시",
+		"ja": "今すぐ",
+		"ru": "Сейчас",
+		"es": "Ahora",
+		"tr": "Hemen"
+	},
+	"继续": {
+		"zh-cn": "继续",
+		"zh-hk": "繼續",
+		"en": "Continue",
+		"kr": "계속",
+		"ja": "続ける",
+		"ru": "Далее",
+		"es": "Continuar",
+		"tr": "Devam"
+	},
+	"门店信息": {
+		"zh-cn": "门店信息",
+		"zh-hk": "門店信息",
+		"en": "Store Info",
+		"kr": "상점 정보",
+		"ja": "店舗情報",
+		"ru": "Магазин",
+		"es": "Tienda",
+		"tr": "Mağaza Bilgisi"
+	},
+	"门店头像": {
+		"zh-cn": "门店头像",
+		"zh-hk": "門店頭像",
+		"en": "Store Avatar",
+		"kr": "상점 이미지",
+		"ja": "店舗画像",
+		"ru": "Логотип",
+		"es": "Avatar",
+		"tr": "Mağaza Fotoğrafı"
+	},
+	"商店名称": {
+		"zh-cn": "商店名称",
+		"zh-hk": "商店名稱",
+		"en": "Store Name",
+		"kr": "상점명",
+		"ja": "店舗名",
+		"ru": "Название",
+		"es": "Nombre",
+		"tr": "Mağaza Adı"
+	},
+	"交易须知": {
+		"zh-cn": "交易须知",
+		"zh-hk": "交易須知",
+		"en": "Terms",
+		"kr": "거래 안내",
+		"ja": "取引条件",
+		"ru": "Условия",
+		"es": "Términos",
+		"tr": "Şartlar"
+	},
+	"请输入商店名称": {
+		"zh-cn": "请输入商店名称",
+		"zh-hk": "請輸入商店名稱",
+		"en": "Enter store name",
+		"kr": "상점명 입력",
+		"ja": "店舗名を入力",
+		"ru": "Введите название",
+		"es": "Ingrese nombre",
+		"tr": "Mağaza adı girin"
+	},
+	"请输入购买须知": {
+		"zh-cn": "请输入购买须知",
+		"zh-hk": "請輸入購買須知",
+		"en": "Enter terms",
+		"kr": "구매 안내 입력",
+		"ja": "購入条件を入力",
+		"ru": "Введите условия",
+		"es": "Ingrese términos",
+		"tr": "Şartları girin"
+	},
+	"发布委托": {
+		"zh-cn": "发布委托",
+		"zh-hk": "發布委託",
+		"en": "Post Order",
+		"kr": "주문 등록",
+		"ja": "注文掲載",
+		"ru": "Разместить",
+		"es": "Publicar orden",
+		"tr": "Emir Yayınla"
+	},
+	"委托类型": {
+		"zh-cn": "委托类型",
+		"zh-hk": "委託類型",
+		"en": "Order Type",
+		"kr": "주문 유형",
+		"ja": "注文タイプ",
+		"ru": "Тип",
+		"es": "Tipo",
+		"tr": "Emir Türü"
+	},
+	"请选择类型": {
+		"zh-cn": "请选择类型",
+		"zh-hk": "請選擇類型",
+		"en": "Select type",
+		"kr": "유형 선택",
+		"ja": "タイプ選択",
+		"ru": "Выберите тип",
+		"es": "Seleccione tipo",
+		"tr": "Tür seçin"
+	},
+	"总委托数量": {
+		"zh-cn": "总委托数量",
+		"zh-hk": "總委託數量",
+		"en": "Total Amount",
+		"kr": "총 수량",
+		"ja": "総数量",
+		"ru": "Количество",
+		"es": "Cantidad",
+		"tr": "Toplam Miktar"
+	},
+	"总数量": {
+		"zh-cn": "总数量",
+		"zh-hk": "總數量",
+		"en": "Quantity",
+		"kr": "수량",
+		"ja": "数量",
+		"ru": "Кол-во",
+		"es": "Cantidad",
+		"tr": "Miktar"
+	},
+	"方式编号": {
+		"zh-cn": "方式编号",
+		"zh-hk": "方式編號",
+		"en": "Method No.",
+		"kr": "방식 번호",
+		"ja": "方法番号",
+		"ru": "№ способа",
+		"es": "Nº método",
+		"tr": "Yöntem No"
+	},
+	"价格": {
+		"zh-cn": "价格",
+		"zh-hk": "價格",
+		"en": "Price",
+		"kr": "가격",
+		"ja": "価格",
+		"ru": "Цена",
+		"es": "Precio",
+		"tr": "Fiyat"
+	},
+	"请输入价格": {
+		"zh-cn": "请输入价格",
+		"zh-hk": "請輸入價格",
+		"en": "Enter price",
+		"kr": "가격 입력",
+		"ja": "価格を入力",
+		"ru": "Введите цену",
+		"es": "Ingrese precio",
+		"tr": "Fiyat girin"
+	},
+	"最小交易量": {
+		"zh-cn": "最小交易量",
+		"zh-hk": "最小交易量",
+		"en": "Min Amount",
+		"kr": "최소 수량",
+		"ja": "最低数量",
+		"ru": "Мин.",
+		"es": "Mínimo",
+		"tr": "Min. Miktar"
+	},
+	"最小量": {
+		"zh-cn": "最小量",
+		"zh-hk": "最小量",
+		"en": "Min",
+		"kr": "최소",
+		"ja": "最小",
+		"ru": "Мин",
+		"es": "Mín",
+		"tr": "Min"
+	},
+	"最大交易量": {
+		"zh-cn": "最大交易量",
+		"zh-hk": "最大交易量",
+		"en": "Max Amount",
+		"kr": "최대 수량",
+		"ja": "最大数量",
+		"ru": "Макс.",
+		"es": "Máximo",
+		"tr": "Maks. Miktar"
+	},
+	"最大量": {
+		"zh-cn": "最大量",
+		"zh-hk": "最大量",
+		"en": "Max",
+		"kr": "최대",
+		"ja": "最大",
+		"ru": "Макс",
+		"es": "Máx",
+		"tr": "Maks"
+	},
+	"联系方式": {
+		"zh-cn": "联系方式",
+		"zh-hk": "聯繫方式",
+		"en": "Contact",
+		"kr": "연락처",
+		"ja": "連絡先",
+		"ru": "Контакты",
+		"es": "Contacto",
+		"tr": "İletişim"
+	},
+	"请输入联系方式": {
+		"zh-cn": "请输入联系方式",
+		"zh-hk": "請輸入聯繫方式",
+		"en": "Enter contact",
+		"kr": "연락처 입력",
+		"ja": "連絡先を入力",
+		"ru": "Введите контакты",
+		"es": "Ingrese contacto",
+		"tr": "İletişim girin"
+	},
+	"交易单位": {
+		"zh-cn": "交易单位",
+		"zh-hk": "交易單位",
+		"en": "Currency",
+		"kr": "거래 단위",
+		"ja": "通貨",
+		"ru": "Валюта",
+		"es": "Moneda",
+		"tr": "Birim"
+	},
+	"请输入交易单位 如: RUB": {
+		"zh-cn": "请输入交易单位 如: RUB",
+		"zh-hk": "請輸入交易單位 如: RUB",
+		"en": "Enter currency e.g. RUB",
+		"kr": "거래 단위 입력 (예: RUB)",
+		"ja": "通貨を入力 (例: RUB)",
+		"ru": "Введите валюту (RUB)",
+		"es": "Ingrese moneda (RUB)",
+		"tr": "Birim girin (örn: RUB)"
+	},
+	"确认发布": {
+		"zh-cn": "确认发布",
+		"zh-hk": "確認發布",
+		"en": "Confirm",
+		"kr": "확인",
+		"ja": "確認",
+		"ru": "Подтвердить",
+		"es": "Confirmar",
+		"tr": "Onayla"
+	},
+	"是否取消该委托": {
+		"zh-cn": "是否取消该委托",
+		"zh-hk": "是否取消該委託",
+		"en": "Cancel order?",
+		"kr": "주문을 취소할까요?",
+		"ja": "注文をキャンセルしますか？",
+		"ru": "Отменить ордер?",
+		"es": "¿Cancelar orden?",
+		"tr": "Emir iptal edilsin mi?"
+	},
+	"是否删除该委托": {
+		"zh-cn": "是否删除该委托",
+		"zh-hk": "是否刪除該委託",
+		"en": "Delete order?",
+		"kr": "주문을 삭제할까요?",
+		"ja": "注文を削除しますか？",
+		"ru": "Удалить ордер?",
+		"es": "¿Eliminar orden?",
+		"tr": "Emir silinsin mi?"
+	},
+	"请选择委托类型": {
+		"zh-cn": "请选择委托类型",
+		"zh-hk": "請選擇委託類型",
+		"en": "Select order type",
+		"kr": "주문 유형 선택",
+		"ja": "注文タイプを選択",
+		"ru": "Выберите тип",
+		"es": "Seleccione tipo",
+		"tr": "Emir türü seçin"
+	},
+	"请输入正确的价格": {
+		"zh-cn": "请输入正确的价格",
+		"zh-hk": "請輸入正確的價格",
+		"en": "Enter valid price",
+		"kr": "올바른 가격 입력",
+		"ja": "有効な価格を入力",
+		"ru": "Введите корректную цену",
+		"es": "Ingrese precio válido",
+		"tr": "Geçerli fiyat girin"
+	},
+	"请输入正确的最小交易量": {
+		"zh-cn": "请输入正确的最小交易量",
+		"zh-hk": "請輸入正確的最小交易量",
+		"en": "Enter valid min amount",
+		"kr": "올바른 최소 수량 입력",
+		"ja": "有効な最低数量を入力",
+		"ru": "Введите корректный мин.",
+		"es": "Ingrese mínimo válido",
+		"tr": "Geçerli min. miktar girin"
+	},
+	"请输入正确的最大交易量": {
+		"zh-cn": "请输入正确的最大交易量",
+		"zh-hk": "請輸入正確的最大交易量",
+		"en": "Enter valid max amount",
+		"kr": "올바른 최대 수량 입력",
+		"ja": "有効な最大数量を入力",
+		"ru": "Введите корректный макс.",
+		"es": "Ingrese máximo válido",
+		"tr": "Geçerli maks. miktar girin"
+	},
+	"最大交易量不能小于最小交易量": {
+		"zh-cn": "最大交易量不能小于最小交易量",
+		"zh-hk": "最大交易量不能小於最小交易量",
+		"en": "Max must be >= min",
+		"kr": "최대 수량은 최소 수량보다 작을 수 없음",
+		"ja": "最大数量は最小数量以上である必要があります",
+		"ru": "Макс. не может быть меньше мин.",
+		"es": "Máx. debe ser >= mín.",
+		"tr": "Maks. miktar min. miktardan küçük olamaz"
+	},
+	"请输入交易方式": {
+		"zh-cn": "请输入交易方式",
+		"zh-hk": "請輸入交易方式",
+		"en": "Enter payment method",
+		"kr": "결제 방식 입력",
+		"ja": "支払方法を入力",
+		"ru": "Введите способ оплаты",
+		"es": "Ingrese método de pago",
+		"tr": "Ödeme yöntemi girin"
+	},
+	"请输入交易单位": {
+		"zh-cn": "请输入交易单位",
+		"zh-hk": "請輸入交易單位",
+		"en": "Enter currency",
+		"kr": "거래 단위 입력",
+		"ja": "通貨を入力",
+		"ru": "Введите валюту",
+		"es": "Ingrese moneda",
+		"tr": "Birim girin"
+	},
+	"请输入正确的总委托数量": {
+		"zh-cn": "请输入正确的总委托数量",
+		"zh-hk": "請輸入正確的總委託數量",
+		"en": "Enter valid amount",
+		"kr": "올바른 총 수량 입력",
+		"ja": "有効な数量を入力",
+		"ru": "Введите корректное кол-во",
+		"es": "Ingrese cantidad válida",
+		"tr": "Geçerli miktar girin"
+	},
+	"取消成功": {
+		"zh-cn": "取消成功",
+		"zh-hk": "取消成功",
+		"en": "Cancelled",
+		"kr": "취소됨",
+		"ja": "キャンセル完了",
+		"ru": "Отменено",
+		"es": "Cancelado",
+		"tr": "İptal edildi"
+	},
+	"发布成功": {
+		"zh-cn": "发布成功",
+		"zh-hk": "發布成功",
+		"en": "Posted",
+		"kr": "등록됨",
+		"ja": "掲載完了",
+		"ru": "Размещено",
+		"es": "Publicado",
+		"tr": "Yayınlandı"
+	},
+	"买入": {
+		"zh-cn": "买入",
+		"zh-hk": "買入",
+		"en": "Buy",
+		"kr": "매수",
+		"ja": "買い",
+		"ru": "Купить",
+		"es": "Comprar",
+		"tr": "Al"
+	},
+	"卖出": {
+		"zh-cn": "卖出",
+		"zh-hk": "賣出",
+		"en": "Sell",
+		"kr": "매도",
+		"ja": "売り",
+		"ru": "Продать",
+		"es": "Vender",
+		"tr": "Sat"
+	},
+	"进行中": {
+		"zh-cn": "进行中",
+		"zh-hk": "進行中",
+		"en": "In Progress",
+		"kr": "진행 중",
+		"ja": "進行中",
+		"ru": "В процессе",
+		"es": "En progreso",
+		"tr": "Devam Ediyor"
+	},
+	"已支付": {
+		"zh-cn": "已支付",
+		"zh-hk": "已支付",
+		"en": "Paid",
+		"kr": "결제 완료",
+		"ja": "支払済み",
+		"ru": "Оплачено",
+		"es": "Pagado",
+		"tr": "Ödendi"
+	},
+	"已完成": {
+		"zh-cn": "已完成",
+		"zh-hk": "已完成",
+		"en": "Completed",
+		"kr": "완료됨",
+		"ja": "完了",
+		"ru": "Завершено",
+		"es": "Completado",
+		"tr": "Tamamlandı"
+	},
+	"售后": {
+		"zh-cn": "售后",
+		"zh-hk": "售後",
+		"en": "After-sales",
+		"kr": "애프터 서비스",
+		"ja": "アフターサービス",
+		"ru": "Поддержка",
+		"es": "Posventa",
+		"tr": "Satış Sonrası"
+	},
+	"异常":{
+			"zh-cn":"异常",
+			"zh-hk":"異常",
+			"en":"Error",
+			"kr":"오류",
+			"ja":"エラー",
+			"ru":"Ошибка",
+			"es":"Error",
+			"tr":"Hata"
+		}
+}

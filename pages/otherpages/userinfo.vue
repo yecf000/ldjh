@@ -1,6 +1,6 @@
 <template>
 	<view class="all">
-		<navbar title="个人资料" ></navbar>
+		<navbar :title="$lang('个人资料')"></navbar>
 		<view class="avatarpart" @click="uploadimg">
 			<view class="avatarpartbox">
 				<image :src="userinfo.avatar||'@/static/icons/defaultavatar.png'" mode="aspectFill">
@@ -12,11 +12,11 @@
 		</view>
 		<view class="accontinfo">
 			<view class="title">
-				账号信息
+				{{$lang('账号信息')}}
 			</view>
 			<view class="infoitemlist">
 				<view class="infoitem">
-					<view>昵称</view>
+					<view>{{$lang('昵称')}}</view>
 					<view class="rightpart" @click="showpop=true,nickname=userinfo.nickname">
 						<view class="value">{{userinfo.nickname||''}}</view>
 						<u-icon style="margin-left: 12rpx;" name="arrow-right" color="#b9bdbd" size="28"></u-icon>
@@ -30,19 +30,19 @@
 					</view>
 				</view>
 				<view class="infoitem">
-					<view>邮箱</view>
+					<view>{{$lang('邮箱')}}</view>
 					<view class="rightpart">
 						<view class="value">123***@qq.com</view>
 					</view>
 				</view>
 				<view class="infoitem">
-					<view>手机</view>
+					<view>{{$lang('手机')}}</view>
 					<view class="rightpart">
 						<view class="value">{{userinfo.mobile||'-'}}</view>
 					</view>
 				</view>
 				<view class="infoitem" style="border: none;">
-					<view>登陆密码</view>
+					<view>{{$lang('登录密码')}}</view>
 					<view class="rightpart" @click="showpspop=true">
 						<view class="value">{{'******'}}</view>
 						<u-icon style="margin-left: 12rpx;" name="arrow-right" color="#b9bdbd" size="28"></u-icon>
@@ -52,52 +52,53 @@
 		</view>
 		<view class="accontinfo" style="margin-top: 48rpx;">
 			<view class="title">
-				其他信息
+				{{$lang('其他信息')}}
 			</view>
 			<view class="infoitemlist">
 				<view class="infoitem" @click="$u.route('/pages/otherpages/realname');">
-					<view>实名认证</view>
+					<view>{{$lang('实名认证')}}</view>
 					<view class="rightpart">
-						<view class="value">{{userinfo.real_status==1?'已认证':'未认证'}}</view>
-						<u-icon v-if="userinfo.real_status!=1" style="margin-left: 12rpx;" name="arrow-right" color="#b9bdbd" size="28"></u-icon>
+						<view class="value">{{userinfo.real_status==1?$lang('已认证'):$lang('未认证')}}</view>
+						<u-icon v-if="userinfo.real_status!=1" style="margin-left: 12rpx;" name="arrow-right"
+							color="#b9bdbd" size="28"></u-icon>
 					</view>
 				</view>
 				<view class="infoitem" @click="$u.route('/pages/otherpages/payways');">
-					<view>收款渠道</view>
+					<view>{{$lang('收款渠道')}}</view>
 					<view class="rightpart">
-						<view class="value">未启用</view>
+						<view class="value">{{$lang('未启用')}}</view>
 						<u-icon style="margin-left: 12rpx;" name="arrow-right" color="#b9bdbd" size="28"></u-icon>
 					</view>
 				</view>
 				<view class="infoitem" style="border: none;" @click="$u.route('/pages/otherpages/level');">
-					<view>会员等级</view>
+					<view>{{$lang('会员等级')}}</view>
 					<view class="rightpart">
-						<view class="value">普通会员</view>
+						<view class="value">{{$lang('普通会员')}}</view>
 						<u-icon style="margin-left: 12rpx;" name="arrow-right" color="#b9bdbd" size="28"></u-icon>
 					</view>
 				</view>
 			</view>
 			<view class="qiutbtview">
 				<view class="qiutbt" @click="qiutlogin">
-					退出登录
+					{{$lang('退出登录')}}
 				</view>
 			</view>
 		</view>
 		<u-popup z-index='7' v-model="showpop" mode="bottom" border-radius="18">
 			<view class="datachange">
 				<view class="tab">
-					<view>昵称</view>
+					<view>{{$lang('昵称')}}</view>
 					<u-icon @click="showpop=false" name="close" color="#000" size="24"></u-icon>
 				</view>
 				<view class="inuter">
 					<view class="tips">
-						您的昵称将显示于交易和聊天
+						{{$lang('您的昵称将显示于交易和聊天')}}
 					</view>
 					<u-input @focus='actived=true' @blur='actived=false' :border-color="actived?'#000':''" clearable
 						:maxlength='12' :custom-style='custyle' v-model="nickname" :border="true" />
 					<view class="btpart">
-						<view class="cancle" @click="showpop=false">取消</view>
-						<view class="confirm" @click="nicknameconfirm">确认</view>
+						<view class="cancle" @click="showpop=false">{{$lang('取消')}}</view>
+						<view class="confirm" @click="nicknameconfirm">{{$lang('确认')}}</view>
 					</view>
 				</view>
 			</view>
@@ -106,34 +107,34 @@
 		<u-popup z-index='7' v-model="showpspop" mode="bottom" border-radius="18">
 			<view class="datachange">
 				<view class="tab">
-					<view>登录密码</view>
+					<view>{{$lang('登录密码')}}</view>
 					<u-icon @click="showpspop=false" name="close" color="#000" size="24"></u-icon>
 				</view>
 				<view class="inuter">
 					<view class="tips">
-						请保管好您的登录密码
+						{{$lang('请保管好您的登录密码')}}
 					</view>
-					<u-input :clearable='false' type='password' placeholder='请输入密码' @focus='actived=true'
+					<u-input :clearable='false' type='password' :placeholder='$lang("请输入密码")' @focus='actived=true'
 						@blur='actived=false' :border-color="actived?'#000':''" :maxlength='12' :custom-style='custyle'
 						v-model="newpsw" :border="true" />
 					<view class="vericode" style="margin-top: 12rpx;">
-						<u-input :clearable='false' placeholder='请填写验证码' @focus='actived2=true' @blur='actived2=false'
-							:border-color="actived2?'#000':''" :maxlength='12' :custom-style='custyle'
-							v-model="code" :border="true" />
+						<u-input :clearable='false' :placeholder='$lang("请填写验证码")' @focus='actived2=true'
+							@blur='actived2=false' :border-color="actived2?'#000':''" :maxlength='12'
+							:custom-style='custyle' v-model="code" :border="true" />
 						<view class="codebt" @click="getCode">
 							{{tips}}
 						</view>
 					</view>
 					<view class="btpart">
-						<view class="cancle" @click="showpspop=false">取消</view>
-						<view class="confirm" @click="pswconfirm">确认</view>
+						<view class="cancle" @click="showpspop=false">{{$lang('取消')}}</view>
+						<view class="confirm" @click="pswconfirm">{{$lang('确认')}}</view>
 					</view>
 				</view>
 			</view>
 		</u-popup>
-		<u-verification-code :seconds="seconds" ref="uCode"
-			@change="codeChange"></u-verification-code>
-		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
+		<u-verification-code :seconds="seconds" ref="uCode" @change="codeChange"></u-verification-code>
+		<zero-loading color='#F0E68C' mask v-if="loading" showText :textColor='$lang("#fff")'
+			:maskOpacity='0.8'></zero-loading>
 	</view>
 </template>
 
@@ -178,17 +179,17 @@
 				if (this.$refs.uCode.canGetCode) {
 					// 模拟向后端请求验证码
 					uni.showLoading({
-						title: '正在获取验证码'
+						title: this.$lang('正在获取验证码')
 					})
 					setTimeout(() => {
 						uni.hideLoading();
 						// 这里此提示会被this.start()方法中的提示覆盖
-						this.$u.toast('验证码已发送');
+						this.$u.toast(this.$lang('验证码已发送'));
 						// 通知验证码组件内部开始倒计时
 						this.$refs.uCode.start();
 					}, 2000);
 				} else {
-					this.$u.toast('倒计时结束后再发送');
+					this.$u.toast(this.$lang('倒计时结束后再发送'));
 				}
 			},
 			uploadimg() {
@@ -197,7 +198,7 @@
 					success: res => {
 						if (res.tempFiles[0].size > 1024 * 1024 * 5) {
 							uni.showToast({
-								title: '图片太大,请控制在5MB内',
+								title: this.$lang('图片太大,请控制在5MB内'),
 								icon: 'none'
 							})
 							return
@@ -213,7 +214,7 @@
 			},
 			nicknameconfirm() {
 				if (!this.nickname) {
-					this.$u.toast('请填写昵称')
+					this.$u.toast(this.$lang('请填写昵称'))
 				} else {
 					this.updateinfo('nickname', this.nickname)
 				}
@@ -225,7 +226,7 @@
 					value,
 				}).then(res => {
 					uni.showToast({
-						title: field == 'avatar' ? '头像已跟新' : '昵称已更新',
+						title: field == 'avatar' ? this.$lang('头像已更新') : this.$lang('昵称已更新'),
 						icon: 'none'
 					})
 					this.getinfo()
@@ -254,7 +255,7 @@
 					data: '123',
 					success: (res) => {
 						uni.showToast({
-							title: '已复制',
+							title: this.$lang('已复制'),
 							icon: 'none'
 						})
 					}
@@ -339,9 +340,11 @@
 			padding: 0 36rpx;
 		}
 	}
-	.qiutbtview{
+
+	.qiutbtview {
 		padding: 24rpx 0;
 	}
+
 	.qiutbt {
 		// margin-top: 24rpx;
 		width: 100%;
@@ -391,9 +394,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		.avatarpartbox{
+
+		.avatarpartbox {
 			position: relative;
 		}
+
 		.dec {
 			width: 50rpx;
 			height: 50rpx;

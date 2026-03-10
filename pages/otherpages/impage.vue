@@ -4,7 +4,7 @@
 			<view class="slot-wrap">
 				<image :src="rinfo.avatar||'@/static/icons/defaultavatar.png'" mode="aspectFill"></image>
 				<view class="nickname">
-					{{rinfo.nickname||'玩家'}}
+					{{rinfo.nickname||$lang('玩家')}}
 				</view>
 			</view>
 		</u-navbar>
@@ -21,24 +21,24 @@
 
 						<view class="statu1" v-if="i.tradetype!=1">
 							<view class="line1">
-								您有一笔出售订单，等待对方支付
+								{{$lang('您有一笔出售订单，等待对方支付')}}
 							</view>
 							<view class="line2">
-								对方正在向你转账，请注意查收
+								{{$lang('对方正在向你转账，请注意查收')}}
 							</view>
 						</view>
 						<view class="statu2" v-else>
 							<view class="line1">
-								您有一笔待支付订单，请及时支付
+								{{$lang('您有一笔待支付订单，请及时支付')}}
 							</view>
 							<view class="line2">
-								您有一笔待支付订单，请及时支付
+								{{$lang('您有一笔待支付订单，请及时支付')}}
 							</view>
 							<view class="line">
 
 							</view>
 							<view class="linebtn" @click="getorderdetal(i.content)">
-								去付款 <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
+								{{$lang('去付款')}} <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
 									size="28"></u-icon>
 							</view>
 						</view>
@@ -49,21 +49,21 @@
 
 						<view class="statu1" v-if="i.tradetype!=1">
 							<view class="line1">
-								已付款，等待对方确认收款
+								{{$lang('已付款，等待对方确认收款')}}
 							</view>
 							<view class="line2">
-								即将完成本单交易
+								{{$lang('即将完成本单交易')}}
 							</view>
 						</view>
 						<view class="statu2" v-else>
 							<view class="line1">
-								对方已完成付款，请确认收款
+								{{$lang('对方已完成付款，请确认收款')}}
 							</view>
 							<view class="line">
 
 							</view>
 							<view class="linebtn" @click="getorderdetal(i.content)">
-								确认 <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
+								{{$lang('确认')}} <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
 									size="28"></u-icon>
 							</view>
 						</view>
@@ -73,23 +73,23 @@
 					<view style="max-width: 380rpx;" class="content" v-if="i.messagetype=='trade-cancel'">
 						<view class="statu2">
 							<view class="line1">
-								订单号：{{i.content}}
+								{{$lang('订单号')}}：{{i.content}}
 							</view>
 							<view class="line">
 
 							</view>
 							<view class="line2">
-								该订单已被取消
+								{{$lang('该订单已被取消')}}
 							</view>
 						</view>
 					</view>
 					<view style="max-width: 380rpx;" class="content" v-if="i.messagetype=='trade-finish'">
 						<view class="statu2">
 							<view class="line1">
-								交易完成
+								{{$lang('交易完成')}}
 							</view>
 							<view class="line2">
-								订单 {{i.content}} 已经完成交易
+								{{$lang('订单')}} {{i.content}} {{$lang('已经完成交易')}}
 							</view>
 						</view>
 					</view>
@@ -107,71 +107,71 @@
 					<view style="max-width: 380rpx;" class="content" v-if="i.messagetype=='order'">
 						<view class="statu2" v-if='i.tradetype!=1'>
 							<view class="line1">
-								您有一笔待支付订单，请及时支付
+								{{$lang('您有一笔待支付订单，请及时支付')}}
 							</view>
 							<view class="line2">
-								您有一笔待支付订单，请及时支付
+								{{$lang('您有一笔待支付订单，请及时支付')}}
 							</view>
 							<view class="line">
 
 							</view>
 							<view class="linebtn" @click="getorderdetal(i.content)">
-								去付款 <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
+								{{$lang('去付款')}} <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
 									size="28"></u-icon>
 							</view>
 						</view>
 						<view class="statu1" v-else>
 							<view class="line1">
-								您有一笔出售订单，等待对方支付
+								{{$lang('您有一笔出售订单，等待对方支付')}}
 							</view>
 							<view class="line2">
-								对方正在向你转账，请注意查收
+								{{$lang('对方正在向你转账，请注意查收')}}
 							</view>
 						</view>
 					</view>
 					<view style="max-width: 380rpx;" class="content" v-if="i.messagetype=='trade-confirm'">
 						<view class="statu2" v-if="i.tradetype!=1">
 							<view class="line1">
-								对方已完成付款，请确认收款
+								{{$lang('对方已完成付款，请确认收款')}}
 							</view>
 							<view class="line">
 
 							</view>
 							<view class="linebtn" @click="getorderdetal(i.content)">
-								确认 <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
+								{{$lang('确认')}} <u-icon style="margin-left: 4rpx;" name="arrow-right" color="#fff2f6"
 									size="28"></u-icon>
 							</view>
 						</view>
 
 						<view class="statu1" v-else>
 							<view class="line1">
-								已付款，等待对方确认收款
+								{{$lang('已付款，等待对方确认收款')}}
 							</view>
 							<view class="line2">
-								即将完成本单交易
+								{{$lang('即将完成本单交易')}}
 							</view>
 						</view>
 					</view>
 					<view style="max-width: 380rpx;" class="content" v-if="i.messagetype=='trade-cancel'">
 						<view class="statu2">
 							<view class="line1">
-								订单号：{{i.content}}
+								{{$lang('订单号')}}：{{i.content}}
 							</view>
 							<view class="line">
 
 							</view>
 							<view class="line2">
-								该订单已被取消
+								{{$lang('该订单已被取消')}}
 							</view>
 						</view>
 					</view>
 					<view style="max-width: 380rpx;" class="content" v-if="i.messagetype=='trade-finish'">
 						<view class="statu2">
 							<view class="line1">
-								交易完成
+								{{$lang('交易完成')}}
 							</view>
 							<view class="line2">
-								订单 {{i.content}} 已经完成交易
+								{{$lang('订单')}} {{i.content}} {{$lang('已经完成交易')}}
 							</view>
 						</view>
 					</view>
@@ -182,7 +182,7 @@
 		</scroll-view>
 		<view class="contentpart">
 			<view class="inputer">
-				<u-input placeholder-style="color: #595c60;" placeholder='在此处输入消息' v-model="message"
+				<u-input placeholder-style="color: #595c60;" :placeholder='$lang("在此处输入消息")' v-model="message"
 					:custom-style='inputstyle' />
 				<u-icon @click="uploadimg" style="margin-left: 8rpx;" name="photo" color="#fff" size="44"></u-icon>
 			</view>
@@ -193,13 +193,13 @@
 		<u-popup z-index='7' v-model="showOrderModal" mode="bottom" border-radius="18">
 			<view class="datachange order-modal">
 				<view class="tab fixed-top">
-					<view class="title">订单详情</view>
+					<view class="title">{{$lang('订单详情')}}</view>
 					<u-icon @click="showOrderModal=false" name="close" color="#000" size="24"></u-icon>
 				</view>
 				<view class="inuter">
 					<!-- 订单基本信息 -->
 					<view class="form-item full-width">
-						<view class="tips">商家昵称</view>
+						<view class="tips">{{$lang('商家昵称')}}</view>
 						<view class="order-value flex">
 							<view>{{orderDetail.store?orderDetail.store.title:'-'}}</view>
 							<image class="shopava" :src="orderDetail.store?orderDetail.store.avatar:''"
@@ -207,50 +207,50 @@
 						</view>
 					</view>
 					<view class="form-item full-width">
-						<view class="tips">订单号</view>
+						<view class="tips">{{$lang('订单号')}}</view>
 						<view class="order-value">{{orderDetail.sn || '-'}}</view>
 					</view>
 
 					<view class="form-item">
-						<view class="tips">订单状态</view>
+						<view class="tips">{{$lang('订单状态')}}</view>
 						<view class="order-value status" :class="'status-' + orderDetail.status">
 							{{getStatusText(orderDetail.status)}}
 						</view>
 					</view>
 					<view class="form-item">
-						<view class="tips">订单类型</view>
-						<view class="order-value">{{orderDetail.type === 1 ? '客户卖出' : '客户买入'}}</view>
+						<view class="tips">{{$lang('订单类型')}}</view>
+						<view class="order-value">{{orderDetail.type === 1 ? $lang('客户卖出') : $lang('客户买入')}}</view>
 					</view>
 					<view class="form-item">
-						<view class="tips">交易数量</view>
+						<view class="tips">{{$lang('交易数量')}}</view>
 						<view class="order-value">{{orderDetail.amount || '0.00'}}</view>
 					</view>
 					<view class="form-item">
-						<view class="tips">交易单价</view>
+						<view class="tips">{{$lang('交易单价')}}</view>
 						<view class="order-value">{{orderDetail.entrust?orderDetail.entrust.price|| '0.00':'-'}}
 							{{orderDetail.entrust?orderDetail.entrust.unit:''}}
 						</view>
 					</view>
 					<view class="form-item">
-						<view class="tips">交易金额</view>
+						<view class="tips">{{$lang('交易金额')}}</view>
 						<view class="order-value">
 							{{orderDetail.entrust?(Number(orderDetail.entrust.price)*Number(orderDetail.amount)).toFixed(2) :'-'}}
 							{{orderDetail.entrust?orderDetail.entrust.unit:''}}
 						</view>
 					</view>
 					<view class="form-item">
-						<view class="tips">交易方式</view>
+						<view class="tips">{{$lang('交易方式')}}</view>
 						<view class="order-value">{{orderDetail.entrust?orderDetail.entrust.deal_way:'-'}}</view>
 					</view>
 					<view class="form-item" v-if="orderDetail.type==0">
-						<view class="tips">交易账户</view>
+						<view class="tips">{{$lang('交易账户')}}</view>
 						<view class="order-value" @click="copyvalue(orderDetail.entrust.contact_way)">
 							{{orderDetail.entrust?orderDetail.entrust.contact_way:'-'}}
 							<image class="copyicon" src="@/static/icons/blackcopy.png" mode="aspectFill"></image>
 						</view>
 					</view>
 					<view class="form-item" v-if="orderDetail.type==1">
-						<view class="tips">交易账户</view>
+						<view class="tips">{{$lang('交易账户')}}</view>
 						<view class="order-value" @click="copyvalue(orderDetail.user.account)">
 							{{orderDetail.user?orderDetail.user.account:'-'}}
 							<image class="copyicon" src="@/static/icons/blackcopy.png" mode="aspectFill"></image>
@@ -258,17 +258,17 @@
 					</view>
 
 					<view class="form-item">
-						<view class="tips">下单时间</view>
+						<view class="tips">{{$lang('下单时间')}}</view>
 						<view class="order-value">{{(orderDetail.create_time)}}</view>
 					</view>
 					<view class="form-item">
-						<view class="tips">支付时间</view>
+						<view class="tips">{{$lang('支付时间')}}</view>
 						<view class="order-value">
 							{{orderDetail.pay_time ? $fuc.formatDate(orderDetail.pay_time) : '--'}}
 						</view>
 					</view>
 					<view class="form-item">
-						<view class="tips">确认时间</view>
+						<view class="tips">{{$lang('确认时间')}}</view>
 						<view class="order-value">
 							{{orderDetail.confirm_time ? $fuc.formatDate(orderDetail.confirm_time) : '--'}}
 						</view>
@@ -276,34 +276,41 @@
 				</view>
 				<view class="btpart fixed-bottom"
 					v-if="orderDetail.status === 0 && ((orderDetail.type==0&&orderDetail.entrust.user_id==rinfo.id)||(orderDetail.type==1&&orderDetail.entrust.user_id!=rinfo.id))">
-					<view class="cancle" @click="showordercancle=true">取消订单</view>
-					<view class="confirm" @click="showpaysuccess=true">完成支付</view>
+					<view class="cancle" @click="showordercancle=true">{{$lang('取消订单')}}</view>
+					<view class="confirm" @click="showpaysuccess=true">{{$lang('完成支付')}}</view>
 				</view>
 				<view class="btpart fixed-bottom"
 					v-if="orderDetail.status === 1&& ((orderDetail.type==0&&orderDetail.entrust.user_id!=rinfo.id)||(orderDetail.type==1&&orderDetail.entrust.user_id==rinfo.id))">
-					<view style="color: #570509;" class="cancle" @click="showorderreport=true">订单申诉</view>
-					<view class="confirm" @click="showordersuccess=true">确认收款</view>
+					<view style="color: #570509;" class="cancle" @click="showorderreport=true">{{$lang('订单申诉')}}</view>
+					<view class="confirm" @click="showordersuccess=true">{{$lang('确认收款')}}</view>
 				</view>
 			</view>
 		</u-popup>
 		<!-- 完成付款 -->
-		<u-modal confirm-text='确认' cancel-text='稍后' v-model="showpaysuccess" content="是否确认完成付款" show-cancel-button
-			confirm-color='#a35f08' @confirm="ordercommandconfirm"></u-modal>
+		<u-modal :confirm-text='$lang("确认")' :cancel-text='$lang("稍后")' v-model="showpaysuccess"
+			:content="$lang('是否确认完成付款')" show-cancel-button confirm-color='#a35f08'
+			@confirm="ordercommandconfirm"></u-modal>
 		<!-- 完成订单 -->
-		<u-modal confirm-text='确认' cancel-text='稍后' v-model="showordersuccess" content="是否确认完成订单" show-cancel-button
-			confirm-color='#a35f08' @confirm="ordercommandfinish"></u-modal>
+		<u-modal :confirm-text='$lang("确认")' :cancel-text='$lang("稍后")' v-model="showordersuccess"
+			:content="$lang('是否确认完成订单')" show-cancel-button confirm-color='#a35f08'
+			@confirm="ordercommandfinish"></u-modal>
 
 		<!-- 取消订单 -->
-		<u-modal confirm-text='确认' cancel-text='取消' v-model="showordercancle" content="是否确认取消该订单" show-cancel-button
-			confirm-color='#a35f08' @confirm="ordercommandcancle"></u-modal>
+		<u-modal :confirm-text='$lang("确认")' :cancel-text='$lang("取消")' v-model="showordercancle"
+			:content="$lang('是否确认取消该订单')" show-cancel-button confirm-color='#a35f08'
+			@confirm="ordercommandcancle"></u-modal>
 		<!-- 申诉订单 -->
-		<u-modal confirm-text='确认' cancel-text='取消' v-model="showorderreport" content="是否确认申诉该订单" show-cancel-button
-			confirm-color='#a35f08' @confirm="ordercommandreport"></u-modal>
+		<u-modal :confirm-text='$lang("确认")' :cancel-text='$lang("取消")' v-model="showorderreport"
+			:content="$lang('是否确认申诉该订单')" show-cancel-button confirm-color='#a35f08'
+			@confirm="ordercommandreport"></u-modal>
 		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
 	</view>
 </template>
 
 <script>
+	import {
+		wssURL
+	} from '@/utils/env.js'
 	import {
 		data
 	} from 'uview-ui/libs/mixin/mixin';
@@ -361,12 +368,12 @@
 			connectionStatus() {
 				if (this.isConnected) {
 					return {
-						text: '已连接',
+						text: $lang('已连接'),
 						class: 'connected'
 					};
 				} else {
 					return {
-						text: '未连接',
+						text: $lang('未连接'),
 						class: 'disconnected'
 					};
 				}
@@ -500,7 +507,7 @@
 				uni.setClipboardData({
 					data: e.toString(),
 					success: () => {
-						this.$u.toast('复制成功')
+						this.$u.toast(this.$lang('复制成功'))
 					}
 				})
 			},
@@ -511,7 +518,7 @@
 				}).then(res => {
 					this.orderDetail = res.data.data;
 					if (!res.data.data.entrust) {
-						this.$u.toast('订单异常')
+						this.$u.toast(this.$lang('订单异常'))
 						this.loading = false;
 					}
 					this.showOrderModal = true;
@@ -522,13 +529,13 @@
 			// 获取状态文本
 			getStatusText(status) {
 				const statusMap = {
-					0: '待支付',
-					1: '待确认',
-					2: '已完成',
-					3: '已取消',
-					4: '申诉中'
+					0: this.$lang('待支付'),
+					1: this.$lang('待确认'),
+					2: this.$lang('已完成'),
+					3: this.$lang('已取消'),
+					4: this.$lang('申诉中')
 				};
-				return statusMap[status] || '未知状态';
+				return statusMap[status] || this.$lang('未知状态');
 			},
 
 			backfuc() {
@@ -569,7 +576,7 @@
 					success: res => {
 						if (res.tempFiles[0].size > 1024 * 1024 * 5) {
 							uni.showToast({
-								title: '图片太大,请控制在5MB内',
+								title: this.$lang('图片太大,请控制在5MB内'),
 								icon: 'none'
 							})
 							return
@@ -623,14 +630,14 @@
 				if (this.isConnected || this.ws) return;
 				try {
 					// 替换为你的服务器地址
-					const serverUrl = 'ws://localhost:8899?token=' + localStorage.getItem('token');
+					const serverUrl = wssURL+'?token=' + localStorage.getItem('token');
 					this.socket = uni.connectSocket({
 						url: serverUrl,
 						complete: () => {}
 					});
 					getApp().globalData.webSocket = this.socket;
 					this.socket.onOpen(() => {
-						console.log('WebSocket连接成功');
+						// console.log('WebSocket连接成功');
 						this.isConnected = true;
 
 						// 清除重连定时器
@@ -645,12 +652,12 @@
 							const data = JSON.parse(res.data);
 							uni.$emit('global-websocket-message', data);
 						} catch (error) {
-							console.error('消息解析错误:', error);
+							// console.error('消息解析错误:', error);
 						}
 					});
 
 					this.socket.onClose((e) => {
-						console.log('WebSocket连接关闭', e);
+						// console.log('WebSocket连接关闭', e);
 						this.isConnected = false;
 						if (e.code != 1000) {
 							this.attemptReconnect();
@@ -658,14 +665,14 @@
 					});
 
 					this.socket.onError((error) => {
-						console.error('WebSocket错误:', error);
+						// console.error('WebSocket错误:', error);
 						this.isConnected = false;
 					});
 
 				} catch (error) {
-					console.error('连接失败:', error);
+					// console.error('连接失败:', error);
 					uni.showToast({
-						title: '连接失败',
+						title: this.$lang('连接失败'),
 						icon: 'none'
 					});
 				}
@@ -690,7 +697,7 @@
 				this.socket.send({
 					data: JSON.stringify(messageData),
 					success: () => {
-						console.log('操作成功')
+						// console.log('操作成功')
 						this.message = ''
 						this.srolltobottom()
 					},

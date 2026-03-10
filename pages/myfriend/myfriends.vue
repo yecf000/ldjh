@@ -5,7 +5,7 @@
 			
 		</view>
 		<view class="searchbar">
-			<u-search animation bg-color='#333' color='#fff' placeholder="请输入关键词" v-model="keyword" :action-style="{color:'#fff'}"></u-search>
+			<u-search animation bg-color='#333' color='#fff' :placeholder="$lang('请输入关键词')" v-model="keyword" :action-style="{color:'#fff'}"></u-search>
 		</view>
 		<view class="null" v-if="friendlist.length==0">
 			<image src="@/static/icons/null.png" mode="aspectFill"></image>
@@ -15,7 +15,7 @@
 				<view class="accontinfo">
 					<image :src="i.chat_user_info?i.chat_user_info.avatar:`@/static/icons/defaultavatar.png`" mode="aspectFill"></image>
 					<view class="infos">
-						<view class="nickname">{{i.chat_user_info?i.chat_user_info.nickname:'陌生人'}}</view>
+						<view class="nickname">{{i.chat_user_info?i.chat_user_info.nickname:$lang('陌生人')}}</view>
 						<view class="message"><div class="lme">{{i.last_msg||' '}}</div> <span>{{$fuc.formatTimestamp(i.update_time)||''}}</span> </view>
 					</view>
 				</view>

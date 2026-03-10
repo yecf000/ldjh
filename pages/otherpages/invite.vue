@@ -1,33 +1,33 @@
 <template>
 	<view class="all">
-		<navbar title="好友邀请"></navbar>
+		<navbar :title="$lang('好友邀请')"></navbar>
 		<view class="qr">
 			<view class="title">
-				邀请好友，赢取专属奖励！
+				{{$lang('邀请好友，赢取专属奖励！')}}
 			</view>
 			<view class="tips">
-				使用手机浏览器扫描二维码加入掘金，您的奖励触手可及。
+				{{$lang('使用手机浏览器扫描二维码加入掘金，您的奖励触手可及。')}}
 			</view>
 			<view class="qrpg">
 				<uqrcode size="200" ref="qrcode" canvas-id="qrcode" :value="invitelink"
 					:options="{ margin: 0 }"></uqrcode>
 			</view>
 		</view>
-		<u-divider margin-top='60' margin-bottom='40' border-color='#2f2f30' color="#818286" bg-color='rgba(0,0,0,0)'>分享专属邀请链接或邀请码</u-divider>
+		<u-divider margin-top='60' margin-bottom='40' border-color='#2f2f30' color="#818286" bg-color='rgba(0,0,0,0)'>{{$lang('分享专属邀请链接或邀请码')}}</u-divider>
 		<view class="invitinfo">
 			<view class="inviteitem">
-				<view class="name">邀请链接</view>
+				<view class="name">{{$lang('邀请链接')}}</view>
 				<view class="content">{{invitelink||'-'}}</view>
 				<image @click="copy(invitelink)" src="@/static/icons/copy.png" mode="aspectFill"></image>
 			</view>
 			<view class="inviteitem">
-				<view class="name">邀请码</view>
+				<view class="name">{{$lang('邀请码')}}</view>
 				<view class="content">{{code||'-'}}</view>
 				<image @click="copy(code)" src="@/static/icons/copy.png" mode="aspectFill"></image>
 			</view>
 		</view>
 		<view class="about">
-			tips: 奖励包括不固定数量的金矿、好友充值返利等多重福利。具体权益因账户等级而异，可前往会员权益查看详情以及最新活动。
+			{{$lang('tips: 奖励包括不固定数量的金矿、好友充值返利等多重福利。具体权益因账户等级而异，可前往会员权益查看详情以及最新活动。')}}
 		</view>
 	</view>
 </template>
@@ -62,7 +62,7 @@
 					data:e,
 					success: () => {
 						uni.showToast({
-							title:'复制成功',
+							title:this.$lang('复制成功'),
 							icon:'none'
 						})
 					}
@@ -123,7 +123,7 @@
 		padding-top: 88rpx;
 
 		.tips {
-			width: 400rpx;
+			width: 450rpx;
 			text-align: center;
 			margin-top: 48rpx;
 			margin-bottom: 48rpx;
@@ -133,6 +133,7 @@
 		.title {
 			font-size: 40rpx;
 			font-weight: bold;
+			text-align: center;
 		}
 
 		.qrpg {

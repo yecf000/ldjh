@@ -1,8 +1,10 @@
 // prod 生产 dev 开发
 const env = "prod"
-
+var domain = window.location.host
 
 const prod = {
+  // wss: "wss://" + domain.replace("www", "game"),
+  wss: "wss://game.isfexag.com:8899",
   url: 'https://admin.isfexag.com', // 线上环境'
   appKey: 'wx7e6fbbbea7d597ef'
 }
@@ -23,10 +25,12 @@ const config = {
   test,
 }
 
+let wssURL = config[env].wss;
 let baseURL = config[env].url;
 let appKey = config[env].appKey
 
 export  {
   baseURL,
+  wssURL,
   appKey
 }

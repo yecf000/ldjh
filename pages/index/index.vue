@@ -2,12 +2,12 @@
 	<view class="content">
 		<view class="navbar">
 			<view class="balance">
-				剩余金矿:<span>{{Number(userinfo.user_money).toFixed(2) }}</span>
+				{{$lang('剩余金矿')}}:<span>{{Number(userinfo.user_money).toFixed(2) }}</span>
 				<image src="@/static/icons/gold.png" mode="aspectFill"></image>
 			</view>
 			<view class="getgoldclass">
 				<u-button @click="$u.route('/pages/otherpages/getgold')" type="primary" size='mini' ripple
-					:custom-style='customstyle'>获取金矿</u-button>
+					:custom-style='customstyle'>{{$lang('获取金矿')}}</u-button>
 			</view>
 		</view>
 		<view class="placeholdernavbar">
@@ -30,7 +30,7 @@
 			<view class="totalbox">
 				<view class="total">
 					<image src="@/static/icons/goldg.png" mode="aspectFill"></image>
-					矿山总资产:<span>$1000000</span>
+					{{$lang('矿山总资产')}}:<span>$1000000</span>
 				</view>
 				<view class="gg" v-show="currentMultiplier">
 					{{currentMultiplier.toFixed(2)}} X
@@ -42,16 +42,17 @@
 		</view>
 		<view class="opration">
 			<view v-if="wsgamestatu=='preparation'" :class="instatu?'outsuccess':'ordernow'" @click="intogame">
-				{{instatu?'已参与':'进入挖矿'}} {{wscurrentTime}}S
+				{{instatu?$lang('已参与'):$lang('进入挖矿')}} {{wscurrentTime}}S
 			</view>
-			<view @click="gameout('human')" v-if="wsgamestatu=='playing'" :class="instatu?(outstatu?'outsuccess':(canoutstatu?'outnow':'outover')):'outover'">
-				{{outstatu?'撤离成功':'立即撤离'}}
+			<view @click="gameout('human')" v-if="wsgamestatu=='playing'"
+				:class="instatu?(outstatu?'outsuccess':(canoutstatu?'outnow':'outover')):'outover'">
+				{{outstatu?$lang('撤离成功'):$lang('立即撤离')}}
 			</view>
 			<view v-if="wsgamestatu=='settlement'" class="ordersettlement">
-				游戏结算中 {{wscurrentTime}}S
+				{{$lang('游戏结算中')}} {{wscurrentTime}}S
 			</view>
 			<view class="types">
-				请选择稿子
+				{{$lang('请选择稿子')}}
 				<svg style="margin-left: 12rpx;" t="1760202195406" class="icon" viewBox="0 0 1024 1024" version="1.1"
 					xmlns="http://www.w3.org/2000/svg" p-id="8284" width="16" height="16">
 					<path
@@ -72,10 +73,12 @@
 					<view class="add" @click="add">+</view>
 				</view>
 				<view class="checkpart">
-					<u-checkbox :disabled='instatu' @change='keepchange' active-color="#1d4087" style="position: relative;right: -20rpx;"
-						v-model="checked">
+					<u-checkbox :disabled='instatu' @change='keepchange' active-color="#1d4087"
+						style="position: relative;right: -20rpx;" v-model="checked">
 					</u-checkbox>
-					<u-input  @blur='keepvalue=Number(keepvalue||0)>5?Number(5).toFixed(2):Number(keepvalue||0).toFixed(2)' type='number' :disabled='!checked||instatu' placeholder='固定倍率撤出'
+					<u-input
+						@blur='keepvalue=Number(keepvalue||0)>5?Number(5).toFixed(2):Number(keepvalue||0).toFixed(2)'
+						type='number' :disabled='!checked||instatu' :placeholder='$lang("固定倍率撤出")'
 						placeholder-style="color: #7b7e83;" v-model="keepvalue" :clearable='false'
 						:custom-style='inputstyle' />
 					<view class="x">
@@ -86,25 +89,33 @@
 		</view>
 		<view class="players">
 			<view class="tabs">
-				<view class="player">玩家<span v-show="playerList.length>0">{{playerList.length}}</span></view>
-				<view class='escape'>撤出</view>
-				<view class='inside'>投入</view>
-				<view class='earn'>盈亏</view>
+				<view class="player">{{$lang('玩家')}}<span v-show="playerList.length>0">{{playerList.length}}</span>
+				</view>
+				<view class='escape'>{{$lang('撤出')}}</view>
+				<view class='inside'>{{$lang('投入')}}</view>
+				<view class='earn'>{{$lang('盈亏')}}</view>
 			</view>
-			<view  class="playeritem" :style="{background:(!goingstatu&&currentMultiplier&&((currentMultiplier<i.keepvalue)||!i.keepvalue))?'#25090420':(i.keepvalue&&(currentMultiplier.toFixed(2)>=i.keepvalue)?'#04200120':(index%2!=1?'#0f131650':''))}" v-for="(i,index) in playerList" :key="i.unikey">
+			<view class="playeritem"
+				:style="{background:(!goingstatu&&currentMultiplier&&((currentMultiplier<i.keepvalue)||!i.keepvalue))?'#25090420':(i.keepvalue&&(currentMultiplier.toFixed(2)>=i.keepvalue)?'#04200120':(index%2!=1?'#0f131650':''))}"
+				v-for="(i,index) in playerList" :key="i.unikey">
 				<view class="player">
 					<image :src="i.avatar||'@/static/icons/defaultavatar.png'" mode="aspectFill"></image>
 					<view class="name">
-						{{i.nickname||'玩家'}}
+						{{i.nickname||$lang('玩家')}}
 					</view>
 				</view>
-				<view class='escape'>{{!i.keepvalue?'-':currentMultiplier.toFixed(2)>=i.keepvalue?('x'+i.keepvalue):'-'}}</view>
+				<view class='escape'>
+					{{!i.keepvalue?'-':currentMultiplier.toFixed(2)>=i.keepvalue?('x'+i.keepvalue):'-'}}</view>
 				<view class='inside'>{{i.gold||0}}</view>
-				
-				<view v-show="currentMultiplier==0||(!i.keepvalue&&goingstatu)||(goingstatu&&currentMultiplier!=0&&currentMultiplier<i.keepvalue)" class='earn'>{{'-'}}</view>
-				<view v-show="i.keepvalue&&currentMultiplier>=i.keepvalue"  class='earn'>{{((i.keepvalue-1)*i.gold).toFixed(2)}}</view>
-				<view v-show="!goingstatu&&currentMultiplier&&((currentMultiplier<i.keepvalue)||!i.keepvalue)" class='earn'>{{Number(i.gold*-1).toFixed(2)}}</view>
-<!-- 				<view v-show="(currentMultiplier >= targetMultiplier)&&(!i.keepvalue||(i.keepvalue>targetMultiplier))" class='earn'>{{Number(i.gold*-1).toFixed(2)}}</view>
+
+				<view
+					v-show="currentMultiplier==0||(!i.keepvalue&&goingstatu)||(goingstatu&&currentMultiplier!=0&&currentMultiplier<i.keepvalue)"
+					class='earn'>{{'-'}}</view>
+				<view v-show="i.keepvalue&&currentMultiplier>=i.keepvalue" class='earn'>
+					{{((i.keepvalue-1)*i.gold).toFixed(2)}}</view>
+				<view v-show="!goingstatu&&currentMultiplier&&((currentMultiplier<i.keepvalue)||!i.keepvalue)"
+					class='earn'>{{Number(i.gold*-1).toFixed(2)}}</view>
+				<!-- 				<view v-show="(currentMultiplier >= targetMultiplier)&&(!i.keepvalue||(i.keepvalue>targetMultiplier))" class='earn'>{{Number(i.gold*-1).toFixed(2)}}</view>
 				<view v-show="i.keepvalue&&(currentMultiplier >= targetMultiplier)&&(i.keepvalue<=targetMultiplier)" class='earn'>{{((i.keepvalue-1)*i.gold).toFixed(2)}}</view>
 				<view v-show="(currentMultiplier < i.keepvalue)&&(currentMultiplier < targetMultiplier)" class='earn'>{{'-'}}</view>
 				<view v-show="(currentMultiplier > i.keepvalue)&&(currentMultiplier < targetMultiplier)" class='earn'>{{((i.keepvalue-1)*i.gold).toFixed(2)}}</view> -->
@@ -117,6 +128,9 @@
 </template>
 
 <script>
+	import {
+		wssURL
+	} from '@/utils/env.js'
 	import tabbar from '@/components/tabbar.vue'
 	export default {
 		components: {
@@ -125,24 +139,24 @@
 		data() {
 			return {
 				// =======================用户数据层
-				userinfo:{
-						user_money:0
+				userinfo: {
+					user_money: 0
 				},
-				
+
 				// =======================游戏层
-				goingstatu:false,
-				instatu:false,
-				canin:false,
-				outstatu:false,
-				canoutstatu:false,
+				goingstatu: false,
+				instatu: false,
+				canin: false,
+				outstatu: false,
+				canoutstatu: false,
 				wsgamestatu: 'preparation', //preparation准备阶段  playing游戏阶段  settlement结算阶段
-				wscurrentTime:0,
+				wscurrentTime: 0,
 				socket: null,
 				isConnected: false,
 				message: '',
 				messages: [],
 				reconnectTimer: null,
-				playerList:[],
+				playerList: [],
 				// =======================页面UI层
 				inputstyle: {
 					color: '#e8e8e8',
@@ -158,31 +172,45 @@
 				options: {
 					10: {
 						tool: "#197f56",
-						toolname: "铁镐",
+						toolname: this.$lang('铁镐'),
 					},
 					50: {
 						tool: "#e6e6e6",
-						toolname: "银镐",
+						toolname: this.$lang('银镐'),
 					},
 					100: {
 						tool: "#fcba00",
-						toolname: "金镐",
+						toolname: this.$lang('金镐'),
 					},
 					150: {
 						tool: "#8888cc",
-						toolname: "秘银镐",
+						toolname: this.$lang('秘银镐'),
 					},
 					200: {
 						tool: "#ffaa7f",
-						toolname: "精钢镐",
+						toolname: this.$lang('精钢镐'),
 					}
 				},
-				times: [
-					{id:0,result:0},
-					{id:0,result:0},
-					{id:0,result:0},
-					{id:0,result:0},
-					{id:0,result:0}
+				times: [{
+						id: 0,
+						result: 0
+					},
+					{
+						id: 0,
+						result: 0
+					},
+					{
+						id: 0,
+						result: 0
+					},
+					{
+						id: 0,
+						result: 0
+					},
+					{
+						id: 0,
+						result: 0
+					}
 				],
 				scrollEnd: 9999,
 				old: {
@@ -228,12 +256,12 @@
 			connectionStatus() {
 				if (this.isConnected) {
 					return {
-						text: '已连接',
+						text: this.$lang('已连接'),
 						class: 'connected'
 					};
 				} else {
 					return {
-						text: '未连接',
+						text: this.$lang('未连接'),
 						class: 'disconnected'
 					};
 				}
@@ -244,76 +272,75 @@
 		},
 		methods: {
 			//撤离
-			gameout(e){
-				if(!this.instatu){
+			gameout(e) {
+				if (!this.instatu) {
 					return;
 				}
-				if(this.outstatu){
+				if (this.outstatu) {
 					return
 				}
-				if(this.canoutstatu){
-					if(!this.checked||(this.checked&&e=='auto')){
+				if (this.canoutstatu) {
+					if (!this.checked || (this.checked && e == 'auto')) {
 						this.outstatu = true
 						this.senddiyMessage({
-							action:'round_game_out',
-							keepvalue:Number(this.currentMultiplier).toFixed(2),
-							type:'game_action'
+							action: 'round_game_out',
+							keepvalue: Number(this.currentMultiplier).toFixed(2),
+							type: 'game_action'
 						})
-					}else{
+					} else {
 						uni.showToast({
-							title:'已设置固定点位',
-							icon:'none'
+							title: this.$lang('已设置固定点位'),
+							icon: 'none'
 						})
 					}
-				}else{
-					if(this.outstatu){
+				} else {
+					if (this.outstatu) {
 						return
 					}
 					uni.showToast({
-						title:'已错过撤离时间',
-						icon:'none'
+						title: this.$lang('已错过撤离时间'),
+						icon: 'none'
 					})
 				}
 			},
 			//进入挖矿游戏	
 			intogame() {
-				if(this.instatu){
+				if (this.instatu) {
 					return
 				}
 				if (!localStorage.getItem('token')) {
 					this.$fuc.gotopage('/pages/otherpages/login')
 					return
 				}
-				if(this.userinfo.user_money<this.dgoin){
+				if (this.userinfo.user_money < this.dgoin) {
 					uni.showToast({
-						icon:'none',
-						title:'金矿不足'
+						icon: 'none',
+						title: this.$lang('金矿不足')
 					})
 					return
 				}
-				if(this.canin){
+				if (this.canin) {
 					this.instatu = true
 					this.senddiyMessage({
-						action:'round_game_in',
-						ifkeep:this.checked,
-						keepvalue:this.checked?this.keepvalue:'',
-						gold:this.dgoin,
-						type:'game_action'
+						action: 'round_game_in',
+						ifkeep: this.checked,
+						keepvalue: this.checked ? this.keepvalue : '',
+						gold: this.dgoin,
+						type: 'game_action'
 					})
-					setTimeout(()=>{
+					setTimeout(() => {
 						this.getmoneyinfo()
-					},1500)
-				}else{
-					if(this.instatu){
+					}, 1500)
+				} else {
+					if (this.instatu) {
 						return
 					}
 					uni.showToast({
-						title:'未到进入时间',
-						icon:'none'
+						title: this.$lang('未到进入时间'),
+						icon: 'none'
 					})
 				}
 			},
-
 			//======================================
 			// 计算像素比例
 			calculatePixelRatio() {
@@ -327,7 +354,7 @@
 
 				// console.log('像素比例:', this.pixelRatio, 'Canvas尺寸:', this.canvasWidth, this.canvasHeight);
 			},
-			
+
 			// 获取系统信息计算像素比例
 			getSystemInfo() {
 				const systemInfo = uni.getSystemInfoSync();
@@ -338,7 +365,7 @@
 				// 如果需要获取canvas的实际像素尺寸
 				// 可以通过selectorQuery获取，或者根据比例计算
 			},
-			
+
 			// 开始/继续绘制
 			startDraw() {
 				if (this.isPlaying) return;
@@ -410,19 +437,19 @@
 				this.goingstatu = true
 				// console.log("===",this.maxMultiplier * Math.pow(this.progress, this.power))
 				if (!this.isPlaying) return;
-				
+
 				const currentTime = Date.now();
 				const elapsed = currentTime - this.startTime;
 				this.progress = elapsed / this.duration;
-				
-				
+
+
 				// 计算当前倍数
 				const currentMultiplier = this.maxMultiplier * Math.pow(this.progress, this.power);
-				if(this.instatu&&this.checked&&(currentMultiplier>=this.keepvalue)){
+				if (this.instatu && this.checked && (currentMultiplier >= this.keepvalue)) {
 					this.gameout('auto')
 				}
-				
-				
+
+
 				// 检查是否达到目标倍数
 				if (currentMultiplier >= this.targetMultiplier) {
 					// 计算精确的进度值
@@ -433,15 +460,15 @@
 					this.goingstatu = false
 					return;
 				}
-				
-				
+
+
 				if (this.progress > 1) {
 					this.progress = 1;
 					this.isPlaying = false;
 				}
-				
+
 				this.drawFrame(this.progress);
-				
+
 				if (this.progress < 1 && this.isPlaying) {
 					this.animationId = setTimeout(() => {
 						this.animate();
@@ -457,36 +484,36 @@
 				const scaledStartX = 0;
 				const scaledStartY = scaledHeight / 2;
 				const scaledEndX = scaledWidth / 2;
-				
+
 				ctx.clearRect(0, 0, scaledWidth, scaledHeight);
 				ctx.strokeStyle = '#de7a08';
 				ctx.lineWidth = 2;
 				ctx.lineCap = 'round';
 				ctx.beginPath();
 				ctx.moveTo(scaledStartX, scaledStartY);
-				
+
 				const segments = 100;
 				for (let i = 1; i <= segments; i++) {
 					const segProgress = i / segments;
 					if (segProgress > progress) break;
-			
+
 					const segX = scaledStartX + (scaledEndX - scaledStartX) * segProgress;
 					const currentMultiplier = this.maxMultiplier * Math.pow(segProgress, this.power);
 					const segY = scaledStartY - (currentMultiplier / this.maxMultiplier) * scaledStartY;
 					ctx.lineTo(segX, segY);
 				}
 				ctx.stroke();
-			
+
 				const currentX = scaledStartX + (scaledEndX - scaledStartX) * progress;
 				const currentMultiplier = this.maxMultiplier * Math.pow(progress, this.power);
 				const currentY = scaledStartY - (currentMultiplier / this.maxMultiplier) * scaledStartY;
 				this.currentMultiplier = currentMultiplier;
-				
+
 				ctx.fillStyle = '#783232';
 				ctx.beginPath();
 				ctx.arc(currentX, currentY, 4 * this.pixelRatio, 0, Math.PI * 2);
 				ctx.fill();
-				
+
 				this.status = this.isPlaying ? 2 : 1;
 				ctx.draw(true);
 			},
@@ -523,7 +550,7 @@
 
 				try {
 					// 替换为你的服务器地址
-					const serverUrl = 'ws://localhost:8899?token=' + localStorage.getItem('token');
+					const serverUrl = wssURL+'?token=' + localStorage.getItem('token');
 					this.socket = uni.connectSocket({
 						url: serverUrl,
 						complete: () => {}
@@ -532,45 +559,45 @@
 					this.socket.onOpen(() => {
 						// console.log('WebSocket连接成功');
 						this.isConnected = true;
-						this.addMessage('system', '连接服务器成功');
-						
+						this.addMessage('system', this.$lang('连接服务器成功'));
+
 						// 清除重连定时器
 						if (this.reconnectTimer) {
 							clearTimeout(this.reconnectTimer);
 							this.reconnectTimer = null;
 						}
 					});
-					
+
 					this.socket.onMessage((res) => {
 						try {
 							const data = JSON.parse(res.data);
 							this.handleServerMessage(data);
 							uni.$emit('global-websocket-message', data);
 						} catch (error) {
-							console.error('消息解析错误:', error);
-							this.addMessage('error', '消息解析错误: ' + res.data);
+							// console.error('消息解析错误:', error);
+							this.addMessage('error', this.$lang('消息解析错误')+': ' + res.data);
 						}
 					});
 
 					this.socket.onClose((e) => {
-						console.log('WebSocket连接关闭', e);
+						// console.log('WebSocket连接关闭', e);
 						this.isConnected = false;
-						this.addMessage('system', '连接已断开');
+						this.addMessage('system', this.$lang('连接已断开'));
 						if (e.code != 1000) {
 							this.attemptReconnect();
 						}
 					});
 
 					this.socket.onError((error) => {
-						console.error('WebSocket错误:', error);
-						this.addMessage('error', '连接错误: ' + error.errMsg);
+						// console.error('WebSocket错误:', error);
+						this.addMessage('error', this.$lang('连接错误')+': ' + error.errMsg);
 						this.isConnected = false;
 					});
 
 				} catch (error) {
-					console.error('连接失败:', error);
+					// console.error('连接失败:', error);
 					uni.showToast({
-						title: '连接失败',
+						title: this.$lang('连接失败'),
 						icon: 'none'
 					});
 				}
@@ -589,7 +616,7 @@
 					this.reconnectTimer = null;
 				}
 
-				this.addMessage('system', '已主动断开连接');
+				this.addMessage('system', this.$lang('已主动断开连接'));
 			},
 
 			// 处理服务器消息
@@ -600,9 +627,9 @@
 						break;
 					case 'player_list_keep':
 						let info = data.info
-						let u = this.playerList.find(item=>item.uid==info.uid)
+						let u = this.playerList.find(item => item.uid == info.uid)
 						// console.log(u,this.playerList)
-						if(u){
+						if (u) {
 							u.keepvalue = info.keepvalue
 						}
 						break;
@@ -636,37 +663,37 @@
 								this.times.shift();
 							}, 10000)
 						}
-						setTimeout(()=>{
+						setTimeout(() => {
 							this.resetDraw()
 							this.playerList = []
-							this.outstatu=false
+							this.outstatu = false
 							this.getmoneyinfo()
-						},8000)
+						}, 8000)
 						break;
 					case 'game_event':
-						this.addMessage('game', `游戏事件: ${this.$fuc.decrypt(data.num)} ${data.event}`);
-						this.targetMultiplier=this.$fuc.decrypt(data.num)
-						this.canin=false
+						// this.addMessage('game', `${this.$lang('已主动断开连接')}: ${this.$fuc.decrypt(data.num)} ${data.event}`);
+						this.targetMultiplier = this.$fuc.decrypt(data.num)
+						this.canin = false
 						this.canoutstatu = true
 						this.drawCurve();
 						break;
 					case 'game_ready':
 						this.instatu = false
-						this.canin=true
+						this.canin = true
 						break;
 					case 'error':
 						uni.showToast({
-							title:data.message,
-							icon:'none'
+							title: data.message,
+							icon: 'none'
 						})
-						if(data.action=='bad_in'){
+						if (data.action == 'bad_in') {
 							this.instatu = false
 						}
 						this.addMessage('error', data.message);
 						break;
 
 					default:
-						this.addMessage('system', `未知消息: ${JSON.stringify(data)}`);
+						this.addMessage('system', `${this.$lang('未知消息')}: ${JSON.stringify(data)}`);
 				}
 			},
 			// 发送自定义消息
@@ -675,10 +702,10 @@
 				this.socket.send({
 					data: JSON.stringify(messageData),
 					success: () => {
-						console.log('操作成功')
+						// console.log('操作成功')
 					},
 					fail: (error) => {
-						this.addMessage('error', '操作失败: ' + error.errMsg);
+						this.addMessage('error', this.$lang('操作失败')+': ' + error.errMsg);
 					}
 				});
 			},
@@ -688,7 +715,7 @@
 
 				const messageData = {
 					type: 'chat',
-					user: '玩家',
+					user: this.$lang('玩家'),
 					message: this.message
 				};
 
@@ -698,7 +725,7 @@
 						this.message = '';
 					},
 					fail: (error) => {
-						this.addMessage('error', '发送失败: ' + error.errMsg);
+						this.addMessage('error', this.$lang('发送失败')+': ' + error.errMsg);
 					}
 				});
 			},
@@ -726,24 +753,24 @@
 			attemptReconnect() {
 				if (this.reconnectTimer) return;
 				this.reconnectTimer = setTimeout(() => {
-					this.addMessage('system', '尝试重新连接...');
+					this.addMessage('system', this.$lang('尝试重新连接')+'...');
 					this.connect();
 				}, 3000);
 			},
-		
-		
-			
+
+
+
 			//====================================
-			getmoneyinfo(){
-				if(localStorage.getItem('token')){
-					this.$reqGet("userfund").then(res=>{
-						this.userinfo =  res.data.data
+			getmoneyinfo() {
+				if (localStorage.getItem('token')) {
+					this.$reqGet("userfund").then(res => {
+						this.userinfo = res.data.data
 					})
 				}
 			},
-			getgamelist(){
-				this.$reqGet("gamelist").then(res=>{
-					res.data.data.lists.map(item=>{
+			getgamelist() {
+				this.$reqGet("gamelist").then(res => {
+					res.data.data.lists.map(item => {
 						item.result = item.target_number
 						item.id = item.game_round
 					})
@@ -789,9 +816,10 @@
 </script>
 
 <style scoped lang="scss">
-	/deep/.u-checkbox__icon-wrap--disabled{
+	/deep/.u-checkbox__icon-wrap--disabled {
 		background-color: #989a9a;
 	}
+
 	.xcanvas {
 		width: 700rpx;
 		height: 400rpx;
@@ -815,6 +843,7 @@
 			color: #9f9f9f;
 			font-size: 24rpx;
 			border-bottom: 1px solid #ffffff07;
+
 			.player {
 				display: flex;
 				align-items: center;
@@ -842,7 +871,7 @@
 
 			.escape {
 				display: flex;
-				width: 100rpx;
+				width: 120rpx;
 			}
 
 			.inside {
@@ -852,7 +881,7 @@
 
 			.earn {
 				display: flex;
-				width: 100rpx;
+				width: 150rpx;
 			}
 		}
 
@@ -861,19 +890,21 @@
 			align-items: center;
 			color: #9f9f9f;
 			margin-bottom: 12rpx;
-			padding:  0 24rpx;
+			padding: 0 24rpx;
+
 			.player {
 				width: 400rpx;
 				display: flex;
 				align-items: center;
-				span{
+
+				span {
 					font-size: 24rpx;
 					margin-left: 12rpx;
 				}
 			}
 
 			.escape {
-				width: 100rpx;
+				width: 120rpx;
 			}
 
 			.inside {
@@ -881,7 +912,7 @@
 			}
 
 			.earn {
-				width: 100rpx;
+				width: 150rpx;
 			}
 		}
 	}
@@ -982,7 +1013,8 @@
 			letter-spacing: 4rpx;
 			box-shadow: 4rpx 8rpx 24rpx rgba(255, 255, 255, 0.25);
 		}
-		.ordersettlement{
+
+		.ordersettlement {
 			width: 100%;
 			border-radius: 10rpx;
 			background-color: #1f1600;
@@ -994,7 +1026,7 @@
 			letter-spacing: 4rpx;
 			box-shadow: 4rpx 8rpx 24rpx rgba(255, 255, 255, 0.25);
 		}
-		
+
 		.outnow {
 			width: 100%;
 			border-radius: 10rpx;
@@ -1007,6 +1039,7 @@
 			letter-spacing: 4rpx;
 			box-shadow: 4rpx 8rpx 24rpx rgba(255, 255, 255, 0.25);
 		}
+
 		.outsuccess {
 			width: 100%;
 			border-radius: 10rpx;
@@ -1019,6 +1052,7 @@
 			letter-spacing: 4rpx;
 			box-shadow: 4rpx 8rpx 24rpx rgba(255, 255, 255, 0.25);
 		}
+
 		.outover {
 			width: 100%;
 			border-radius: 10rpx;

@@ -1,8 +1,7 @@
 <template>
 	<view>
-		<navbar title="游戏记录"></navbar>
+		<navbar :title="$lang('游戏记录')"></navbar>
 		<view class="container">
-			<!-- 流水列表 -->
 			<view class="list-container">
 				<view :style="{border:item.action === 1?'1rpx solid #0e2800':'1rpx solid #290100'}" class="record-item" v-for="item in recordList" :key="item.id">
 					<view class="record-left">
@@ -13,7 +12,7 @@
 							{{ item.create_time }}
 						</view>
 						<view class="record-round" v-if="item.source_sn">
-							游戏回合: {{ item.source_sn }}
+							{{$lang("游戏回合")}}: {{ item.source_sn }}
 						</view>
 					</view>
 					<view class="record-right">
@@ -21,30 +20,28 @@
 							{{ item.action === 1 ? '+' : '-' }}{{ item.change_amount }}
 						</view>
 						<view class="record-balance">
-							金矿余量: {{ item.left_amount }}
+							{{$lang("金矿余量")}}: {{ item.left_amount }}
 						</view>
 					</view>
 				</view>
 			</view>
 
-			<!-- 加载状态提示 -->
 			<view class="loading-container" v-if="loading">
-				<text class="loading-text">加载中...</text>
+				<text class="loading-text">{{$lang("加载中")}}...</text>
 			</view>
 
-			<!-- 没有更多数据提示 -->
 			<view class="no-more-container" v-if="noMore&&recordList.length>0">
-				<text class="no-more-text">没有更多数据了</text>
+				<text class="no-more-text">{{$lang("没有更多数据了")}}</text>
 			</view>
 
-			<!-- 空状态 -->
 			<view class="empty-container" v-if="!loading && recordList.length === 0">
 				<image src="@/static/icons/null.png" class="empty-icon"></image>
-				<text class="empty-text">暂无流水记录</text>
+				<text class="empty-text">{{$lang("暂无流水记录")}}</text>
 			</view>
 		</view>
 	</view>
 </template>
+
 
 <script>
 	import navbar from '@/components/navbar.vue'
@@ -99,8 +96,8 @@
 			// 根据类型获取文本
 			getTypeText(type) {
 				const typeMap = {
-					202: '游戏获得',
-					103: '游戏投入'
+					202: this.$lang("游戏获得"),
+					103: this.$lang("游戏投入")
 					// 可以根据实际情况添加更多类型
 				}
 				return typeMap[type] || '其他'

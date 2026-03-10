@@ -3,11 +3,13 @@ var token = uni.getStorageSync('token')
 const obj = {
   headerGET: {
     "Content-type":'application/x-www-from-urlencoded',
+	"think-lang":localStorage.getItem('lang')
 	// "token":uni.getStorageSync('token')
 	// "Authorization": 'Bearer '+ token
   },
   headerPOST: {
     "Content-type":'application/json',
+	"think-lang":localStorage.getItem('lang')
 	// "Authorization": 'Bearer '+ token
   },
 }

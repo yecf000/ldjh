@@ -1,66 +1,68 @@
 <template>
 	<view class="all">
-		<navbar title="商户主页"></navbar>
+		<navbar :title="$lang('商户主页')"></navbar>
 		<view class="storehome">
 			<image :src="storeInfo.avatar||'@/static/svg/XTVCUSDT--big.svg'" mode="aspectFill"></image>
 			<view class="info">
-				<view class="line1">{{storeInfo.title||'日月星辰商行'}}<u-icon @click="showEditPopup=true" name="edit-pen"
-						color="#ecfff8" size="28"></u-icon></view>
-				<view class="line2">保证金 10,000 USDT</view>
+				<view class="line1">{{storeInfo.title||$lang('日月星辰商行')}}<u-icon @click="showEditPopup=true"
+						name="edit-pen" color="#ecfff8" size="28"></u-icon></view>
+				<view class="line2">{{$lang('保证金')}} 10,000 USDT</view>
 				<view class="line3">
-					<view class="item">身份认证</view>
-					<view class="item">电子邮件</view>
-					<view class="item">手机</view>
-					<view class="item">官方认证</view>
+					<view class="item">{{$lang('身份认证')}}</view>
+					<view class="item">{{$lang('电子邮件')}}</view>
+					<view class="item">{{$lang('手机')}}</view>
+					<view class="item">{{$lang('官方认证')}}</view>
 				</view>
-				<view class="line4">成为商家时间：{{storeInfo.create_time?formatDate(storeInfo.create_time):'2000/01/01'}}</view>
+				<view class="line4">
+					{{$lang('成为商家时间')}}:{{storeInfo.create_time?formatDate(storeInfo.create_time):'2000/01/01'}}
+				</view>
 			</view>
 		</view>
 		<view class="tradeinfo">
 			<view class="trade">
 				<view class="title">
-					近期交易
+					{{$lang('近期交易')}}
 				</view>
 				<view class="detail">
 					<view class="line top">
-						<view>成交单数</view>
+						<view>{{$lang('成交单数')}}</view>
 						<view>{{(storeInfo.buy_success_amount || 0) + (storeInfo.sell_success_amount || 0)}}</view>
 					</view>
 					<view class="line">
 						<view class="flex">
 							<view class="decred">
 							</view>
-							购买
+							{{$lang('购买')}}
 						</view>
 						<view>{{storeInfo.buy_amount || 0}}</view>
 					</view>
 					<view class="line">
 						<view class="flex">
 							<view class="decgreen">
-							</view>出售
+							</view>{{$lang('出售')}}
 						</view>
 						<view>{{storeInfo.sell_amount || 0}}</view>
 					</view>
 					<view class="line top">
-						<view>成交率</view>
+						<view>{{$lang('成交率')}}</view>
 						<view>{{calculateSuccessRate()}}%</view>
 					</view>
 					<view class="line">
 						<view class="flex">
 							<view class="decred">
-							</view>购买
+							</view>{{$lang('购买')}}
 						</view>
 						<view>{{calculateBuySuccessRate()}}%</view>
 					</view>
 					<view class="line">
 						<view class="flex">
 							<view class="decgreen">
-							</view>出售
+							</view>{{$lang('出售')}}
 						</view>
 						<view>{{calculateSellSuccessRate()}}%</view>
 					</view>
 					<view class="line top">
-						<view>交易订单总数</view>
+						<view>{{$lang('交易订单总数')}}</view>
 						<view>{{(storeInfo.buy_amount || 0) + (storeInfo.sell_amount || 0)}}</view>
 					</view>
 				</view>
@@ -68,7 +70,7 @@
 		</view>
 		<view class="entrust">
 			<view class="title">
-				我的委托
+				{{$lang('我的委托')}}
 			</view>
 			<view class="bg">
 				<view class="item" :style="{border:index+1==entrustList.length?'none':''}"
@@ -77,9 +79,13 @@
 						{{i.unit.toUpperCase()}} <u-icon @click="handleDeleteEntrust(i.id)" name="close" color="#fcffea"
 							size="24"></u-icon>
 					</view>
-					<view class="txt2"><span>数量</span>{{i.left_amount}}</view>
-					<view class="txt3"><span>总额</span>{{(i.amount*i.price).toFixed(2)}} {{i.unit.toUpperCase()}}</view>
-					<view class="txt4"><span>限额</span>{{i.min_amount}}-{{i.max_amount}} {{i.unit.toUpperCase()}}</view>
+					<view class="txt2"><span>{{$lang('数量')}}</span>{{i.left_amount}}</view>
+					<view class="txt3"><span>{{$lang('总额')}}</span>{{(i.amount*i.price).toFixed(2)}}
+						{{i.unit.toUpperCase()}}
+					</view>
+					<view class="txt4"><span>{{$lang('限额')}}</span>{{i.min_amount}}-{{i.max_amount}}
+						{{i.unit.toUpperCase()}}
+					</view>
 					<view class="txt5">
 						<view class="flex">
 							<view class="decblue"></view>{{i.deal_way}}
@@ -90,47 +96,49 @@
 				</view>
 				<image v-if="entrustList.length==0" src="@/static/icons/null.png"></image>
 				<view v-show="entrustList.length<3" class="send" @click="showPublishPopup=true">
-					{{entrustList.length==0?'立即':'继续'}}发布
+					{{entrustList.length==0?$lang('立即'):$lang('继续')}}{{$lang('发布')}}
 					<u-icon style="margin-left: 12rpx;" name="arrow-right" color="#727475" size="28"></u-icon>
 				</view>
 			</view>
 		</view>
 		<!-- 取消委托确认弹窗 -->
-		<u-modal confirm-text='确认' cancel-text='取消' v-model="cancelConfirmVisible" :content="cancelConfirmContent"
-			show-cancel-button confirm-color='#a35f08' @confirm="confirmCancelEntrust"></u-modal>
+		<u-modal :confirm-text='$lang("确认")' :cancel-text='$lang("取消")' v-model="cancelConfirmVisible"
+			:content="cancelConfirmContent" show-cancel-button confirm-color='#a35f08'
+			@confirm="confirmCancelEntrust"></u-modal>
 
 		<!-- 删除委托确认弹窗 -->
-		<u-modal confirm-text='确认' cancel-text='取消' v-model="deleteConfirmVisible" :content="deleteConfirmContent"
-			show-cancel-button confirm-color='#a35f08' @confirm="confirmDeleteEntrust"></u-modal>
+		<u-modal :confirm-text='$lang("确认")' :cancel-text='$lang("取消")' v-model="deleteConfirmVisible"
+			:content="deleteConfirmContent" show-cancel-button confirm-color='#a35f08'
+			@confirm="confirmDeleteEntrust"></u-modal>
 
 		<!-- 修改商店信息弹窗 -->
 		<u-popup z-index='7' v-model="showEditPopup" mode="bottom" border-radius="18">
 			<view class="datachange">
 				<view class="tab">
-					<view>门店信息</view>
+					<view>{{$lang('门店信息')}}</view>
 					<u-icon @click="showEditPopup=false" name="close" color="#000" size="24"></u-icon>
 				</view>
 				<view class="inuter">
 					<view class="tips">
-						门店头像
+						{{$lang('门店头像')}}
 					</view>
 					<u-avatar @click="uploadimg" level-bg-color='#d2d6d6' show-level level-icon='edit-pen' :size='120'
 						:src='storeInfo.avatar||"@/static/svg/XTVCUSDT--big.svg"'></u-avatar>
 					<view class="tips" style="margin-top: 44rpx;">
-						商店名称
+						{{$lang('商店名称')}}
 					</view>
-					<u-input placeholder='请输入商店名称' @focus='actived=true' @blur='actived=false'
+					<u-input :placeholder='$lang("请输入商店名称")' @focus='actived=true' @blur='actived=false'
 						:border-color="actived?'#000':''" clearable :maxlength='12' :custom-style='custyle'
 						v-model="editForm.title" :border="true" />
 					<view class="tips" style="margin-top: 44rpx;">
-						交易须知
+						{{$lang('交易须知')}}
 					</view>
-					<u-input type="textarea" placeholder='请输入购买须知' @focus='actived2=true' @blur='actived2=false'
-						:border-color="actived2?'#000':''" clearable :maxlength='200' :custom-style='custyle'
-						v-model="editForm.must_know" :border="true" />
+					<u-input type="textarea" :placeholder='$lang("请输入购买须知")' @focus='actived2=true'
+						@blur='actived2=false' :border-color="actived2?'#000':''" clearable :maxlength='200'
+						:custom-style='custyle' v-model="editForm.must_know" :border="true" />
 					<view class="btpart" style="margin-top: 24rpx;">
-						<view class="cancle" @click="showEditPopup=false">取消</view>
-						<view class="confirm" @click="handleSaveStoreInfo">确认</view>
+						<view class="cancle" @click="showEditPopup=false">{{$lang('取消')}}</view>
+						<view class="confirm" @click="handleSaveStoreInfo">{{$lang('确认')}}</view>
 					</view>
 				</view>
 			</view>
@@ -140,7 +148,7 @@
 		<u-popup v-model="showPublishPopup" mode="bottom" border-radius="18">
 			<view class="datachange publish-popup">
 				<view class="tab fixed-top">
-					<view>发布委托</view>
+					<view>{{$lang('发布委托')}}</view>
 					<u-icon @click="showPublishPopup=false" name="close" color="#000" size="24"></u-icon>
 				</view>
 				<scroll-view class="content-scroll" scroll-y="true">
@@ -148,15 +156,15 @@
 						<!-- 第一行：委托类型和价格 -->
 						<view class="form-row">
 							<view class="form-item">
-								<view class="tips">委托类型</view>
-								<u-input @click="showsheet=true" placeholder='请选择类型' @focus='publishActive.type=true'
-									@blur='publishActive.type=false' :border-color="publishActive.type?'#000':''"
-									clearable :custom-style='custyle' v-model="publishForm.type" type="select"
-									:border="true" />
+								<view class="tips">{{$lang('委托类型')}}</view>
+								<u-input @click="showsheet=true" :placeholder='$lang("请选择类型")'
+									@focus='publishActive.type=true' @blur='publishActive.type=false'
+									:border-color="publishActive.type?'#000':''" clearable :custom-style='custyle'
+									v-model="publishForm.type" type="select" :border="true" />
 							</view>
 							<view class="form-item">
-								<view class="tips">总委托数量</view>
-								<u-input placeholder='总数量' @focus='publishActive.amount=true'
+								<view class="tips">{{$lang('总委托数量')}}</view>
+								<u-input :placeholder='$lang("总数量")' @focus='publishActive.amount=true'
 									@blur='publishActive.amount=false' :border-color="publishActive.amount?'#000':''"
 									clearable :custom-style='custyle' v-model="publishForm.amount" type="number"
 									:border="true" />
@@ -166,35 +174,33 @@
 						<!-- 第二行：交易方式和总委托数量 -->
 						<view class="form-row">
 							<view class="form-item">
-								<view class="tips">交易方式</view>
-								<u-input disabled placeholder='方式编号' @focus='publishActive.deal_way=true'
+								<view class="tips">{{$lang('交易方式')}}</view>
+								<u-input disabled :placeholder='$lang("方式编号")' @focus='publishActive.deal_way=true'
 									@blur='publishActive.deal_way=false'
 									:border-color="publishActive.deal_way?'#000':''" clearable :custom-style='custyle'
 									v-model="publishForm.deal_way" :border="true" />
 							</view>
 							<view class="form-item">
-								<view class="tips">价格(₽)</view>
-								<u-input placeholder='请输入价格' @focus='publishActive.price=true'
+								<view class="tips">{{$lang('价格')}}(₽)</view>
+								<u-input :placeholder='$lang("请输入价格")' @focus='publishActive.price=true'
 									@blur='publishActive.price=false' :border-color="publishActive.price?'#000':''"
 									clearable :custom-style='custyle' v-model="publishForm.price" type="number"
 									:border="true" />
 							</view>
 
 						</view>
-
-
 						<!-- 第三行：最小交易量和最大交易量 -->
 						<view class="form-row">
 							<view class="form-item">
-								<view class="tips">最小交易量</view>
-								<u-input placeholder='最小量' @focus='publishActive.min_amount=true'
+								<view class="tips">{{$lang('最小交易量')}}</view>
+								<u-input :placeholder='$lang("最小量")' @focus='publishActive.min_amount=true'
 									@blur='publishActive.min_amount=false'
 									:border-color="publishActive.min_amount?'#000':''" clearable :custom-style='custyle'
 									v-model="publishForm.min_amount" type="number" :border="true" />
 							</view>
 							<view class="form-item">
-								<view class="tips">最大交易量</view>
-								<u-input placeholder='最大量' @focus='publishActive.max_amount=true'
+								<view class="tips">{{$lang('最大交易量')}}</view>
+								<u-input :placeholder='$lang("最大量")' @focus='publishActive.max_amount=true'
 									@blur='publishActive.max_amount=false'
 									:border-color="publishActive.max_amount?'#000':''" clearable :custom-style='custyle'
 									v-model="publishForm.max_amount" type="number" :border="true" />
@@ -205,8 +211,8 @@
 						<!-- 单独一行：联系方式 -->
 						<view class="form-row">
 							<view class="form-item full-width">
-								<view class="tips">联系方式</view>
-								<u-input placeholder='请输入联系方式' @focus='publishActive.contact_way=true'
+								<view class="tips">{{$lang('联系方式')}}</view>
+								<u-input :placeholder='$lang("请输入联系方式")' @focus='publishActive.contact_way=true'
 									@blur='publishActive.contact_way=false'
 									:border-color="publishActive.contact_way?'#000':''" clearable
 									:custom-style='custyle' v-model="publishForm.contact_way" :border="true" />
@@ -216,21 +222,23 @@
 						<!-- 单独一行：交易单位 -->
 						<view class="form-row">
 							<view class="form-item full-width">
-								<view class="tips">交易单位</view>
-								<u-input disabled placeholder='请输入交易单位 如: RUB' @focus='publishActive.unit=true'
-									@blur='publishActive.unit=false' :border-color="publishActive.unit?'#000':''"
-									clearable :custom-style='custyle' v-model="publishForm.unit" :border="true" />
+								<view class="tips">{{$lang('交易单位')}}</view>
+								<u-input disabled :placeholder='$lang("请输入交易单位 如: RUB")'
+									@focus='publishActive.unit=true' @blur='publishActive.unit=false'
+									:border-color="publishActive.unit?'#000':''" clearable :custom-style='custyle'
+									v-model="publishForm.unit" :border="true" />
 							</view>
 						</view>
 					</view>
 				</scroll-view>
 				<view class="btpart fixed-bottom">
-					<view class="cancle" @click="showPublishPopup=false">取消</view>
-					<view class="confirm" @click="handlePublishEntrust">确认发布</view>
+					<view class="cancle" @click="showPublishPopup=false">{{$lang('取消')}}</view>
+					<view class="confirm" @click="handlePublishEntrust">{{$lang('确认发布')}}</view>
 				</view>
 			</view>
 		</u-popup>
-		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
+		<zero-loading color='#F0E68C' mask v-if="loading" showText :textColor='$lang("#fff")'
+			:maskOpacity='0.8'></zero-loading>
 		<u-action-sheet @click="actionSheetCallback" :list="actionSheetList" v-model="showsheet"></u-action-sheet>
 	</view>
 </template>
@@ -243,18 +251,18 @@
 		},
 		data() {
 			return {
-				loading:true,
+				nowtype: 0,
+				loading: true,
 				showsheet: false,
-				actionSheetList: [
-					{
-						text: '买入',
-						color:'#000',
-						value:0
+				actionSheetList: [{
+						text: this.$lang('买入'),
+						color: '#000',
+						value: 0
 					},
 					{
-						text: '卖出',
-						color:'#000',
-						value:1
+						text: this.$lang('卖出'),
+						color: '#000',
+						value: 1
 					}
 				],
 				avatarimage: '',
@@ -267,8 +275,8 @@
 				},
 				cancelConfirmVisible: false,
 				deleteConfirmVisible: false,
-				cancelConfirmContent: "是否取消该委托",
-				deleteConfirmContent: "是否删除该委托",
+				cancelConfirmContent: this.$lang("是否取消该委托"),
+				deleteConfirmContent: this.$lang("是否删除该委托"),
 				currentEntrustId: null,
 				storeInfo: {
 					avatar: '',
@@ -314,32 +322,33 @@
 		},
 		methods: {
 			formatDate(dateString) {
-			        if (!dateString) return ''
-			        
-			        // 方法1：替换横杠为斜杠并去除时间部分
-			        if (dateString.includes('-')) {
-			            const datePart = dateString.split(' ')[0] // 获取日期部分
-			            return datePart.replace(/-/g, '/')
-			        }
-			        
-			        // 方法2：使用正则表达式
-			        // return dateString.replace(/-/g, '/').split(' ')[0]
-			        
-			        return dateString
-			    },
+				if (!dateString) return ''
+
+				// 方法1：替换横杠为斜杠并去除时间部分
+				if (dateString.includes('-')) {
+					const datePart = dateString.split(' ')[0] // 获取日期部分
+					return datePart.replace(/-/g, '/')
+				}
+
+				// 方法2：使用正则表达式
+				// return dateString.replace(/-/g, '/').split(' ')[0]
+
+				return dateString
+			},
 			actionSheetCallback(index) {
 				this.publishForm.type = this.actionSheetList[index].text
+				this.nowtype = this.actionSheetList[index].value
 			},
 			// 获取商店信息
 			getstoreinfo() {
 				this.$reqPost("accountDetail").then(res => {
-					this.loading=false
+					this.loading = false
 					this.storeInfo = res.data.data
 					this.editForm.title = res.data.data.title || ''
 					this.editForm.must_know = res.data.data.must_know || ''
 					this.editForm.avatar = res.data.data.avatar || ''
-				}).finally(v=>{
-					this.loading=false
+				}).finally(v => {
+					this.loading = false
 				})
 			},
 
@@ -377,11 +386,11 @@
 			// 获取交易方式文本
 			getDealWayText(dealWay) {
 				const ways = {
-					1: '支付宝',
-					2: '微信',
-					3: '银行卡'
+					1: this.$lang('支付宝'),
+					2: this.$lang('微信'),
+					3: this.$lang('银行卡')
 				}
-				return ways[dealWay] || '未知方式'
+				return ways[dealWay] || this.$lang('未知方式')
 			},
 
 			// 上传图片
@@ -391,7 +400,7 @@
 					success: async res => {
 						if (res.tempFiles[0].size > 1024 * 1024 * 5) {
 							uni.showToast({
-								title: '图片太大,请控制在5MB内',
+								title: this.$lang('图片太大,请控制在5MB内'),
 								icon: 'none'
 							})
 							return
@@ -409,7 +418,7 @@
 			handleSaveStoreInfo() {
 				if (!this.editForm.title.trim()) {
 					uni.showToast({
-						title: '请输入商店名称',
+						title: this.$lang('请输入商店名称'),
 						icon: 'none'
 					})
 					return
@@ -424,7 +433,7 @@
 
 				this.$reqPost("storeedit", params).then(res => {
 					uni.showToast({
-						title: '修改成功'
+						title: this.$lang('修改成功')
 					})
 					this.showEditPopup = false
 					this.getstoreinfo() // 刷新商店信息
@@ -439,7 +448,7 @@
 				}
 
 				const params = {
-					type: this.publishForm.type=='买入'?0:1,
+					type: this.nowtype,
 					price: parseFloat(this.publishForm.price),
 					min_amount: parseFloat(this.publishForm.min_amount),
 					max_amount: parseFloat(this.publishForm.max_amount),
@@ -451,8 +460,8 @@
 
 				this.$reqPost("entrustadd", params).then(res => {
 					uni.showToast({
-						title: '发布成功',
-						icon:'none'
+						title: this.$lang('发布成功'),
+						icon: 'none'
 					})
 					this.showPublishPopup = false
 					this.resetPublishForm()
@@ -464,7 +473,7 @@
 			validatePublishForm() {
 				if (this.publishForm.type === '') {
 					uni.showToast({
-						title: '请选择委托类型',
+						title: this.$lang('请选择委托类型'),
 						icon: 'none'
 					})
 					return false
@@ -472,7 +481,7 @@
 
 				if (!this.publishForm.price || parseFloat(this.publishForm.price) <= 0) {
 					uni.showToast({
-						title: '请输入正确的价格',
+						title: this.$lang('请输入正确的价格'),
 						icon: 'none'
 					})
 					return false
@@ -480,7 +489,7 @@
 
 				if (!this.publishForm.min_amount || parseFloat(this.publishForm.min_amount) <= 0) {
 					uni.showToast({
-						title: '请输入正确的最小交易量',
+						title: this.$lang('请输入正确的最小交易量'),
 						icon: 'none'
 					})
 					return false
@@ -488,7 +497,7 @@
 
 				if (!this.publishForm.max_amount || parseFloat(this.publishForm.max_amount) <= 0) {
 					uni.showToast({
-						title: '请输入正确的最大交易量',
+						title: this.$lang('请输入正确的最大交易量'),
 						icon: 'none'
 					})
 					return false
@@ -496,7 +505,7 @@
 
 				if (parseFloat(this.publishForm.max_amount) < parseFloat(this.publishForm.min_amount)) {
 					uni.showToast({
-						title: '最大交易量不能小于最小交易量',
+						title: this.$lang('最大交易量不能小于最小交易量'),
 						icon: 'none'
 					})
 					return false
@@ -504,7 +513,7 @@
 
 				if (!this.publishForm.deal_way) {
 					uni.showToast({
-						title: '请输入交易方式',
+						title: this.$lang('请输入交易方式'),
 						icon: 'none'
 					})
 					return false
@@ -512,7 +521,7 @@
 
 				if (!this.publishForm.contact_way) {
 					uni.showToast({
-						title: '请输入联系方式',
+						title: this.$lang('请输入联系方式'),
 						icon: 'none'
 					})
 					return false
@@ -520,7 +529,7 @@
 
 				if (!this.publishForm.unit) {
 					uni.showToast({
-						title: '请输入交易单位',
+						title: this.$lang('请输入交易单位'),
 						icon: 'none'
 					})
 					return false
@@ -528,7 +537,7 @@
 
 				if (!this.publishForm.amount || parseFloat(this.publishForm.amount) <= 0) {
 					uni.showToast({
-						title: '请输入正确的总委托数量',
+						title: this.$lang('请输入正确的总委托数量'),
 						icon: 'none'
 					})
 					return false
@@ -563,8 +572,8 @@
 					id: this.currentEntrustId
 				}).then(res => {
 					uni.showToast({
-						title: '取消成功',
-						icon:'none'
+						title: this.$lang('取消成功'),
+						icon: 'none'
 					})
 					this.getEntrustList() // 刷新委托列表
 
@@ -584,8 +593,8 @@
 					id: this.currentEntrustId
 				}).then(res => {
 					uni.showToast({
-						title: '删除成功',
-						icon:'none'
+						title: this.$lang('删除成功'),
+						icon: 'none'
 					})
 					this.getEntrustList() // 刷新委托列表
 					this.currentEntrustId = null

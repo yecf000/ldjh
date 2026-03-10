@@ -8,8 +8,8 @@
 					<image class="avatar" :src="userinfo.avatar||'@/static/icons/defaultavatar.png'" mode="aspectFill">
 					</image>
 					<view class="accont">
-						<view class="nickname">{{userinfo.nickname||'玩家*'}}</view>
-						<view class="vip">普通用户</view>
+						<view class="nickname">{{userinfo.nickname||$lang("玩家")+'*'}}</view>
+						<view class="vip">{{userinfo.level_info?userinfo.level_info.title:$lang("普通用户")}}</view>
 					</view>
 				</view>
 				<view class="balance" @click="$u.route('/pages/otherpages/invite');">
@@ -20,7 +20,7 @@
 			<view class="assets">
 				<view class="assetstitlebox">
 					<view class="assetstitle">
-						资产估值
+						{{$lang("资产估值")}}
 						<image @click="showmoney=!showmoney" v-show="showmoney" src="@/static/icons/eye.png"
 							mode="aspectFill"></image>
 						<image @click="showmoney=!showmoney" v-show="!showmoney" src="@/static/icons/eye-off.png"
@@ -36,90 +36,90 @@
 						*********
 					</view>
 					<view class="assetstitle" v-show="showmoney">
-						今日收益 ${{Number(userinfo.today_income/2).toFixed(2)}}
+						{{$lang("今日收益")}} ${{Number(userinfo.today_income/2).toFixed(2)}}
 						({{Number((userinfo.today_income?Number(userinfo.today_income):0)/(Number(userinfo.user_money)?Number(userinfo.user_money):1)*100).toFixed(2)}}%)
 					</view>
 					<view class="assetstitle" v-show="!showmoney">
-						今日收益 ************
+						{{$lang("今日收益")}} ************
 					</view>
 				</view>
 				<view class="gold" v-show="showmoney">
 					<view class="title">
-						可用资产
+						{{$lang("可用资产")}}
 					</view>
 					<view class="goldnum">
 						{{Number(userinfo.user_money).toFixed(2)}}
 						<image src="@/static/icons/gold.png" mode="aspectFill"></image>
 					</view>
 					<view class="assetstitle">
-						今日收益 {{Number(userinfo.today_income).toFixed(2)}}
+						{{$lang("今日收益")}} {{Number(userinfo.today_income).toFixed(2)}}
 					</view>
 				</view>
 				<view class="gold" v-show="!showmoney">
 					<view class="title">
-						可用资产
+						{{$lang("可用资产")}}
 					</view>
 					<view class="goldnum">
 						*******
 						<image src="@/static/icons/gold.png" mode="aspectFill"></image>
 					</view>
 					<view class="assetstitle">
-						今日收益 *****
+						{{$lang("今日收益")}} *****
 					</view>
 				</view>
 			</view>
 			<view class="oprations">
 				<view class="title">
-					资产管理
+					{{$lang("资产管理")}}
 				</view>
 				<view class="itemgroup">
 					<view class="item" @click="$u.route('/pages/otherpages/getgold');">
 						<image src="@/static/icons/myicon/moneyin.png" mode="aspectFill"></image>
 						<view class="name">
-							获取金矿
+							{{$lang("充值")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/sellgold');">
 						<image src="@/static/icons/myicon/moneyout.png" mode="aspectFill"></image>
 						<view class="name">
-							金矿兑现
+							{{$lang("金矿兑现")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/c2c');">
 						<image src="@/static/icons/myicon/c2c.png" mode="aspectFill"></image>
 						<view class="name">
-							C2C交易
+							{{$lang("C2C交易")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/otcorder');">
 						<image src="@/static/icons/myicon/otcorder.png" mode="aspectFill"></image>
 						<view class="name">
-							OTC订单
+							{{$lang("OTC订单")}}
 						</view>
 					</view>
 				</view>
 			</view>
 			<view class="oprations" style="border-bottom: none;">
 				<view class="title">
-					其他常用
+					{{$lang("其他常用")}}
 				</view>
 				<view class="itemgroup">
 					<view class="item" @click="$u.route('/pages/otherpages/logs')">
 						<image src="@/static/icons/myicon/ls.png" mode="aspectFill"></image>
 						<view class="name">
-							流水详情
+							{{$lang("流水详情")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/lottery')">
 						<image src="@/static/icons/myicon/history.png" mode="aspectFill"></image>
 						<view class="name">
-							矿产记录
+							{{$lang("矿产记录")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/gamegoldhis')">
 						<image src="@/static/icons/myicon/order.png" mode="aspectFill"></image>
 						<view class="name">
-							游戏记录
+							{{$lang("游戏记录")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/mymessage')">
@@ -128,61 +128,61 @@
 						</view>
 						<image src="@/static/icons/myicon/message.png" mode="aspectFill"></image>
 						<view class="name">
-							我的消息
+							{{$lang("我的消息")}}
 						</view>
 					</view>
-					<view class="item">
+					<view class="item" @click="$fuc.jumpToTelegram('bot',options.customer_url)">
 						<image src="@/static/icons/myicon/kf.png" mode="aspectFill"></image>
 						<view class="name">
-							官方客服
+							{{$lang("官方客服")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/question')">
 						<image src="@/static/icons/myicon/questions.png" mode="aspectFill"></image>
 						<view class="name">
-							常见问题
+							{{$lang("常见问题")}}
 						</view>
 					</view>
-					<view class="item">
+					<view class="item" @click="$fuc.jumpToTelegram('group',options.group_url)">
 						<image src="@/static/icons/myicon/gfql.png" mode="aspectFill"></image>
 						<view class="name">
-							官方群聊
+							{{$lang("官方群聊")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/invite')">
 						<image src="@/static/icons/myicon/gift.png" mode="aspectFill"></image>
 						<view class="name">
-							好友邀请
+							{{$lang("好友邀请")}}
 						</view>
 					</view>
 					<view v-if="!userinfo.is_store" class="item" @click="$u.route('/pages/otherpages/otcapply')">
 						<image src="@/static/icons/myicon/otc.png" mode="aspectFill"></image>
 						<view class="name">
-							OTC申请
+							{{$lang("OTC申请")}}
 						</view>
 					</view>
 					<view v-if="userinfo.is_store" class="item" @click="$u.route('/pages/otherpages/store')">
 						<image src="@/static/icons/myicon/otc.png" mode="aspectFill"></image>
 						<view class="name">
-							OTC商户
+							{{$lang("OTC商户")}}
 						</view>
 					</view>
 					<view class="item" @click="$u.route('/pages/otherpages/rules')">
 						<image src="@/static/icons/myicon/rule.png" mode="aspectFill"></image>
 						<view class="name">
-							游戏说明
+							{{$lang("游戏说明")}}
 						</view>
 					</view>
 					<view class="item">
 						<image src="@/static/icons/myicon/combine.png" mode="aspectFill"></image>
 						<view class="name">
-							商务合作
+							{{$lang("商务合作")}}
 						</view>
 					</view>
 					<view class="item">
 						<image @click="$u.route('pages/otherpages/mockgame')" src="@/static/icons/myicon/mockgame.png" mode="aspectFill"></image>
 						<view class="name">
-							模拟游戏
+							{{$lang("模拟游戏")}}
 						</view>
 					</view>
 				</view>
@@ -213,7 +213,9 @@
 					today_income: 0
 				},
 				options:{
-					exchange_rate:1
+					exchange_rate:1,
+					group_url:"",
+					customer_url:""
 				}
 			}
 		},
@@ -283,7 +285,10 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
-
+				text-align: center;
+				.name{
+					 white-space: pre-line;
+				}
 				.onmsg {
 					width: 16rpx;
 					height: 16rpx;

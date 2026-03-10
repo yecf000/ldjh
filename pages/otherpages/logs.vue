@@ -1,33 +1,33 @@
 <template>
 	<view>
-		<navbar title="流水记录"></navbar>
+		<navbar :title="$lang('流水记录')"></navbar>
 		<view class="container">
 			<!-- 流水列表 -->
 			<view class="list-container">
 				<view class="list-container-item" v-for="(i,index) in recordList" :key="index">
 					<view class="tagline">
 						<view class="l">
-							<view class="title">时间</view>
+							<view class="title">{{$lang('时间')}}</view>
 							<view class="value">{{i.create_time}}</view>
 						</view>
 						<view class="r">
-							<view class="title">关联单号</view>
+							<view class="title">{{$lang('关联单号')}}</view>
 							<view class="value">{{i.source_sn||'-'}}</view>
 						</view>
 					</view>
 					<view class="tagline">
 						<view class="l">
-							<view class="title">账单类型</view>
+							<view class="title">{{$lang('账单类型')}}</view>
 							<view class="value">{{i.type_desc}}</view>
 						</view>
 						<view class="r">
-							<view class="title">数量</view>
+							<view class="title">{{$lang('数量')}}</view>
 							<view class="value" :style="{color:i.change_amount_desc>0?'#31bd65':'#eb4b6d'}">{{i.change_amount_desc}}</view>
 						</view>
 					</view>
 					<view class="tagline" style="margin-bottom: 0;">
 						<view class="l">
-							<view class="title">金矿余额</view>
+							<view class="title">{{$lang('金矿余额')}}</view>
 							<view class="value">{{i.left_amount}}</view>
 						</view>
 					</view>
@@ -36,18 +36,18 @@
 
 			<!-- 加载状态提示 -->
 			<view class="loading-container" v-if="loading">
-				<text class="loading-text">加载中...</text>
+				<text class="loading-text">{{$lang('加载中')}}</text>
 			</view>
 
 			<!-- 没有更多数据提示 -->
 			<view class="no-more-container" v-if="noMore&&recordList.length>0">
-				<text class="no-more-text">没有更多数据了</text>
+				<text class="no-more-text">{{$lang('没有更多数据了')}}</text>
 			</view>
 
 			<!-- 空状态 -->
 			<view class="empty-container" v-if="!loading && recordList.length === 0">
 				<image src="@/static/icons/null.png" class="empty-icon"></image>
-				<text class="empty-text">暂无流水记录</text>
+				<text class="empty-text">{{$lang('暂无流水记录')}}</text>
 			</view>
 		</view>
 	</view>

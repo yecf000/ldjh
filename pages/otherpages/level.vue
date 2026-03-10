@@ -1,17 +1,17 @@
 <template>
 	<view class="all">
-		<navbar title="用户等级"></navbar>
+		<navbar :title="$lang('用户等级')"></navbar>
 		<view class="level">
-			<view class="title">账户等级</view>
-			<view class="name">{{nowlevel.level_name||'普通用户'}}</view>
+			<view class="title">{{$lang('账户等级')}}</view>
+			<view class="name">{{nowlevel.level_name||$lang('普通用户')}}</view>
 		</view>
 		<view class="group">
 			<view class="item">
-				<view>金矿兑U手续费</view>
+				<view>{{$lang('金矿兑U手续费')}}</view>
 				<view class="titemgroup">
 					<view class="lgroup">
 						<view class="t">
-							当前等级
+							{{$lang('当前等级')}}
 						</view>
 						<view class="c">
 							{{nowlevel.withdraw_fee_rate?nowlevel.withdraw_fee_rate+'%':'0.00%'}}
@@ -19,7 +19,7 @@
 					</view>
 					<view class="rgroup">
 						<view class="t">
-							下一等级
+							{{$lang('下一等级')}}
 						</view>
 						<view class="c">
 							{{nextlevel.withdraw_fee_rate?nextlevel.withdraw_fee_rate+'%':'0.00%'}}
@@ -28,32 +28,32 @@
 				</view>
 			</view>
 			<view class="item">
-				<view>平台金矿兑U处理时间</view>
+				<view>{{$lang('平台金矿兑U处理时间')}}</view>
 				<view class="titemgroup">
 					<view class="lgroup">
 						<view class="t">
-							当前等级
+							{{$lang('当前等级')}}
 						</view>
 						<view class="c">
-							{{'<'}}{{nowlevel.deal_time?Number(nowlevel.deal_time).toFixed(0):'0'}}H
+							{{'<'}}{{nowlevel.deal_time?Number(nowlevel.deal_time).toFixed(0):'0'}}{{$lang('小时')}}
 						</view>
 					</view>
 					<view class="rgroup">
 						<view class="t">
-							下一等级
+							{{$lang('下一等级')}}
 						</view>
 						<view class="c">
-							{{'<'}}{{nextlevel.deal_time?	Number(nextlevel.deal_time).toFixed(0):'0'}}H
+							{{'<'}}{{nextlevel.deal_time?	Number(nextlevel.deal_time).toFixed(0):'0'}}{{$lang('小时')}}
 						</view>
 					</view>
 				</view>
 			</view>
 			<view class="item">
-				<view>单日最大金矿兑换数</view>
+				<view>{{$lang('单日最大金矿兑换数')}}</view>
 				<view class="titemgroup">
 					<view class="lgroup">
 						<view class="t">
-							当前等级
+							{{$lang('当前等级')}}
 						</view>
 						<view class="c">
 							{{nowlevel.day_max_number?$fuc.formatNumber(nowlevel.day_max_number,0):'0'}}
@@ -61,7 +61,7 @@
 					</view>
 					<view class="rgroup">
 						<view class="t">
-							下一等级
+							{{$lang('下一等级')}}
 						</view>
 						<view class="c">
 							{{nextlevel.day_max_number?$fuc.formatNumber(nextlevel.day_max_number,0):'0'}}
@@ -70,11 +70,11 @@
 				</view>
 			</view>
 			<view class="item">
-				<view>平台单日最大金矿交易订单数</view>
+				<view>{{$lang('平台单日最大金矿交易订单数')}}</view>
 				<view class="titemgroup">
 					<view class="lgroup">
 						<view class="t">
-							当前等级
+							{{$lang('当前等级')}}
 						</view>
 						<view class="c">
 							{{nowlevel.day_max_order_amount?Number(nowlevel.day_max_order_amount).toFixed(0):'0'}}
@@ -82,7 +82,7 @@
 					</view>
 					<view class="rgroup">
 						<view class="t">
-							下一等级
+							{{$lang('下一等级')}}
 						</view>
 						<view class="c">
 							{{nextlevel.day_max_order_amount?Number(nextlevel.day_max_order_amount).toFixed(0):'0'}}
@@ -91,11 +91,11 @@
 				</view>
 			</view>
 			<view class="item">
-				<view>C2C单日最大金矿交易订单数</view>
+				<view>{{$lang('C2C单日最大金矿交易订单数')}}</view>
 				<view class="titemgroup">
 					<view class="lgroup">
 						<view class="t">
-							当前等级
+							{{$lang('当前等级')}}
 						</view>
 						<view class="c">
 							{{nowlevel.c2c_day_max_order_amount?Number(nowlevel.c2c_day_max_order_amount).toFixed(0):'0'}}
@@ -103,7 +103,7 @@
 					</view>
 					<view class="rgroup">
 						<view class="t">
-							下一等级
+							{{$lang('下一等级')}}
 						</view>
 						<view class="c">
 							{{nextlevel.c2c_day_max_order_amount?Number(nextlevel.c2c_day_max_order_amount).toFixed(0):'0'}}
@@ -115,14 +115,14 @@
 		<view class="rules">
 			<view class="normal">
 				<view class="titlegrid">
-					{{rule[0].title|| '普通用户'}}
+					{{rule[0].title|| $lang('普通用户')}}
 				</view>
 				<view class="colum">
-					<view class="il">用户等级</view>
-					<view class="ir">总流水(金矿)</view>
+					<view class="il">{{$lang('用户等级')}}</view>
+					<view class="ir">{{$lang('总流水(金矿)')}}</view>
 				</view>
 				<view class="ncolum">
-					<view class="il">普通用户</view>
+					<view class="il">{{$lang('普通用户')}}</view>
 					<view class="ir">{{'<'}} {{$fuc.formatNumber(rule[0].up_turnover,0) }}</view>
 				</view>
 			</view>
@@ -134,31 +134,23 @@
 		<view class="rules" style="margin-top: 32rpx;">
 			<view class="normal">
 				<view class="titlegrid">
-					专业用户
+					{{$lang('专业用户')}}
 				</view>
 				<view class="colum">
-					<view class="il">用户等级</view>
-					<view class="ir">总流水(金矿)</view>
+					<view class="il">{{$lang('用户等级')}}</view>
+					<view class="ir">{{$lang('总流水(金矿)')}}</view>
 				</view>
 				<view class="ncolum btb" v-for="(i,index) in krule" :key="index">
 					<view class="il">{{i.title||'vip'}}</view>
 					<view class="ir">{{'≥'}} {{i.up_turnover?$fuc.formatNumber(i.up_turnover,0):'100,000'}}</view>
 				</view>
-				<!-- <view class="ncolum btb">
-					<view class="il">vip2</view>
-					<view class="ir">{{'≥'}} 1,000,000</view>
-				</view>
-				<view class="ncolum btb">
-					<view class="il">vip3</view>
-					<view class="ir">{{'≥'}} 100,000,000</view>
-				</view> -->
 			</view>
 		</view>
 		<view class="about">
-			<view class="title">关于用户等级</view>
+			<view class="title">{{$lang('关于用户等级')}}</view>
 			<view class="detail">{{level_explanation}}</view>
 		</view>
-		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
+		<zero-loading color='#F0E68C' mask v-if="loading" showText :textColor='$lang("#fff")' :maskOpacity='0.8'></zero-loading>
 	</view>
 </template>
 

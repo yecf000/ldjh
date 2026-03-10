@@ -5,9 +5,10 @@ import '@/utils/interceptors.js' //引入拦截
 // #ifndef VUE3
 import Vue from 'vue'
 import './uni.promisify.adaptor'
-
+import {getlang} from "@/utils/lang.js";
 import uView from "uview-ui";
 Vue.use(uView);
+Vue.prototype.$lang = getlang;
 Vue.prototype.$reqAll = reqAll;
 Vue.prototype.$reqGet = reqGet;
 Vue.prototype.$reqPost = reqPost;
@@ -29,3 +30,7 @@ export function createApp() {
   }
 }
 // #endif
+
+if(!localStorage.getItem('lang')){
+	localStorage.setItem('lang','ru')
+}

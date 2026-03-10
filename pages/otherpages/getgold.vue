@@ -1,19 +1,18 @@
 <template>
 	<view class="all">
-		<navbar title="获取金矿"></navbar>
+		<navbar :title="$lang('获取金矿')"></navbar>
 		<view class="title">
-			<view>USDT 兑换金矿</view>
-			<view class="tips">( USDT与金矿兑换比例为{{options.exchange_rate}}:1 )</view>
+			<view>USDT {{$lang("兑换金矿")}}</view>
+			<view class="tips">( {{$lang("USDT与金矿兑换比例为")}}{{options.exchange_rate}}:1 )</view>
 		</view>
 		<view class="qrcode">
 			<div class="qrcode-container" :style="containerStyle">
-				<!-- <uqrcode ref="qrcode" canvas-id="qrcode" :value="options.wallet_address" :options="{ margin: 6 }"></uqrcode> -->
 				<image style="width: 300rpx;height: 300rpx;" :src="options.wallet_qrcode" mode="aspectFill"></image>
 			</div>
 		</view>
 		<view class="address">
 			<view class="leftview">
-				<view class="txt">地址
+				<view class="txt">{{$lang("地址")}}
 				<view class="trc">
 					<image src="@/static/svg/XTVCTRX--big.svg" mode="aspectFill"></image>
 					Tron(trc20)
@@ -34,20 +33,20 @@
 				500 U
 			</view>
 			<view @click="tagitemIndex=3" :class="tagitemIndex==3?'tagitemactive':'tagitem'">
-				其他数量
+				{{$lang("其他数量")}}
 			</view>
 		</view>
 		<view class="othernum" v-if="tagitemIndex==3">
 			<view class="inputbox">
-				<u-input :custom-style="{color:'#fff'}" :clearable='false' placeholder='请输入USDT数量' v-model="numvalue" type="number"/>
+				<u-input :custom-style="{color:'#fff'}" :clearable='false' :placeholder='$lang("请输入USDT数量")' v-model="numvalue" type="number"/>
 			</view>
 		</view>
 		<view class="history">
 			<view class="htitle">
-				<view>近期记录</view>
+				<view>{{$lang("近期记录")}}</view>
 				<view class="rpart">
 					<u-icon style="margin-right: 8rpx;" name="order" color="#fff" size="24"></u-icon>
-					全部
+					{{$lang("全部")}}
 				</view>
 			</view>
 			<view class="list">
@@ -58,16 +57,16 @@
 					USDT
 					<view class="flex">
 						<view class="line">
-							<view class="linetitle">时间</view>
+							<view class="linetitle">{{$lang("时间")}}</view>
 							<view>{{i.create_time}}</view>
 						</view>
 						<view class="line" style="min-width: 180rpx;">
-							<view class="linetitle">数量</view>
+							<view class="linetitle">{{$lang("数量")}}</view>
 							<view>{{$fuc.formatNumber(i.amount)}}</view>
 						</view>
 						<view class="line"  style="min-width: 100rpx;display: flex;flex-direction: column;align-items: flex-end;">
-							<view class="linetitle">状态</view>
-							<view>{{i.status==0?'待确认':i.status==1?'成功充值':i.status==2?'充值失败':i.status==3?'订单取消':i.status==4?'订单失效':'订单异常'}}</view>
+							<view class="linetitle">{{$lang("状态")}}</view>
+							<view>{{i.status==0?$lang('待确认'):i.status==1?$lang('成功充值'):i.status==2?$lang('充值失败'):i.status==3?$lang('订单取消'):i.status==4?$lang('订单失效'):$lang('订单异常')}}</view>
 						</view>
 					</view>
 				</view>
@@ -78,10 +77,10 @@
 		</view>
 		<view class="afterbtn">
 			<view class="xbtn" @click="already">
-				我已完成储值
+				{{$lang("我已完成储值")}}
 			</view>
 		</view>
-		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
+		<zero-loading color='#F0E68C' mask v-if="loading" showText :textColor='$lang("#fff")' :maskOpacity='0.8'></zero-loading>
 	</view>
 </template>
 

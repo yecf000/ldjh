@@ -2,12 +2,12 @@
 	<view class="content">
 		<view class="navbar">
 			<view class="balance">
-				剩余金矿:<span>{{userinfo.user_money?Number(userinfo.user_money).toFixed(2):0 }}</span>
+				{{$lang('剩余金矿')}}:<span>{{userinfo.user_money?Number(userinfo.user_money).toFixed(2):0 }}</span>
 				<image src="@/static/icons/gold.png" mode="aspectFill"></image>
 			</view>
 			<view class="getgoldclass">
 				<u-button @click="backtomyinfo" type="primary" size='mini' ripple
-					:custom-style='customstyle'>退出模拟</u-button>
+					:custom-style='customstyle'>{{$lang('退出模拟')}}</u-button>
 			</view>
 		</view>
 		<view class="placeholdernavbar">
@@ -30,7 +30,7 @@
 			<view class="totalbox">
 				<view class="total">
 					<image src="@/static/icons/goldg.png" mode="aspectFill"></image>
-					矿山总资产:<span>$1000000</span>
+					{{$lang('矿山总资产')}}:<span>$1000000</span>
 				</view>
 				<view class="gg" v-show="currentMultiplier">
 					{{currentMultiplier.toFixed(2)}} X
@@ -42,17 +42,17 @@
 		</view>
 		<view class="opration">
 			<view v-if="wsgamestatu=='preparation'" :class="instatu?'outsuccess':'ordernow'" @click="intogame">
-				{{instatu?'已参与':'进入挖矿'}} {{wscurrentTime}}S
+				{{instatu?$lang('已参与'):$lang('进入挖矿')}} {{wscurrentTime}}S
 			</view>
 			<view @click="gameout('human')" v-if="wsgamestatu=='playing'"
 				:class="instatu?(outstatu?'outsuccess':(canoutstatu?'outnow':'outover')):'outover'">
-				{{outstatu?'撤离成功':'立即撤离'}}
+				{{outstatu?$lang('撤离成功'):$lang('立即撤离')}}
 			</view>
 			<view v-if="wsgamestatu=='settlement'" class="ordersettlement">
-				游戏结算中 {{wscurrentTime}}S
+				{{$lang('游戏结算中')}} {{wscurrentTime}}S
 			</view>
 			<view class="types">
-				请选择稿子
+				{{$lang('请选择稿子')}}
 				<svg style="margin-left: 12rpx;" t="1760202195406" class="icon" viewBox="0 0 1024 1024" version="1.1"
 					xmlns="http://www.w3.org/2000/svg" p-id="8284" width="16" height="16">
 					<path
@@ -78,7 +78,7 @@
 					</u-checkbox>
 					<u-input
 						@blur='keepvalue=Number(keepvalue||0)>5?Number(5).toFixed(2):Number(keepvalue||0).toFixed(2)'
-						type='number' :disabled='!checked||instatu' placeholder='固定倍率撤出'
+						type='number' :disabled='!checked||instatu' :placeholder='$lang("固定倍率撤出")'
 						placeholder-style="color: #7b7e83;" v-model="keepvalue" :clearable='false'
 						:custom-style='inputstyle' />
 					<view class="x">
@@ -89,10 +89,11 @@
 		</view>
 		<view class="players">
 			<view class="tabs">
-				<view class="player">玩家<span v-show="playerList.length>0">{{playerList.length}}</span></view>
-				<view class='escape'>撤出</view>
-				<view class='inside'>投入</view>
-				<view class='earn'>盈亏</view>
+				<view class="player">{{$lang('玩家')}}<span v-show="playerList.length>0">{{playerList.length}}</span>
+				</view>
+				<view class='escape'>{{$lang('撤出')}}</view>
+				<view class='inside'>{{$lang('投入')}}</view>
+				<view class='earn'>{{$lang('盈亏')}}</view>
 			</view>
 			<view class="playeritem"
 				:style="{background:(!goingstatu&&currentMultiplier&&((currentMultiplier<i.keepvalue)||!i.keepvalue))?'#25090420':(i.keepvalue&&(currentMultiplier.toFixed(2)>=i.keepvalue)?'#04200120':(index%2!=1?'#0f131650':''))}"
@@ -100,18 +101,20 @@
 				<view class="player">
 					<image :src="i.avatar||'@/static/icons/defaultavatar.png'" mode="aspectFill"></image>
 					<view class="name">
-						{{i.nickname||'玩家'}}
+						{{i.nickname||$lang('玩家')}}
 					</view>
 				</view>
 				<view class='escape'>
-					{{!i.keepvalue?'-':currentMultiplier.toFixed(2)>=i.keepvalue?('x'+i.keepvalue):'-'}}</view>
+					{{!i.keepvalue?'-':currentMultiplier.toFixed(2)>=i.keepvalue?('x'+i.keepvalue):'-'}}
+				</view>
 				<view class='inside'>{{i.gold||0}}</view>
 
 				<view
 					v-show="currentMultiplier==0||(!i.keepvalue&&goingstatu)||(goingstatu&&currentMultiplier!=0&&currentMultiplier<i.keepvalue)"
 					class='earn'>{{'-'}}</view>
 				<view v-show="i.keepvalue&&currentMultiplier>=i.keepvalue" class='earn'>
-					{{((i.keepvalue-1)*i.gold).toFixed(2)}}</view>
+					{{((i.keepvalue-1)*i.gold).toFixed(2)}}
+				</view>
 				<view v-show="!goingstatu&&currentMultiplier&&((currentMultiplier<i.keepvalue)||!i.keepvalue)"
 					class='earn'>{{Number(i.gold*-1).toFixed(2)}}</view>
 				<!-- 				<view v-show="(currentMultiplier >= targetMultiplier)&&(!i.keepvalue||(i.keepvalue>targetMultiplier))" class='earn'>{{Number(i.gold*-1).toFixed(2)}}</view>
@@ -126,6 +129,9 @@
 </template>
 
 <script>
+	import {
+		wssURL
+	} from '@/utils/env.js'
 	export default {
 		data() {
 			return {
@@ -163,23 +169,23 @@
 				options: {
 					10: {
 						tool: "#197f56",
-						toolname: "铁镐",
+						toolname: this.$lang('铁镐'),
 					},
 					50: {
 						tool: "#e6e6e6",
-						toolname: "银镐",
+						toolname: this.$lang('银镐'),
 					},
 					100: {
 						tool: "#fcba00",
-						toolname: "金镐",
+						toolname: this.$lang('金镐'),
 					},
 					150: {
 						tool: "#8888cc",
-						toolname: "秘银镐",
+						toolname: this.$lang('秘银镐'),
 					},
 					200: {
 						tool: "#ffaa7f",
-						toolname: "精钢镐",
+						toolname: this.$lang('精钢镐'),
 					}
 				},
 				times: [{
@@ -247,12 +253,12 @@
 			connectionStatus() {
 				if (this.isConnected) {
 					return {
-						text: '已连接',
+						text: this.$lang('已连接'),
 						class: 'connected'
 					};
 				} else {
 					return {
-						text: '未连接',
+						text: this.$lang('未连接'),
 						class: 'disconnected'
 					};
 				}
@@ -284,11 +290,11 @@
 						// 	keepvalue: Number(this.currentMultiplier).toFixed(2),
 						// 	type: 'game_action'
 						// })
-						this.userinfo.user_money+=(this.dgoin*Number(this.currentMultiplier).toFixed(2))
-						localStorage.setItem('mockdata',JSON.stringify(this.userinfo))
+						this.userinfo.user_money += (this.dgoin * Number(this.currentMultiplier).toFixed(2))
+						localStorage.setItem('mockdata', JSON.stringify(this.userinfo))
 					} else {
 						uni.showToast({
-							title: '已设置固定点位',
+							title: this.$lang('已设置固定点位'),
 							icon: 'none'
 						})
 					}
@@ -297,7 +303,7 @@
 						return
 					}
 					uni.showToast({
-						title: '已错过撤离时间',
+						title: this.$lang('已错过撤离时间'),
 						icon: 'none'
 					})
 				}
@@ -330,14 +336,14 @@
 					// setTimeout(() => {
 					// 	this.getmoneyinfo()
 					// }, 1500)
-					this.userinfo.user_money-=this.dgoin
-					localStorage.setItem('mockdata',JSON.stringify(this.userinfo))
+					this.userinfo.user_money -= this.dgoin
+					localStorage.setItem('mockdata', JSON.stringify(this.userinfo))
 				} else {
 					if (this.instatu) {
 						return
 					}
 					uni.showToast({
-						title: '未到进入时间',
+						title: this.$lang('未到进入时间'),
 						icon: 'none'
 					})
 				}
@@ -552,7 +558,7 @@
 
 				try {
 					// 替换为你的服务器地址
-					const serverUrl = 'ws://localhost:8899?token=' + localStorage.getItem('token');
+					const serverUrl = wssURL+'?token=' + localStorage.getItem('token');
 					this.socket = uni.connectSocket({
 						url: serverUrl,
 						complete: () => {}
@@ -576,13 +582,11 @@
 							this.handleServerMessage(data);
 							uni.$emit('global-websocket-message', data);
 						} catch (error) {
-							console.error('消息解析错误:', error);
 							this.addMessage('error', '消息解析错误: ' + res.data);
 						}
 					});
 
 					this.socket.onClose((e) => {
-						console.log('WebSocket连接关闭', e);
 						this.isConnected = false;
 						this.addMessage('system', '连接已断开');
 						if (e.code != 1000) {
@@ -591,7 +595,6 @@
 					});
 
 					this.socket.onError((error) => {
-						console.error('WebSocket错误:', error);
 						this.addMessage('error', '连接错误: ' + error.errMsg);
 						this.isConnected = false;
 					});
@@ -599,7 +602,7 @@
 				} catch (error) {
 					console.error('连接失败:', error);
 					uni.showToast({
-						title: '连接失败',
+						title: this.$lang('连接失败'),
 						icon: 'none'
 					});
 				}
@@ -717,7 +720,7 @@
 
 				const messageData = {
 					type: 'chat',
-					user: '玩家',
+					user: this.$lang('玩家'),
 					message: this.message
 				};
 
@@ -876,7 +879,7 @@
 
 			.escape {
 				display: flex;
-				width: 100rpx;
+				width: 120rpx;
 			}
 
 			.inside {
@@ -886,7 +889,7 @@
 
 			.earn {
 				display: flex;
-				width: 100rpx;
+				width: 150rpx;
 			}
 		}
 
@@ -909,7 +912,7 @@
 			}
 
 			.escape {
-				width: 100rpx;
+				width: 120rpx;
 			}
 
 			.inside {
@@ -917,7 +920,7 @@
 			}
 
 			.earn {
-				width: 100rpx;
+				width: 150rpx;
 			}
 		}
 	}

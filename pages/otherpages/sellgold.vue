@@ -1,6 +1,6 @@
 <template>
 	<view class="all">
-		<navbar title="售出金矿"></navbar>
+		<navbar :title="$lang('售出金矿')"></navbar>
 		<view class="chainline">
 			<view class="trc">
 				<image src="@/static/svg/XTVCTRX--big.svg" mode="aspectFill"></image>
@@ -9,38 +9,40 @@
 		</view>
 		<view class="address">
 			<view class="inputer">
-				<u-input type='textarea' placeholder='地址' input-align='center' v-model="address"
+				<u-input type='textarea' :placeholder='$lang("地址")' input-align='center' v-model="address"
 					:custom-style="{color:'#f4faff',fontSize:'64rpx'}" />
 			</view>
 			<view class="cv">
 				<view class="cvbtn" @click="cv">
-					<u-icon style="margin-right: 8rpx;" name="order" color="#fff" size="24"></u-icon>粘贴
+					<u-icon style="margin-right: 8rpx;" name="order" color="#fff" size="24"></u-icon>{{$lang('粘贴')}}
 				</view>
 			</view>
 			<view class="sell">
 				<view class="title">
-					我要出售
+					{{$lang('我要出售')}}
 				</view>
 				<view class="usdt">
 					<view class="inputerx">
-						<u-input type='number' placeholder='0' v-model="gold"
-						 @input='comu'	:custom-style="{color:'#fff',fontSize:'64rpx'}" />
+						<u-input type='number' placeholder='0.00' v-model="gold" @input='comu'
+							:custom-style="{color:'#fff',fontSize:'64rpx'}" />
 					</view>
 					<view class="unit">
 						<image style="height: 42rpx;" src="@/static/icons/gold.png" mode="aspectFill"></image>
-						金矿
+						{{$lang('金矿')}}
 					</view>
 				</view>
 				<view class="infos">
-					<view>当前账户可出售金矿数量 <span style="color: #fff;margin-left: 12rpx;font-weight: bold;">{{userinfo.user_money||0}}</span></view>
-					<view>1 金矿 = {{rate}} USDT</view>
+					<view>{{$lang('当前账户可出售金矿数量')}} <span
+							style="color: #fff;margin-left: 12rpx;font-weight: bold;">{{userinfo.user_money||0}}</span>
+					</view>
+					<view>1{{$lang('金矿')}}= {{rate}} USDT</view>
 				</view>
 				<view class="title" style="margin-top: 48rpx;">
-					我将获得
+					{{$lang('我将获得')}}
 				</view>
 				<view class="usdt">
 					<view class="inputerx">
-						<u-input @input='comg' type='number' placeholder='0' v-model="usdt"
+						<u-input @input='comg' type='number' placeholder='0.00' v-model="usdt"
 							:custom-style="{color:'#fff',fontSize:'64rpx'}" />
 					</view>
 					<view class="unit">
@@ -52,50 +54,53 @@
 		</view>
 		<view class="history" v-if="withdrawlists.length">
 			<view class="htitle">
-				<view>近期记录</view>
+				<view>{{$lang('近期记录')}}</view>
 				<view class="rpart">
 					<u-icon style="margin-right: 8rpx;" name="order" color="#fff" size="24"></u-icon>
-					全部
+					{{$lang('全部')}}
 				</view>
 			</view>
 			<view class="list">
 				<view class="null" v-show="false">
 					<image src="@/static/icons/null.png" mode="aspectFill"></image>
 				</view>
-				<view class="project" :style="{border:index==2?'none':''}" v-for="(i,index) in withdrawlists" :key="index">
-					售出金矿
+				<view class="project" :style="{border:index==2?'none':''}" v-for="(i,index) in withdrawlists"
+					:key="index">
+					{{$lang('售出金矿')}}
 					<view class="flex">
 						<view class="line" style="width: 240rpx;">
-							<view class="linetitle">时间</view>
+							<view class="linetitle">{{$lang('时间')}}</view>
 							<view>{{i.create_time}}</view>
 						</view>
 						<view class="line" style="width: 120rpx;">
-							<view class="linetitle">售出数量</view>
+							<view class="linetitle">{{$lang('售出数量')}}</view>
 							<view>{{i.user_money}}</view>
 						</view>
-						<view class="line" style="width: 120rpx;">
-							<view class="linetitle">USDT数量</view>
+						<view class="line" style="width: 80rpx;">
+							<view class="linetitle">{{$lang('USDT数量')}}</view>
 							<view>{{i.amount}}</view>
 						</view>
-						<view class="line" style="width: 72rpx;">
-							<view class="linetitle">状态</view>
-							<view>{{i.status==0?'待审核':(i.status==1?'通过':'拒绝')}}</view>
+						<view class="line" style="width: 80rpx;">
+							<view class="linetitle">{{$lang('状态')}}</view>
+							<view>{{i.status==0?$lang('待审核'):(i.status==1?$lang('通过'):$lang('拒绝'))}}</view>
 						</view>
 					</view>
 				</view>
 			</view>
 		</view>
-		
+
 		<view class="afterplease">
-			
+
 		</view>
 		<view class="afterbtn">
 			<view class="xbtn" @click="sub">
-				确认售出
-			</view> 
+				{{$lang('确认售出')}}
+			</view>
 		</view>
-		<u-modal @confirm='confirm' confirm-color='#2537a8' show-cancel-button v-model="showconfirm" :content="'是否确认售出？'"></u-modal>
-		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
+		<u-modal @confirm='confirm' confirm-color='#2537a8' show-cancel-button v-model="showconfirm"
+			:content="$lang('是否确认售出？')"></u-modal>
+		<zero-loading color='#F0E68C' mask v-if="loading" showText :textColor='$lang("#fff")'
+			:maskOpacity='0.8'></zero-loading>
 	</view>
 </template>
 
@@ -107,17 +112,17 @@
 		},
 		data() {
 			return {
-				showconfirm:false,
-				gold:'',
-				loading:false,
-				usdt:'',
-				rate:1,
+				showconfirm: false,
+				gold: '',
+				loading: false,
+				usdt: '',
+				rate: 1,
 				address: '',
 				nums: "",
-				userinfo:{
-					
+				userinfo: {
+
 				},
-				withdrawlists:[]
+				withdrawlists: []
 			}
 		},
 		onLoad() {
@@ -126,35 +131,35 @@
 			this.gameConfig()
 		},
 		methods: {
-			
-			gameConfig(){
+
+			gameConfig() {
 				this.$reqGet("gameConfig").then(res => {
 					this.rate = res.data.data.exchange_rate
 				})
 			},
-			tradelist(){
-				this.$reqGet("withdrawlists",{
-					page_size:3
+			tradelist() {
+				this.$reqGet("withdrawlists", {
+					page_size: 3
 				}).then(res => {
 					this.withdrawlists = res.data.data.lists
 				})
 			},
 			getinfo() {
 				if (localStorage.getItem('token')) {
-					this.loading=true
+					this.loading = true
 					this.$reqGet("usercenter").then(res => {
 						this.userinfo = res.data.data
 						this.loading = false
 					})
 				}
 			},
-			confirm(){
+			confirm() {
 				this.$reqPost('withdraw', {
-					currency_id:1,
-					user_money:this.gold,
-					address:this.address
+					currency_id: 1,
+					user_money: this.gold,
+					address: this.address
 				}).then(res => {
-					this.$u.toast('已提交售出')
+					this.$u.toast(this.$lang('已提交售出'))
 					this.getinfo()
 				}).finally(v => {
 					this.loading = false
@@ -162,44 +167,44 @@
 					this.tradelist()
 				})
 			},
-			sub(){
-				if(!this.address){
+			sub() {
+				if (!this.address) {
 					uni.showToast({
-						title:'未填写地址',
-						icon:'none'
+						title: this.$lang('未填写地址'),
+						icon: 'none'
 					})
 					return
 				}
-				if(!this.gold){
+				if (!this.gold) {
 					uni.showToast({
-						title:'未填写数量',
-						icon:'none'
+						title: this.$lang('未填写数量'),
+						icon: 'none'
 					})
 					return
 				}
 				this.gold = Math.floor(this.gold)
-				if((this.gold*this.rate)%1!=0){
-					this.usdt =  (this.gold*this.rate).toFixed(1)
-				}else{
-					this.usdt =  (this.gold*this.rate)
+				if ((this.gold * this.rate) % 1 != 0) {
+					this.usdt = (this.gold * this.rate).toFixed(1)
+				} else {
+					this.usdt = (this.gold * this.rate)
 				}
 				this.showconfirm = true
 			},
-			comg(e){
-				if(e){
-					this.gold =  (e/this.rate).toFixed(2)
-				}else{
+			comg(e) {
+				if (e) {
+					this.gold = (e / this.rate).toFixed(2)
+				} else {
 					this.gold = ''
 				}
 			},
-			comu(e){
-				if(e){
-					if((e*this.rate)%1!=0){
-						this.usdt =  (e*this.rate).toFixed(1)
-					}else{
-						this.usdt =  (e*this.rate)
+			comu(e) {
+				if (e) {
+					if ((e * this.rate) % 1 != 0) {
+						this.usdt = (e * this.rate).toFixed(1)
+					} else {
+						this.usdt = (e * this.rate)
 					}
-				}else{
+				} else {
 					this.usdt = ''
 				}
 			},
@@ -210,7 +215,7 @@
 					},
 					fail: (err) => {
 						uni.showToast({
-							title: '粘贴失败',
+							title: this.$lang('粘贴失败'),
 							icon: 'none'
 						})
 					}
@@ -221,49 +226,56 @@
 </script>
 
 <style lang="scss" scoped>
-	.flex{
+	.flex {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 12rpx;
 	}
-	.history{
+
+	.history {
 		margin-top: 88rpx;
 		padding: 0 42rpx;
-		.list{
-			.project{
+
+		.list {
+			.project {
 				font-weight: bold;
 				padding: 24rpx 0;
 				border-bottom: 1px solid #1c1c1c;
 			}
-			.line{
+
+			.line {
 				font-weight: 500;
 				display: flex;
 				flex-direction: column;
 				font-size: 24rpx;
-				.linetitle{
+
+				.linetitle {
 					color: #8d8f8f;
 					margin-bottom: 8rpx;
 				}
 			}
 		}
-		.rpart{
+
+		.rpart {
 			display: flex;
 			align-items: center;
 			font-size: 24rpx;
 			font-weight: 500;
 		}
-		.htitle{
+
+		.htitle {
 			font-weight: bold;
 			display: flex;
 			justify-content: space-between;
 		}
 	}
-	
-	.afterplease{
+
+	.afterplease {
 		height: 150rpx;
 	}
-	.afterbtn{
+
+	.afterbtn {
 		background-color: rgba(15, 16, 18, 1);
 		position: fixed;
 		z-index: 9;
@@ -273,7 +285,8 @@
 		display: flex;
 		justify-content: center;
 		padding: 30rpx 48rpx;
-		.xbtn{
+
+		.xbtn {
 			width: 100%;
 			height: 100%;
 			background-color: #fff;
@@ -286,11 +299,13 @@
 			font-weight: 700;
 		}
 	}
-	.infos{
+
+	.infos {
 		margin-top: 8rpx;
 		font-size: 24rpx;
 		color: #b6bfc3;
 	}
+
 	.usdt {
 		display: flex;
 		align-items: center;
@@ -299,21 +314,25 @@
 		border-bottom: 1px solid #b6bfcc;
 		font-size: 38rpx;
 		font-weight: bold;
-		.inputerx{
+
+		.inputerx {
 			display: flex;
 			width: 400rpx;
 			height: 88rpx;
 			display: flex;
 			align-items: center;
 		}
-		.unit{
-			
+
+		.unit {
+
 			padding: 12rpx;
 			background-color: #2c2f30;
-			border-radius: 10rpx;display: flex;
+			border-radius: 10rpx;
+			display: flex;
 			align-items: center;
 			justify-content: center;
-			image{
+
+			image {
 				width: 54rpx;
 				height: 54rpx;
 				margin-right: 12rpx;

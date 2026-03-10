@@ -1,10 +1,10 @@
 <template>
 	<view class="all">
-		<navbar title="常见问题"></navbar>
+		<navbar :title="$lang('常见问题')"></navbar>
 		<view class="null" v-show="!list.length">
 			<image src="@/static/icons/null.png" mode="aspectFill"></image>
 			<view class="txtnull">
-				暂无内容
+				{{$lang('暂无内容')}}
 			</view>
 		</view>
 		<view class="message">
@@ -38,16 +38,7 @@
 				headstyle: {
 					color: '#fff'
 				},
-				itemList: [{
-					head: "赏识在于角度的转换",
-					body: "只要我们正确择取一个合适的参照物乃至稍降一格去看待他人，值得赏识的东西便会扑面而来",
-				}, {
-					head: "生活中不是缺少美，而是缺少发现美的眼睛",
-					body: "学会欣赏，实际是一种积极生活的态度，是生活的调味品，会在欣赏中发现生活的美",
-				}, {
-					head: "提现通过通知",
-					body: "但是据说雕刻大卫像所用的这块大理石，曾被多位雕刻家批评得一无是处，有些人认为这块大理石采凿得不好，有些人嫌它的纹路不够美",
-				}],
+				itemList: [],
 			}
 		},
 		onLoad() {

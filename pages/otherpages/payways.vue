@@ -1,26 +1,26 @@
 <template>
 	<view class="all">
-		<navbar title="收款渠道"></navbar>
+		<navbar :title="$lang('收款渠道')"></navbar>
 
 		<!-- 空状态 -->
 		<view class="empty-state" v-if="accountList.length === 0 && !loading">
 			<view class="empty-icon">
 				<image src="@/static/icons/null.png" mode="aspectFill"></image>
 			</view>
-			<view class="empty-text">暂无收款渠道</view>
-			<view class="empty-desc">添加收款渠道以便接收款项</view>
+			<view class="empty-text">{{$lang('暂无收款渠道')}}</view>
+			<view class="empty-desc">{{$lang('添加收款渠道以便接收款项')}}</view>
 		</view>
-		
+
 		<!-- 收款渠道列表 -->
 		<view class="account-list" v-else>
-			<view class="title">我的收款渠道</view>
+			<view class="title">{{$lang('我的收款渠道')}}</view>
 			<view class="list-content">
 				<view class="account-item" v-for="item in accountList" :key="item.id" :class="{active: item.is_used}">
 					<view class="account-header">
 						<view class="account-way">{{ item.way }}</view>
 						<view class="account-status">
-							<text v-if="item.is_used" class="status-active">使用中</text>
-							<text v-else class="status-inactive">未启用</text>
+							<text v-if="item.is_used" class="status-active">{{$lang('使用中')}}</text>
+							<text v-else class="status-inactive">{{$lang('未启用')}}</text>
 						</view>
 					</view>
 
@@ -29,11 +29,11 @@
 						<view class="account-actions">
 							<view class="action-btn edit" @click="editAccount(item)">
 								<u-icon name="edit-pen" color="#76787a" size="28"></u-icon>
-								<text>编辑</text>
+								<text>{{$lang('编辑')}}</text>
 							</view>
 							<view class="action-btn delete" @click="deleteAccount(item.id)">
 								<u-icon name="trash" color="#fd7774" size="28"></u-icon>
-								<text>删除</text>
+								<text>{{$lang('删除')}}</text>
 							</view>
 						</view>
 					</view>
@@ -41,7 +41,7 @@
 					<view class="qr-code-preview" v-if="item.qr_code">
 						<image :src="item.qr_code" mode="aspectFit" class="qr-image"
 							@click="previewQrCode(item.qr_code)"></image>
-						<view class="qr-tips" @click="previewQrCode(item.qr_code)">点击预览收款码</view>
+						<view class="qr-tips" @click="previewQrCode(item.qr_code)">{{$lang('点击预览收款码')}}</view>
 					</view>
 				</view>
 			</view>
@@ -51,53 +51,53 @@
 		<view class="bottom-actions">
 			<view class="add-btn" @click="showAddForm">
 				<u-icon name="plus" color="#000" size="32"></u-icon>
-				<text>添加收款渠道</text>
+				<text>{{$lang('添加收款渠道')}}</text>
 			</view>
 		</view>
 
 		<!-- 新增/编辑弹窗 -->
 		<u-popup z-index='7' v-model="showForm" mode="bottom" border-radius="18" :closeable="true">
 			<view class="account-form">
-				<view class="form-title">{{ isEditing ? '编辑收款渠道' : '添加收款渠道' }}</view>
+				<view class="form-title">{{ isEditing ? $lang('编辑收款渠道') : $lang('添加收款渠道') }}</view>
 
 				<view class="form-content">
 					<view class="form-item">
-						<view class="label">收款方式</view>
-						<u-input disabled v-model="formData.way" placeholder="例如：银行卡" :custom-style="inputStyle" :border="true"
-							:border-color="borderColor" />
+						<view class="label">{{$lang('收款方式')}}</view>
+						<u-input disabled v-model="formData.way" :placeholder='$lang("例如：银行卡")'
+							:custom-style="inputStyle" :border="true" :border-color="borderColor" />
 					</view>
 
 					<view class="form-item">
-						<view class="label">账户号码</view>
-						<u-input v-model="formData.account" placeholder="请输入账户号码" :custom-style="inputStyle"
+						<view class="label">{{$lang('账户号码')}}</view>
+						<u-input v-model="formData.account" :placeholder='$lang("请输入账户号码")' :custom-style="inputStyle"
 							:border="true" :border-color="borderColor" />
 					</view>
 
 					<view class="form-item">
-						<view class="label">收款码</view>
+						<view class="label">{{$lang('收款码')}}</view>
 						<view class="upload-area" @click="uploadQrCode">
 							<image v-if="formData.qr_code" :src="formData.qr_code" mode="aspectFit"
 								class="qr-upload-image"></image>
 							<view v-else class="upload-placeholder">
 								<u-icon name="photo" color="#b9bdbd" size="48"></u-icon>
-								<view class="upload-text">上传收款码</view>
+								<view class="upload-text">{{$lang('上传收款码')}}</view>
 							</view>
 						</view>
 					</view>
 
 					<view class="form-item">
-						<view class="label">启用状态</view>
+						<view class="label">{{$lang('启用状态')}}</view>
 						<view class="switch-item">
-							<text class="switch-label">立即启用此收款渠道</text>
+							<text class="switch-label">{{$lang('立即启用此收款渠道')}}</text>
 							<u-switch v-model="formData.is_used" active-color="#000" size="28"></u-switch>
 						</view>
 					</view>
 
 					<view class="form-actions">
-						<view class="action-btn cancel" @click="showForm = false">取消</view>
+						<view class="action-btn cancel" @click="showForm = false">{{$lang('取消')}}</view>
 						<view class="action-btn confirm" :class="{disabled: !formData.way || !formData.account}"
 							@click="submitForm">
-							{{ isEditing ? '保存修改' : '确认添加' }}
+							{{ isEditing ? $lang('保存修改') : $lang('确认添加') }}
 						</view>
 					</view>
 				</view>
@@ -109,7 +109,8 @@
 			@confirm="confirmDelete"></u-modal>
 
 		<!-- 加载状态 -->
-		<zero-loading color='#F0E68C' mask v-if="loading" showText textColor='#fff' :maskOpacity='0.8'></zero-loading>
+		<zero-loading color='#F0E68C' mask v-if="loading" showText :textColor='$lang("#fff")'
+			:maskOpacity='0.8'></zero-loading>
 	</view>
 </template>
 
@@ -144,14 +145,13 @@
 		},
 		computed: {
 			deleteConfirmText() {
-				return '确定要删除这个收款渠道吗？删除后无法恢复。'
+				return this.$lang('确定要删除这个收款渠道吗？删除后无法恢复。')
 			}
 		},
 		onLoad() {
 			this.getAccountList();
 		},
-		methods: {
-			// 获取收款渠道列表
+		methods: { // 获取收款渠道列表
 			async getAccountList() {
 				this.loading = true;
 				try {
@@ -203,7 +203,7 @@
 					});
 
 					uni.showToast({
-						title: '删除成功',
+						title: this.$lang('删除成功'),
 						icon: 'none'
 					});
 
@@ -212,7 +212,7 @@
 				} catch (error) {
 					console.error('删除失败', error);
 					uni.showToast({
-						title: '删除失败',
+						title: this.$lang('删除失败'),
 						icon: 'none'
 					});
 				} finally {
@@ -225,7 +225,7 @@
 			async submitForm() {
 				if (!this.formData.way || !this.formData.account) {
 					uni.showToast({
-						title: '请填写完整信息',
+						title: this.$lang('请填写完整信息'),
 						icon: 'none'
 					});
 					return;
@@ -238,7 +238,7 @@
 						// 编辑
 						await this.$reqPost("accountedit", postdata);
 						uni.showToast({
-							title: '修改成功',
+							title: this.$lang('修改成功'),
 							icon: 'none'
 						});
 					} else {
@@ -246,7 +246,7 @@
 						delete postdata['id']
 						await this.$reqPost("accountadd", postdata);
 						uni.showToast({
-							title: '添加成功',
+							title: this.$lang('添加成功'),
 							icon: 'none'
 						});
 					}
@@ -254,9 +254,8 @@
 					this.showForm = false;
 					this.getAccountList();
 				} catch (error) {
-					console.error('操作失败', error);
 					uni.showToast({
-						title: '操作失败',
+						title: this.$lang('操作失败'),
 						icon: 'none'
 					});
 				} finally {
@@ -271,7 +270,7 @@
 					success: res => {
 						if (res.tempFiles[0].size > 1024 * 1024 * 5) {
 							uni.showToast({
-								title: '图片太大,请控制在5MB内',
+								title: this.$lang('图片太大,请控制在5MB内'),
 								icon: 'none'
 							});
 							return;
@@ -283,14 +282,14 @@
 							this.formData.qr_code = result;
 							this.loading = false;
 							uni.showToast({
-								title: '上传成功',
+								title: this.$lang('上传成功'),
 								icon: 'none'
 							});
 						}).catch(error => {
 							console.error('上传失败', error);
 							this.loading = false;
 							uni.showToast({
-								title: '上传失败',
+								title: this.$lang('上传失败'),
 								icon: 'none'
 							});
 						});

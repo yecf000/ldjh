@@ -1,107 +1,98 @@
 <template>
 	<view class="all">
-		<navbar title="C2C交易"></navbar>
+		<navbar :title="$lang('C2C交易')"></navbar>
 		<view class="tabs">
-			<view class="activetabitem">快捷交易</view>
-			<view class="tabitem" @click="$u.route('/pages/otherpages/storelist');">商户列表</view>
+			<view class="activetabitem">{{$lang("快捷交易")}}</view>
+			<view class="tabitem" @click="$u.route('/pages/otherpages/storelist');">{{$lang("商户列表")}}</view>
 		</view>
 		<view v-show="pageindex==1" class="pageone">
 			<view class="accont">
-				<view class="title">
-					C2C 快捷交易</br>
-					使用 CNY {{mode==1?'购买':'售出'}} 金矿
-				</view>
-				<view class="tips">
-					快捷交易为您自动匹配当前 C2C 市场{{mode==1?'购买':'售出'}} 金矿 最优价格的商家。
-				</view>
+				<view class="title"> C2C {{$lang("快捷交易")}}</br> {{$lang("使用")}} RUB {{mode==1?$lang('购买'):$lang('售出')}}
+					{{$lang("金矿")}} </view>
+				<view class="tips"> {{$lang("快捷交易为您自动匹配当前")}} C2C {{$lang("市场")}}{{mode==1?$lang('购买'):$lang('售出')}}
+					{{$lang("金矿")}} {{$lang("最优价格的商家")}} </view>
 			</view>
 			<view class="shadowbox">
 				<view class="box">
 					<view class="taps">
-						<view @click="mode=1,changemode()" :class="mode==1?'active':''" class="buy">购买</view>
-						<view @click="mode=2,changemode()" :class="mode==2?'active':''" class="sell">出售</view>
+						<view @click="mode=1,changemode()" :class="mode==1?'active':''" class="buy">{{$lang("购买")}}
+						</view>
+						<view @click="mode=2,changemode()" :class="mode==2?'active':''" class="sell">{{$lang("出售")}}
+						</view>
 					</view>
 					<view class="inputerbox">
 						<view class="inputer" :style="{border:activeinput1?'1px solid #fff':''}">
 							<view class="pay">
-								<view class="paytxt">我要支付</view>
-								<u-input @input='computegold' @focus='activeinput1=true' @blur='activeinput1=false' type='number'
-									placeholder='0' height='40' v-model="pay" :custom-style='diystyle' />
+								<view class="paytxt">{{$lang("我要支付")}}</view> <u-input @input='computegold'
+									@focus='activeinput1=true' @blur='activeinput1=false' type='number'
+									placeholder="0.00" height='40' v-model="pay" :custom-style='diystyle' />
 							</view>
 							<view class="btn" v-if='mode==1'>
-								<image src="@/static/icons/cny.png" mode="aspectFill"></image>
-								CNY
+								<image src="@/static/icons/rub.png" mode="aspectFill"></image> RUB
 							</view>
 							<view class="btn" v-if='mode==2'>
-								<image src="@/static/icons/gold.png" mode="aspectFit"></image>
-								金矿
+								<image src="@/static/icons/gold.png" mode="aspectFit"></image> {{$lang("金矿")}}
 							</view>
 						</view>
 					</view>
-					<view class="xtips" v-if="mode==2">可用余额 1000</view>
+					<view class="xtips" v-if="mode==2">{{$lang("可用余额")}} 1000</view>
 					<view class="inputerbox">
 						<view class="inputer" :style="{border:activeinput2?'1px solid #fff':''}">
 							<view class="pay">
-								<view class="paytxt">我将收到 ≈</view>
-								<u-input @input="computegoldmoney" @focus='activeinput2=true' @blur='activeinput2=false' type='number'
-									placeholder='0' height='40' v-model="get" :custom-style='diystyle' />
+								<view class="paytxt">{{$lang("我将收到")}}≈</view> <u-input @input="computegoldmoney"
+									@focus='activeinput2=true' @blur='activeinput2=false' type='number'
+									placeholder="0.00" height='40' v-model="get" :custom-style='diystyle' />
 							</view>
 							<view class="btn" v-if='mode==1'>
-								<image src="@/static/icons/gold.png" mode="aspectFit"></image>
-								金矿
+								<image src="@/static/icons/gold.png" mode="aspectFit"></image> {{$lang("金矿")}}
 							</view>
 							<view class="btn" v-if='mode==2'>
-								<image src="@/static/icons/cny.png" mode="aspectFill"></image>
-								CNY
+								<image src="@/static/icons/rub.png" mode="aspectFill"></image> RUB
 							</view>
 						</view>
 					</view>
-					<view class="btbtnbox">
-						<u-button @click="pageindex=2" :hair-line='false' ripple :custom-style='btstyle'>选择{{mode==1?'付款':'收款'}}方式</u-button>
+					<view class="btbtnbox"> <u-button @click="pageindex=2" :hair-line='false' ripple
+							:custom-style='btstyle'>{{$lang("选择")}}{{mode==1?$lang('付款'):$lang('收款')}}{{$lang("方式")}}</u-button>
 					</view>
 				</view>
 			</view>
 		</view>
 		<view v-show="pageindex==2" class="pagetwo">
 			<view class="bread">
-				<view @click="pageindex=1">快捷交易</view>
+				<view @click="pageindex=1">{{$lang("快捷交易")}}</view>
 				<view class="step">></view>
-				<view class="in">选择{{mode==1?'购买':'收款'}}方式</view>
+				<view class="in">{{$lang("选择")}}{{mode==1?$lang('购买'):$lang('收款')}}{{$lang("方式")}}</view>
 			</view>
-			<view class="title">
-				{{mode==1?'购买':'售出'}}金矿
-			</view>
-			<view class="paywaysbox" >
+			<view class="title"> {{mode==1?$lang('购买'):$lang('售出')}}{{$lang("金矿")}} </view>
+			<view class="paywaysbox">
 				<view class="paywayitem" @click="payways=1" :style="{border:payways==1?'1px solid #fff':''}">
 					<view class="leftpart">
-						<view>支付宝</view>
-						<view class="txt2">预计单价 <span>3.6 CNY</span></view>
+						<view>{{"Система быстрых платежей"}}</view>
+						<view class="txt2">{{$lang("预计单价")}} <span>{{bili.toFixed(2)}} RUB</span></view>
 					</view>
 					<image v-if="payways==1" src="@/static/icons/confirm.png" mode="aspectFill"></image>
 				</view>
-				<view class="paywayitem" @click="payways=2" :style="{border:payways==2?'1px solid #fff':''}">
+				<!-- <view class="paywayitem" @click="payways=2" :style="{border:payways==2?'1px solid #fff':''}">
 					<view class="leftpart">
-						<view>微信支付</view>
-						<view class="txt2">预计单价 <span>3.6 CNY</span></view>
+						<view>{{$lang("支付方式")}}</view>
+						<view class="txt2">{{$lang("预计单价")}} <span>3.6 CNY</span></view>
 					</view>
 					<image v-if="payways==2" src="@/static/icons/confirm.png" mode="aspectFill"></image>
-				</view>
+				</view> -->
 			</view>
 			<view class="ineed">
 				<view class="line1">
-					<view>我需要支付</view>
-					<view class="cny">1000 {{mode==1?'CNY':'金矿'}}</view>
+					<view>{{$lang("我需要支付")}}</view>
+					<view class="cny">1000 {{mode==1?'RUB':$lang('金矿')}}</view>
 				</view>
-				<view class="gold">≈  {{mode==1?((1000/3.6).toFixed(2)):(1000*3.6).toFixed(2)}} {{mode==1?'金矿':'CNY'}}</view>
+				<view class="gold">≈ {{mode==1?((1000/3.6).toFixed(2)):(1000*3.6).toFixed(2)}}
+					{{mode==1?$lang('金矿'):'RUB'}}</view>
 			</view>
-			<view class="btbtnbox" style="padding: 0;margin-top: 48rpx;">
-				<u-button :hair-line='false' ripple :custom-style='btstyle' @click="sendoreder">确认</u-button>
-			</view>
+			<view class="btbtnbox" style="padding: 0;margin-top: 48rpx;"> <u-button :hair-line='false' ripple
+					:custom-style='btstyle' @click="sendoreder">{{$lang("确认")}}</u-button> </view>
 		</view>
 	</view>
-
 </template>
-
 <script>
 	import navbar from '@/components/navbar.vue'
 	export default {
@@ -110,7 +101,7 @@
 		},
 		data() {
 			return {
-				payways:1,
+				payways: 1,
 				pageindex: 1,
 				btstyle: {
 					border: 'none',
@@ -128,37 +119,53 @@
 				pay: '',
 				get: '',
 				mode: 1,
-				bili:2
+				bili: 2,
+				options:{
+					
+				}
 			}
 		},
-		methods:{
-			
-			changemode(){
+		onLoad() {
+			this.getoption()
+		},
+		methods: {
+			getoption(){
+				this.$reqGet('gameConfig').then(res=>{
+					this.options = res.data.data
+					this.bili = 1/res.data.data.exchange_rate
+				}).catch(err=>{
+				})
+			},
+			changemode() {
 				let keep = ''
 				keep = JSON.parse(JSON.stringify(this.get))
 				this.get = this.pay
 				this.pay = keep
 			},
-			computegold(e){
-				if(e){
-					this.get = this.mode==1?Number(e/this.bili).toFixed(2):(e*this.bili).toFixed(2) 
+			computegold(e) {
+				if (e) {
+					this.get = this.mode == 1 ? Number(e / this.bili).toFixed(2) : (e * this.bili).toFixed(2)
+				}else{
+					this.get = ''
 				}
 			},
-			computegoldmoney(e){
-				if(e){
-					this.pay = this.mode==1?Number(e/this.bili).toFixed(2):(e*this.bili).toFixed(2) 
+			computegoldmoney(e) {
+				if (e) {
+					this.pay = this.mode == 1 ? Number(e / this.bili).toFixed(2) : (e * this.bili).toFixed(2)
+				}else{
+					this.pay = ''
 				}
 			},
-			
-			
-			sendoreder(){
-				this.$reqPost('fastAdd',{
-					amount:this.pay,
-					type:this.mode==1?0:1
-				}).then(res=>{
+
+
+			sendoreder() {
+				this.$reqPost('fastAdd', {
+					amount: this.pay,
+					type: this.mode == 1 ? 0 : 1
+				}).then(res => {
 					console.log(res)
 					uni.navigateTo({
-						url:`/pages/otherpages/impage?cid=${res.data.data.chat_id}&ruid=${res.data.data.user_id}`
+						url: `/pages/otherpages/impage?cid=${res.data.data.chat_id}&ruid=${res.data.data.user_id}`
 					})
 				})
 			},
@@ -167,20 +174,24 @@
 </script>
 
 <style lang="scss" scoped>
-	.pagetwo{
+	.pagetwo {
 		padding: 0 24rpx;
-		.ineed{
+
+		.ineed {
 			margin-top: 24rpx;
-			.line1{
+
+			.line1 {
 				display: flex;
 				align-items: center;
 				justify-content: space-between;
-				.cny{
+
+				.cny {
 					font-size: 24rpx;
 				}
-				
+
 			}
-			.gold{
+
+			.gold {
 				color: #a9aeb1;
 				margin-top: 12rpx;
 				font-size: 24rpx;
@@ -188,9 +199,11 @@
 				justify-content: flex-end;
 			}
 		}
-		.paywaysbox{
+
+		.paywaysbox {
 			margin-top: 24rpx;
-			.paywayitem{
+
+			.paywayitem {
 				display: flex;
 				justify-content: space-between;
 				align-items: center;
@@ -199,17 +212,20 @@
 				border: 1px solid #28282a;
 				border-radius: 16rpx;
 				margin-bottom: 24rpx;
-				image{
+
+				image {
 					width: 32rpx;
 					height: 32rpx;
 					border-radius: 50%;
 				}
-				.leftpart{
-					.txt2{
+
+				.leftpart {
+					.txt2 {
 						color: #939497;
 						font-size: 24rpx;
 						margin-top: 12rpx;
-						span{
+
+						span {
 							color: #fff;
 							margin-left: 12rpx;
 						}
@@ -217,26 +233,31 @@
 				}
 			}
 		}
-		.title{
+
+		.title {
 			margin-top: 48rpx;
 			font-size: 42rpx;
 		}
 	}
-	.bread{
+
+	.bread {
 		font-size: 24rpx;
 		margin-top: 24rpx;
 		height: 66rpx;
 		display: flex;
 		align-items: center;
 		color: #c7c9cd;
-		.in{
+
+		.in {
 			color: #fff;
 			font-weight: 700;
 		}
-		.step{
+
+		.step {
 			margin: 0 24rpx;
 		}
 	}
+
 	.tabs {
 		height: 88rpx;
 		// background-color: #5a595f;

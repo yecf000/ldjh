@@ -40,6 +40,7 @@
 </template>
 
 <script>
+	import {getlang} from "@/utils/lang.js";
 import loading0 from "./static/loading-circle.vue";
 import loading1 from "./static/loading-pulse.vue";
 import loading2 from "./static/loading-bounce.vue";
@@ -116,7 +117,7 @@ export default {
     },
     text: {
       type: String,
-      default: "加载中...",
+      default: getlang("加载中"),
     },
     textSize: {
       type: String,

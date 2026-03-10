@@ -2,10 +2,14 @@ import {
 	baseURL
 } from './env.js'
 import {
+	getlang
+} from "@/utils/lang.js";
+import {
 	api
 } from './api.js'
 // 请求拦截
 const fetch = (url, opt) => {
+	
 	let urls = (api[opt.url]?.url || api[url]?.url);
 	let params = opt.params ? ('?' + Object.keys(opt.params).map(key => key + '=' + opt.params[key]).join('&')) : ''
 	opt.url = baseURL + urls + params
@@ -39,19 +43,19 @@ const fetch = (url, opt) => {
 // 响应拦截
 const interceptorsRes = (res, resolve, reject) => {
 	let code = res.data.code
-	if(code == -2){
+	if (code == -2) {
 		// console.log("666666")
 		uni.showToast({
 			icon: 'none',
 			title: '登录超时'
 		})
 		uni.removeStorageSync('token')
-		setTimeout(()=>{
+		setTimeout(() => {
 			uni.redirectTo({
-				url:'/pages/otherpages/login'
+				url: '/pages/otherpages/login'
 			})
-		},1500)
-		
+		}, 1500)
+
 	}
 	if (code == 1) {
 		resolve(res)
@@ -68,7 +72,7 @@ const interceptorsRes = (res, resolve, reject) => {
 const interceptorsErr = (err, reject) => {
 	uni.showToast({
 		icon: 'none',
-		title: "网络异常" + err
+		title: getlang('网络异常') + err
 	})
 	reject(err)
 }
